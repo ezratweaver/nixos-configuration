@@ -41,4 +41,30 @@
   };
 
   programs.fish.enable = true;
+
+  # GTK theme configuration for dark mode
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
+  };
+
+  # Configure GTK settings for dark mode
+  home.sessionVariables = {
+    GTK_THEME = "Adwaita:dark";
+  };
+
+  # dconf settings for GNOME applications
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "Adwaita-dark";
+      color-scheme = "prefer-dark";
+    };
+  };
 }
