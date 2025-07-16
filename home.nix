@@ -24,4 +24,16 @@
   ];
   
   programs.home-manager.enable = true;
+
+  # Auto-launch fish if not already in fish and if interactive
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      if [[ $- == *i* ]] && [[ -z "$FISH_VERSION" ]] && command -v fish >/dev/null 2>&1; then
+        exec fish
+      fi
+    '';
+  };
+
+  programs.fish.enable = true;
 }
