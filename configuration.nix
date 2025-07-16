@@ -40,9 +40,12 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable Docker
+  virtualisation.docker.enable = true;
+
   users.users.ezratweaver = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" ];
+     extraGroups = [ "wheel" "networkmanager" "docker" ];
      initialPassword = "password"; # Please use `passwd` to change this
      packages = with pkgs; [
        tree
