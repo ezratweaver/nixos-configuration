@@ -379,17 +379,42 @@ slider {
   border: 1px solid #606060;
 }
 
-.widget-mpris .widget-mpris-player {
-  background: #2a2a2a;
-  padding: 7px;
+.widget-mpris {
+  /* The parent to all players */
+  padding: 8px 0 0 0;
+  margin: 8px 8px;
+  margin-bottom: 0;
+  border-radius: 6px;
 }
 
-.widget-mpris .widget-mpris-title {
-  font-size: 1.2rem;
+.widget-mpris-player {
+  padding: 10px 10px;
+  margin: 5px 8px;
+  background-color: alpha(#2a2a2a, 0.55);
+  border-radius: 6px;
+  box-shadow: 0px 0px 0.8em rgba(0, 0, 0, 0.15);
 }
 
-.widget-mpris .widget-mpris-subtitle {
-  font-size: 0.8rem;
+.widget-mpris > box > button {
+  /* Change player side buttons */
+  margin: 1em 0 0 0;
+  padding: 0.1em;
+  box-shadow: none;
+  border: none;
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-album-art {
+  border-radius: 0.1em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+.widget-mpris-title {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
 }
 
 .widget-menubar > box > .menu-button-bar > button > label {
