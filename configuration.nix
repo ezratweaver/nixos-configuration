@@ -16,7 +16,11 @@
 
   networking.hostName = "ezratweaver";
 
-  networking.networkmanager.enable = true;
+  networking.wireless.iwd.enable = true;
+  
+  # Enable bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -80,6 +84,8 @@
     pamixer # audio control
     pavucontrol # audio control gui
     playerctl # media control
+    blueman # bluetooth manager
+    iwgtk # iwd GUI
     hyprshot # screenshot tool
 
     # Clipboard stuff
