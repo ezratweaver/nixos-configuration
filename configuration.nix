@@ -77,7 +77,6 @@
     kitty # terminal
     wofi # application laucnher
     waybar # status bar
-    dunst # notification daemon
     hyprpaper # wallpaper
     nautilus # file manager
     brightnessctl # brightness control
@@ -88,6 +87,7 @@
     iwgtk # wifi GUI
     hyprshot # screenshot tool
     hyprpolkitagent # authentication agent
+    swaynotificationcenter # notification center
 
     # Clipboard stuff
     xclip
