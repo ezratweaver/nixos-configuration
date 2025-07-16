@@ -22,6 +22,11 @@
       source = ./dotfiles/kitty;
       recursive = true;
     };
+
+    ".config/wofi/" = {
+      source = ./dotfiles/wofi;
+      recursive = true;
+    };
   };
   
   home.packages = with pkgs; [
