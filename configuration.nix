@@ -91,6 +91,7 @@
     fish
     zoxide
     eza
+    claude-code
   ];
 
 
