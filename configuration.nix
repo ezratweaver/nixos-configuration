@@ -64,7 +64,7 @@
     wofi # application laucnher
     dunst # notification daemon
     hyprpaper # wallpaper
-    gnome.nautilus # file manager
+    dolphin # file manager
     brightnessctl # brightness control
     pamixer # audio control
     playerctl # media control
