@@ -112,6 +112,7 @@
     zoxide
     eza
     claude-code
+    gnumake
 
     # Theme stuff
     bibata-cursors
