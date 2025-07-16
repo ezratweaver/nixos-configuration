@@ -84,9 +84,10 @@
     pamixer # audio control
     pavucontrol # audio control gui
     playerctl # media control
-    blueman # bluetooth manager
-    iwgtk # iwd GUI
+    blueman # bluetooth GUI
+    iwgtk # wifi GUI
     hyprshot # screenshot tool
+    hyprpolkitagent # authentication agent
 
     # Clipboard stuff
     xclip
