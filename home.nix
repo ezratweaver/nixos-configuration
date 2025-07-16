@@ -17,6 +17,11 @@
       source = ./dotfiles/fish;
       recursive = true;
     };
+
+    ".config/kitty/" = {
+      source = ./dotfiles/kitty;
+      recursive = true;
+    };
   };
   
   home.packages = with pkgs; [
