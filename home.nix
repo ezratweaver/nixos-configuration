@@ -27,6 +27,11 @@
       source = ./dotfiles/wofi;
       recursive = true;
     };
+
+    ".config/waybar/" = {
+      source = ./dotfiles/waybar;
+      recursive = true;
+    };
   };
   
   home.packages = with pkgs; [

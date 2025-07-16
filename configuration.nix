@@ -59,11 +59,20 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+    ];
+  };
+
   # Packages to install
   environment.systemPackages = with pkgs; [
     # Hyprland essentials
     kitty # terminal
     wofi # application laucnher
+    waybar # status bar
     dunst # notification daemon
     hyprpaper # wallpaper
     nautilus # file manager
