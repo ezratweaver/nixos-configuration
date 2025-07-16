@@ -91,6 +91,7 @@
     hyprshot # screenshot tool
     hyprpolkitagent # authentication agent
     swaynotificationcenter # notification center
+    nwg-displays # monitor control
 
     # Clipboard stuff
     xclip
@@ -117,6 +118,7 @@
     claude-code
     gnumake
     docker
+    pnpm
 
     # formux specific
     atlas
