@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "network", "bluetooth", "tray"],
+    "modules-right": ["wireplumber", "backlight", "battery", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -32,7 +32,14 @@
 
     "wireplumber": {
         "format": "\udb81\udd7e  {volume}%",
+        "format-muted": "\uf026  {volume}%",
         "max-volume": 100,
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "\uf185  {percent}%",
         "scroll-step": 5
     },
 

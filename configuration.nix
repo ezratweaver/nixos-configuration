@@ -78,6 +78,7 @@
     nautilus # file manager
     brightnessctl # brightness control
     pamixer # audio control
+    pavucontrol # audio control gui
     playerctl # media control
     hyprshot # screenshot tool
 
