@@ -113,6 +113,12 @@
     eza
     claude-code
     gnumake
+    docker
+
+    # formux specific
+    atlas
+    go-swag
+    air
 
     # Theme stuff
     bibata-cursors
