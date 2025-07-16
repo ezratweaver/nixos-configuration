@@ -57,6 +57,8 @@
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
   # Packages to install
   environment.systemPackages = with pkgs; [
     # Hyprland essentials
@@ -64,7 +66,7 @@
     wofi # application laucnher
     dunst # notification daemon
     hyprpaper # wallpaper
-    dolphin # file manager
+    nautilus # file manager
     brightnessctl # brightness control
     pamixer # audio control
     playerctl # media control
