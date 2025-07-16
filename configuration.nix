@@ -104,6 +104,8 @@
     zoxide
     eza
     claude-code
+
+    # Theme stuff
     bibata-cursors
   ];
 

@@ -4,9 +4,9 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "temperature"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "hyprland/language", "idle_inhibitor", "network", "bluetooth", "tray"],
+    "modules-right": ["wireplumber", "battery", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -48,10 +48,6 @@
         "format": "\uf4bc  {used:0.1f}G"
     },
 
-    "temperature": {
-        "format": "{temperatureC}°C"
-    },
-
     "network": {
         "format": "",
         "format-ethernet": "\udb83\udc9d",
@@ -72,20 +68,9 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
-    "hyprland/language": {
-        "format": "{short}"
-    },
-
     "tray": {
         "icon-size": 16,
         "spacing": 16
     },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "\udb80\udd76",
-            "deactivated": "\udb83\udfaa"
-        }
-    }
 }

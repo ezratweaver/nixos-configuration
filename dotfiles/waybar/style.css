@@ -29,11 +29,9 @@
 
 #wireplumber,
 #battery,
-#idle_inhibitor,
 #language,
 #network,
 #bluetooth,
 #tray {
   padding-right: 1em;
 }
-
