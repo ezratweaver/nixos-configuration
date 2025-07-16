@@ -27,7 +27,8 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
+        "format": "{:%d.%m.%Y | %H:%M}",
+        "on-click": "swaync-client -t -sw"
     },
 
     "wireplumber": {

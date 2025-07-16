@@ -32,6 +32,11 @@
       source = ./dotfiles/waybar;
       recursive = true;
     };
+
+    ".config/swaync/" = {
+      source = ./dotfiles/swaync;
+      recursive = true;
+    };
   };
   
   home.packages = with pkgs; [
