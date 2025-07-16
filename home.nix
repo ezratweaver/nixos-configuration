@@ -12,6 +12,11 @@
       source = ./dotfiles/nvim;
       recursive = true;
     };
+
+    ".config/fish/" = {
+      source = ./dotfiles/fish;
+      recursive = true;
+    };
   };
   
   home.packages = with pkgs; [

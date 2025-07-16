@@ -87,6 +87,10 @@
     go
     tree-sitter
     gh
+    gcc
+    fish
+    zoxide
+    eza
   ];
 
 
