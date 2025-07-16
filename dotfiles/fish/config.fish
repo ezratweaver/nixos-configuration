@@ -20,9 +20,19 @@ if status is-interactive
     alias pf='pfetch'
     alias ls='eza -a --icons'
     alias ll='eza -al --icons'
-    alias l='eza -a --tree --level=0 --icons'
+    alias l='eza -a --tree --level=1 --icons'
     alias shutdown='systemctl poweroff'
     alias v='$EDITOR'
+    alias sv='sudo -E $EDITOR'
+
+    alias nx-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#ezratweaver"
+    alias nx-update="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
+    alias nx-rollback="sudo nixos-rebuild switch --rollback"
+    alias nx-generations="sudo nixos-rebuild list-generations"
+    alias nx-conf="sudo -E nvim /etc/nixos/configuration.nix"
+    alias nx-homeconf="sudo -E nvim /etc/nixos/home.nix"
+    alias nx-flakeconf="sudo -E nvim /etc/nixos/flake.nix"
+    alias nx-dir="cd /etc/nixos/"
 
     alias vfzf='fzf --height=70% --layout=reverse --info=inline --border --margin=1 --padding=1 | xargs -r $EDITOR'
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
