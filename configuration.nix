@@ -95,6 +95,7 @@
     zoxide
     eza
     claude-code
+    bibata-cursors
   ];
 
 
