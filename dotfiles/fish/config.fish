@@ -29,9 +29,7 @@ if status is-interactive
     alias nx-update="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
     alias nx-rollback="sudo nixos-rebuild switch --rollback"
     alias nx-generations="sudo nixos-rebuild list-generations"
-    alias nx-conf="sudo -E nvim /etc/nixos/configuration.nix"
-    alias nx-homeconf="sudo -E nvim /etc/nixos/home.nix"
-    alias nx-flakeconf="sudo -E nvim /etc/nixos/flake.nix"
+    alias nx-edit="sudo -E nvim /etc/nixos/configuration.nix"
     alias nx-dir="cd /etc/nixos/"
 
     alias vfzf='fzf --height=70% --layout=reverse --info=inline --border --margin=1 --padding=1 | xargs -r $EDITOR'
