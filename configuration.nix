@@ -70,6 +70,7 @@
     brightnessctl # brightness control
     pamixer # audio control
     playerctl # media control
+    hyprshot # screenshot tool
 
     # Clipboard stuff
     xclip
