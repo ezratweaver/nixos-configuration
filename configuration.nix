@@ -86,6 +86,7 @@
     python3
     go
     tree-sitter
+    gh
   ];
 
 

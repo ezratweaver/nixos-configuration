@@ -21,6 +21,7 @@ return {
         "prisma",
         "fish",
         "sql",
+        "hyprlang"
       },
     },
   },
