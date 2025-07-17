@@ -23,6 +23,7 @@
     hyprshot # screenshot tool
     hyprpolkitagent # authentication agent
     swaynotificationcenter # notification center
+    hyprlock # lockscreen
 
     # Clipboard stuff
     xclip
