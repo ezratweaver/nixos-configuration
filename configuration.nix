@@ -120,7 +120,24 @@
     pnpm
 
     # formux specific
-    atlas
+    # work around for atlas-official
+    (stdenv.mkDerivation {
+      pname = "atlas-official";
+      version = "latest";
+      
+      src = fetchurl {
+        url = "https://release.ariga.io/atlas/atlas-linux-amd64-latest";
+        sha256 = "0q929km4jhma88n91ya8kq5gqjjylqg74vq6sppcdhc2h4p2hm4d";
+      };
+      
+      dontUnpack = true;
+      
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/atlas
+        chmod +x $out/bin/atlas
+      '';
+    })
     go-swag
     air
 
