@@ -1,6 +1,6 @@
 return {
   "williamboman/mason.nvim",
   opts = {
-    ensure_installed = { "goimports", "gofumpt", "prettierd" }
+    ensure_installed = { "goimports", "gofumpt" }
   },
 }

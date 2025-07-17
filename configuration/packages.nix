@@ -64,6 +64,7 @@
     unzip
     wget
     cargo
+    prettierd
 
     # formux specific
     # work around for atlas-official
