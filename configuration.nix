@@ -96,6 +96,9 @@
     xclip
     wl-clipboard
 
+    # Nix stuff
+    nix-search
+
     # Dev tools
     fzf
     git
@@ -117,7 +120,7 @@
     claude-code
     gnumake
     docker
-    pnpm
+    pnpm 
 
     # formux specific
     # work around for atlas-official
