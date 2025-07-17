@@ -24,6 +24,7 @@
     hyprpolkitagent # authentication agent
     swaynotificationcenter # notification center
     hyprlock # lockscreen
+    hypridle # idle daemon
 
     # Clipboard stuff
     xclip
