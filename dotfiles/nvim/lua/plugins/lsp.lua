@@ -12,6 +12,8 @@ return {
         sqlls = {},
         pyright = {},
         gopls = {},
+        nil_ls = {},
+        ts_ls = {},
       },
     },
   },

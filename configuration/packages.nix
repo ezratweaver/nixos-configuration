@@ -59,6 +59,10 @@
     docker
     pnpm 
     gemini-cli
+    luarocks
+    unzip
+    wget
+    cargo
 
     # formux specific
     # work around for atlas-official
