@@ -25,12 +25,12 @@ if status is-interactive
     alias v='$EDITOR'
     alias sv='sudo -E $EDITOR'
 
-    alias nx-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#ezratweaver"
-    alias nx-update="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
-    alias nx-rollback="sudo nixos-rebuild switch --rollback"
-    alias nx-generations="sudo nixos-rebuild list-generations"
-    alias nx-edit="sudo -E nvim /etc/nixos/configuration.nix"
-    alias nx-dir="cd /etc/nixos/"
+    alias nxreb="sudo nixos-rebuild switch --flake /etc/nixos#ezratweaver"
+    alias nxupdate="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
+    alias nxrollback="sudo nixos-rebuild switch --rollback"
+    alias nxgenerations="sudo nixos-rebuild list-generations"
+    alias vnx="sudo -E nvim /etc/nixos/configuration.nix"
+    alias nxdir="cd /etc/nixos/"
 
     alias vfzf='fzf --height=70% --layout=reverse --info=inline --border --margin=1 --padding=1 | xargs -r $EDITOR'
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
