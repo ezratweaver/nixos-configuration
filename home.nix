@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.stateVersion = "24.05";
 
@@ -39,10 +39,6 @@
     };
   };
   
-  home.packages = with pkgs; [
-    # Move some packages here if you want
-  ];
-  
   programs.home-manager.enable = true;
 
   # Auto-launch fish if not already in fish and if interactive
@@ -73,6 +69,13 @@
   # Configure GTK settings for dark mode
   home.sessionVariables = {
     GTK_THEME = "Adwaita:dark";
+  };
+
+  # Qt theme configuration for dark mode
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style.name = "adwaita-dark";
   };
 
   # dconf settings for GNOME applications

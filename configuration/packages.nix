@@ -26,7 +26,7 @@
     hyprlock # lockscreen
     hypridle # idle daemon
     hyprpicker # color picker
-    nomacs # image viewer
+    pinta # image viewer
 
     # Clipboard stuff
     xclip
