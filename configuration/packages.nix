@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -25,6 +25,7 @@
     swaynotificationcenter # notification center
     hyprlock # lockscreen
     hypridle # idle daemon
+    hyprpicker # color picker
 
     # Clipboard stuff
     xclip
