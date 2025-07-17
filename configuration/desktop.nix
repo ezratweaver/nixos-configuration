@@ -1,6 +1,17 @@
 { pkgs, ... }:
 
 {
+
+  # Create a service to enable numlock on boot
+  systemd.services.numlock = {
+    description = "Enable NumLock on boot";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.kbd}/bin/setleds -D +num";
+    };
+  };
+  
   # Enable touchpad
   services.libinput.enable = true;
   
