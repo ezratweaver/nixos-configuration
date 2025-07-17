@@ -27,7 +27,7 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}",
+        "format": "{:%d.%m.%Y | %I:%M %p}",
         "on-click": "swaync-client -t -sw"
     },
 
