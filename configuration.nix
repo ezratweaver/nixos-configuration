@@ -130,7 +130,7 @@
       
       src = fetchurl {
         url = "https://release.ariga.io/atlas/atlas-linux-amd64-latest";
-        sha256 = "0q929km4jhma88n91ya8kq5gqjjylqg74vq6sppcdhc2h4p2hm4d";
+        sha256 = "1xw266mkmyy0s2arf6d9mh82gbpdnmlkhx83ndamdhcf6hyvzgr6";
       };
       
       dontUnpack = true;
