@@ -5,151 +5,20 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Use the systemd-boot EFI boot loader.
+  imports = [
+    ./configuration/networking.nix
+    ./configuration/audio.nix
+    ./configuration/desktop.nix
+    ./configuration/packages.nix
+    ./configuration/users.nix
+  ];
+
+  # Boot configuration
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "ezratweaver";
-
-  networking.wireless.iwd.enable = true;
-  
-  # Enable bluetooth
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
   # Set your time zone.
   time.timeZone = "America/New_York";
-
-  # Enable sound.
-  security.rtkit.enable = true;
-  services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-     alsa.enable = true;
-     alsa.support32Bit = true;
-  };
-
-  # Enable touchpad support
-  services.libinput.enable = true;
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Enable Docker
-  virtualisation.docker.enable = true;
-
-  users.users.ezratweaver = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" "docker" ];
-     initialPassword = "password"; # Please use `passwd` to change this
-     packages = with pkgs; [
-       tree
-     ];
-   };
-
-
-  # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Fancy pants stuff not needed for the system to run normally
-  
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "ezratweaver";
-      user.email = "ezratweaver@gmail.com";
-    };
-  };
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-  programs.firefox.enable = true;
-  programs.hyprland.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
-
-  # Fonts
-  fonts = {
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-    ];
-  };
-
-  # Packages to install
-  environment.systemPackages = with pkgs; [
-    # Hyprland essentials
-    kitty # terminal
-    wofi # application laucnher
-    waybar # status bar
-    hyprpaper # wallpaper
-    nautilus # file manager
-    brightnessctl # brightness control
-    pamixer # audio control
-    pavucontrol # audio control gui
-    playerctl # media control
-    blueman # bluetooth GUI
-    iwgtk # wifi GUI
-    hyprshot # screenshot tool
-    hyprpolkitagent # authentication agent
-    swaynotificationcenter # notification center
-
-    # Clipboard stuff
-    xclip
-    wl-clipboard
-
-    # Nix stuff
-    nix-search
-
-    # Dev tools
-    fzf
-    git
-    vim
-    neovim
-    ripgrep
-    fd
-    nodejs
-    nodePackages.npm
-    nodePackages.prettier
-    python3
-    go
-    tree-sitter
-    gh
-    gcc
-    fish
-    zoxide
-    eza
-    claude-code
-    gnumake
-    docker
-    pnpm 
-
-    # formux specific
-    # work around for atlas-official
-    (stdenv.mkDerivation {
-      pname = "atlas-official";
-      version = "latest";
-      
-      src = fetchurl {
-        url = "https://release.ariga.io/atlas/atlas-linux-amd64-latest";
-        sha256 = "1xw266mkmyy0s2arf6d9mh82gbpdnmlkhx83ndamdhcf6hyvzgr6";
-      };
-      
-      dontUnpack = true;
-      
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/atlas
-        chmod +x $out/bin/atlas
-      '';
-    })
-    go-swag
-    air
-
-    # Theme stuff
-    bibata-cursors
-  ];
 
 
   system.stateVersion = "25.05"; # DON'T CHANGE THIS AT ANY COST OR THE WORLD ENDS
