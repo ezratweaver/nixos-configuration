@@ -11,7 +11,7 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: 
     let
-      mkNixosSystem = hardwareConfig: nixpkgs.lib.nixosSystem {
+      mkNixosSystem = { hardwareConfig, modules ? [] }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           hardwareConfig
@@ -23,12 +23,12 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.ezratweaver = import ./home.nix;
           }
-        ];
+        ] ++ modules;
       };
     in {
       nixosConfigurations = {
-        black-dell-laptop = mkNixosSystem ./hardware/black-dell-laptop.nix;
-        gaming-laptop = mkNixosSystem ./hardware/gaming-laptop.nix;
+        black-dell-laptop = mkNixosSystem { hardwareConfig = ./hardware/black-dell-laptop.nix; };
+        gaming-laptop = mkNixosSystem { hardwareConfig = ./hardware/gaming-laptop.nix; };
       };
     };
 }
