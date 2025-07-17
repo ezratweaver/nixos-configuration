@@ -57,6 +57,14 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Fancy pants stuff not needed for the system to run normally
+  
+  programs.git = {
+    enable = true;
+    config = {
+      user.name = "ezratweaver";
+      user.email = "ezratweaver@gmail.com";
+    };
+  };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

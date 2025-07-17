@@ -57,14 +57,6 @@
 
   programs.fish.enable = true;
 
-  programs.git = {
-    enable = true;
-    extraConfig = {
-      user.name = "ezratweaver";
-      user.email = "ezratweaver@gmail.com";
-    };
-  };
-
   # GTK theme configuration for dark mode
   gtk = {
     enable = true;
