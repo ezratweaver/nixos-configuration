@@ -17,7 +17,6 @@ if status is-interactive
 
     alias c='clear'
     alias nf='neofetch'
-    alias pf='pfetch'
     alias ls='eza -a --icons'
     alias ll='eza -al --icons'
     alias l='eza -a --tree --level=1 --icons'
@@ -46,28 +45,6 @@ if status is-interactive
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
 
     alias ts='~/dotfiles/scripts/snapshot.sh'
-    alias matrix='cmatrix'
-    alias wifi='nmtui'
-    alias od='~/private/onedrive.sh'
-    alias rw='~/dotfiles/waybar/reload.sh'
-    alias winclass="xprop | grep 'CLASS'"
-    alias dot="cd ~/dotfiles"
-    alias cleanup='~/dotfiles/scripts/cleanup.sh'
-    alias ml4w='~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage'
-
-    alias bluetooth="bluetuith"
-
-    alias airplane-on="rfkill block all"
-    alias airplane-off="rfkill unblock all"
-    alias wifi-on="rfkill unblock 1"
-    alias wifi-off="rfkill block 1"
-    alias bluetooth-on="rfkill unblock 0"
-    alias bluetooth-off="rfkill block 0"
-
-    alias gb='go build'
-    alias p="python"
-
-    alias fixmon="xset -dpms"
 
     function cd --argument dir
         if [ dir = "" ]
