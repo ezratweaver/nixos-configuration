@@ -11,9 +11,10 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      ezratweaver = nixpkgs.lib.nixosSystem {
+      black-dell-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./hardware/black-dell-laptop.nix
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {

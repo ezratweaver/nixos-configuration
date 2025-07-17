@@ -25,7 +25,11 @@ if status is-interactive
     alias v='$EDITOR'
     alias sv='sudo -E $EDITOR'
 
-    alias nxreb="sudo nixos-rebuild switch --flake /etc/nixos#ezratweaver"
+    function nxreb
+        source /etc/nixos/.env
+        sudo nixos-rebuild switch --flake /etc/nixos#$NIX_HOST
+    end
+
     alias nxupdate="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
