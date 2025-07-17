@@ -58,6 +58,7 @@
     gnumake
     docker
     pnpm 
+    gemini-cli
 
     # formux specific
     # work around for atlas-official
