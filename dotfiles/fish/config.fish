@@ -30,7 +30,13 @@ if status is-interactive
         sudo nixos-rebuild switch --flake /etc/nixos#$NIX_HOST
     end
 
-    alias nxupdate="cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ezratweaver"
+    function nxupdate
+        cd /etc/nixos
+        source .env
+        sudo nix flake update
+        sudo nixos-rebuild switch --flake .#$NIX_HOST
+    end
+
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
     alias vnx="sudo -E nvim /etc/nixos/configuration.nix"

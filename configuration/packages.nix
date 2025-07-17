@@ -33,6 +33,9 @@
     # Nix stuff
     nix-search
 
+    # Fun stuff
+    discord
+
     # Dev tools
     fzf
     git
