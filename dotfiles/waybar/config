@@ -36,7 +36,7 @@
         "format-muted": "\uf026  {volume}%",
         "max-volume": 100,
         "scroll-step": 5,
-        "on-click": "pavucontrol"
+        "on-click": "hyprctl dispatch exec '[float; center]' pavucontrol"
     },
 
     "backlight": {
