@@ -29,11 +29,6 @@ if status is-interactive
         sudo nixos-rebuild switch --flake /etc/nixos#$NIX_HOST
     end
 
-    function hmreb
-        source /etc/nixos/.env
-        home-manager switch --flake /etc/nixos#$NIX_HOST
-    end
-
     function nxupdate
         cd /etc/nixos
         source .env
