@@ -74,8 +74,8 @@
       version = "latest";
       
       src = fetchurl {
-        url = "https://release.ariga.io/atlas/atlas-linux-amd64-latest";
-        sha256 = "1xw266mkmyy0s2arf6d9mh82gbpdnmlkhx83ndamdhcf6hyvzgr6";
+        url = "https://release.ariga.io/atlas/atlas-linux-amd64-v0.35.0";
+        sha256 = "1rkr51pzb51j2pwx0zf83qai4bk308j984b2r7gqpicqchjrp3lf";
       };
       
       dontUnpack = true;
