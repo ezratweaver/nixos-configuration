@@ -45,7 +45,6 @@
     },
 
     "battery": {
-        "bat": "BAT1",
         "interval": 1,
         "format": "{icon}  {capacity}%",
         "format-charging": "\uf0e7  {capacity}%",
