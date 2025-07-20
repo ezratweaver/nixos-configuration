@@ -36,6 +36,7 @@ if status is-interactive
         sudo nixos-rebuild switch --flake .#$NIX_HOST
     end
 
+    alias nxs="nix-search"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
     alias vnx="sudo -E nvim /etc/nixos/configuration.nix"

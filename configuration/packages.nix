@@ -67,6 +67,7 @@
     cargo
     prettierd
     dbeaver-bin
+    azuredatastudio
 
     # formux specific
     # work around for atlas-official
