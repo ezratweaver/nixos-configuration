@@ -66,6 +66,7 @@
     wget
     cargo
     prettierd
+    dbeaver-bin
 
     # formux specific
     # work around for atlas-official
