@@ -27,6 +27,18 @@
 
     "clock": {
         "format": "{:%d.%m.%Y | %I:%M %p}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#d0d0d0'><b>{}</b></span>",
+                "days": "<span color='#aaaaaa'><b>{}</b></span>",
+                "weekdays": "<span color='#606060'><b>{}</b></span>",
+                "today": "<span color='#ffffff'><b><u>{}</u></b></span>"
+            }
+        },
         "on-click": "swaync-client -t -sw"
     },
 
