@@ -53,6 +53,49 @@
 
   programs.fish.enable = true;
 
+  programs.firefox = {
+    enable = true;
+    profiles.default = {
+      settings = {
+        "browser.fullscreen.autohide" = false;
+        "sidebar.verticalTabs" = true;
+        "browser.tabs.tabmanager.enabled" = false;
+        "ui.systemUsesDarkTheme" = 1;
+        "browser.toolbars.bookmarks.visibility" = "always";
+        
+        # Disable telemetry and data collection
+        "datareporting.healthreport.uploadEnabled" = false;
+        "datareporting.policy.dataSubmissionEnabled" = false;
+        "toolkit.telemetry.enabled" = false;
+        "toolkit.telemetry.unified" = false;
+        "toolkit.telemetry.server" = "";
+        "browser.ping-centre.telemetry" = false;
+        "browser.newtabpage.activity-stream.feeds.telemetry" = false;
+        "browser.newtabpage.activity-stream.telemetry" = false;
+        "toolkit.telemetry.bhrPing.enabled" = false;
+        "toolkit.telemetry.firstShutdownPing.enabled" = false;
+        "toolkit.telemetry.hybridContent.enabled" = false;
+        "toolkit.telemetry.newProfilePing.enabled" = false;
+        "toolkit.telemetry.reportingpolicy.firstRun" = false;
+        "toolkit.telemetry.shutdownPingSender.enabled" = false;
+        "toolkit.telemetry.updatePing.enabled" = false;
+        "experiments.supported" = false;
+        "experiments.enabled" = false;
+        "experiments.manifest.uri" = "";
+        "network.allow-experiments" = false;
+        "app.shield.optoutstudies.enabled" = false;
+        "app.normandy.enabled" = false;
+        "app.normandy.api_url" = "";
+        "breakpad.reportURL" = "";
+        "browser.tabs.crashReporting.sendReport" = false;
+        "browser.crashReports.unsubmittedCheck.autoSubmit2" = false;
+        "captivedetect.canonicalURL" = "";
+        "network.captive-portal-service.enabled" = false;
+        "network.connectivity-service.enabled" = false;
+      };
+    };
+  };
+
   # GTK theme configuration for dark mode
   gtk = {
     enable = true;

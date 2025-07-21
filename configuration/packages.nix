@@ -37,6 +37,7 @@
 
     # Fun stuff
     discord
+    obsidian
 
     # Dev tools
     fzf
