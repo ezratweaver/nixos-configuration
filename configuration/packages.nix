@@ -31,6 +31,7 @@
     # Clipboard stuff
     xclip
     wl-clipboard
+    cliphist
 
     # Nix stuff
     nix-search

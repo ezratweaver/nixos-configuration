@@ -59,6 +59,7 @@
       settings = {
         "browser.fullscreen.autohide" = false;
         "sidebar.verticalTabs" = true;
+        "sidebar.verticalTabs.expandOnHover" = true;
         "browser.tabs.tabmanager.enabled" = false;
         "ui.systemUsesDarkTheme" = 1;
         "browser.toolbars.bookmarks.visibility" = "always";
