@@ -29,6 +29,7 @@
       nixosConfigurations = {
         black-dell-laptop = mkNixosSystem { hardwareConfig = ./hardware/black-dell-laptop.nix; };
         gaming-laptop = mkNixosSystem { hardwareConfig = ./hardware/gaming-laptop.nix; };
+	      work-laptop = mkNixosSystem { hardwareConfig = ./hardware/work-laptop.nix; };
       };
     };
 }
