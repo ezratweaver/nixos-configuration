@@ -10,7 +10,6 @@
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
-        "on-click": "activate",
         "format-icons": {
             "active": "\uf444",
             "default": "\uf4c3"
