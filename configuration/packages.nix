@@ -27,6 +27,7 @@
     hypridle # idle daemon
     hyprpicker # color picker
     pinta # image viewer
+    wdisplays # monitor manager
 
     # Clipboard stuff
     xclip
