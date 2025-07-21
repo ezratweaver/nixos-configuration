@@ -93,5 +93,6 @@
 
     # Theme stuff
     bibata-cursors
+    font-awesome
   ];
 }

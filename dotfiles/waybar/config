@@ -31,7 +31,7 @@
     },
 
     "wireplumber": {
-        "format": "\udb81\udd7e  {volume}%",
+        "format": "\uf028  {volume}%",
         "format-muted": "\uf026  {volume}%",
         "max-volume": 100,
         "scroll-step": 5,
@@ -39,7 +39,7 @@
     },
 
     "backlight": {
-        "format": "\uf185  {percent}%",
+        "format": " {percent}%",
         "scroll-step": 5
     },
 
@@ -53,15 +53,15 @@
 
     "memory": {
         "interval": 30,
-        "format": "\uf4bc  {used:0.1f}G"
+        "format": "\uf2db {used:0.1f}G"
     },
 
     "network": {
         "format": "",
-        "format-ethernet": "\udb83\udc9d",
+        "format-ethernet": "\uf796",
         "format-wifi": "{icon}",
-        "format-disconnected": "\udb83\udc9c",
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "format-disconnected": "\uf127",
+        "format-icons": ["\uf1eb", "\uf1eb", "\uf1eb", "\uf1eb", "\uf1eb"],
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
@@ -69,9 +69,9 @@
     },
 
     "bluetooth": {
-        "format": "\udb80\udcaf",
-        "format-disabled": "\udb80\udcb2",
-        "format-connected": "\udb80\udcb1",
+        "format": "\uf293",
+        "format-disabled": "\uf294",
+        "format-connected": "\uf292",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
