@@ -1,0 +1,14 @@
+configuration {
+    modes: "drun,run,filebrowser,window";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-filebrowser: "Files";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+    window-format: "{w} {c} {t}";
+}
+
+@theme "~/.config/rofi/theme.rasi"

@@ -23,8 +23,8 @@
       recursive = true;
     };
 
-    ".config/wofi/" = {
-      source = ./dotfiles/wofi;
+    ".config/rofi/" = {
+      source = ./dotfiles/rofi;
       recursive = true;
     };
 

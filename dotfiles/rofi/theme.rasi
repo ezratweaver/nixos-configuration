@@ -1,0 +1,103 @@
+* {
+    bg-col: #141414;
+    bg-col-light: #2a2a2a;
+    border-col: #2a2a2a;
+    selected-col: #2a2a2a;
+    fg-col: #d0d0d0;
+    fg-col-selected: #ffffff;
+    width: 600;
+    height: 500;
+    font: "JetBrains Mono 12";
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+window {
+    height: @height;
+    width: @width;
+    border: 2px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [entry];
+    background-color: @bg-col-light;
+    border: 1px;
+    border-color: @border-col;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 5px;
+}
+
+entry {
+    text-color: @fg-col;
+    background-color: transparent;
+    placeholder-color: @fg-col;
+    placeholder: "Search...";
+}
+
+listview {
+    border: 0px;
+    padding: 0px;
+    margin: 5px;
+    columns: 1;
+    lines: 10;
+    background-color: @bg-col;
+    spacing: 0px;
+}
+
+element {
+    padding: 4px 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border-radius: 4px;
+    margin: 1px 0px;
+}
+
+element-icon {
+    size: 20px;
+    margin: 0px 6px 0px 0px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col-selected;
+}
+
+element alternate {
+    background-color: @bg-col;
+}
+
+mode-switcher {
+    spacing: 0;
+    background-color: @bg-col;
+}
+
+button {
+    padding: 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border: 1px;
+    border-color: @border-col;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+button selected {
+    background-color: @selected-col;
+    text-color: @fg-col-selected;
+}

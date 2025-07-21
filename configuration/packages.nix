@@ -10,7 +10,7 @@
   environment.systemPackages = with pkgs; [
     # Hyprland essentials
     kitty # terminal
-    wofi # application laucnher
+    rofi-wayland # application launcher
     waybar # status bar
     hyprpaper # wallpaper
     nautilus # file manager
