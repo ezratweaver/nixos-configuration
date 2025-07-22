@@ -72,6 +72,7 @@
     dbeaver-bin
     azuredatastudio
     chromium
+    openssl
 
     # formux specific
     # work around for atlas-official
