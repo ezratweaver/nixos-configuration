@@ -37,11 +37,6 @@
       source = ./dotfiles/swaync;
       recursive = true;
     };
-
-    ".config/eww/" = {
-      source = ./dotfiles/eww;
-      recursive = true;
-    };
   };
   
   programs.home-manager.enable = true;
