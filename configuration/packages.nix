@@ -71,6 +71,7 @@
     prettierd
     dbeaver-bin
     azuredatastudio
+    chromium
 
     # formux specific
     # work around for atlas-official
