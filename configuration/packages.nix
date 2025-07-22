@@ -28,6 +28,7 @@
     hyprpicker # color picker
     pinta # image viewer
     wdisplays # monitor manager
+    eww # widgets
 
     # Clipboard stuff
     xclip
