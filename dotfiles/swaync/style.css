@@ -339,46 +339,6 @@ slider {
   background-color: #606060;
 }
 
-.control-center-dnd {
-  margin-top: 5px;
-  border-radius: 8px;
-  background: #2a2a2a;
-  border: 1px solid #404040;
-  box-shadow: none;
-}
-
-.control-center-dnd:checked {
-  background: #2a2a2a;
-}
-
-.control-center-dnd slider {
-  background: #404040;
-  border-radius: 8px;
-}
-
-.widget-dnd {
-  margin: 0px;
-  font-size: 1.1rem;
-}
-
-.widget-dnd > switch {
-  font-size: initial;
-  border-radius: 8px;
-  background: #2a2a2a;
-  border: 1px solid #404040;
-  box-shadow: none;
-}
-
-.widget-dnd > switch:checked {
-  background: #2a2a2a;
-}
-
-.widget-dnd > switch slider {
-  background: #404040;
-  border-radius: 8px;
-  border: 1px solid #606060;
-}
-
 .widget-mpris {
   padding: 8px 0 0 0;
   margin: 8px 8px;

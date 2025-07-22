@@ -34,7 +34,7 @@
       "app-name": "Spotify"
     }
   },
-  "widgets": ["inhibitors", "title", "dnd", "mpris", "notifications"],
+  "widgets": ["inhibitors", "title", "mpris", "notifications"],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
@@ -45,9 +45,6 @@
       "text": "Notifications",
       "clear-all-button": true,
       "button-text": "Clear All"
-    },
-    "dnd": {
-      "text": "Do Not Disturb"
     },
     "mpris": {
       "image-size": 96,
