@@ -26,9 +26,11 @@
     hyprlock # lockscreen
     hypridle # idle daemon
     hyprpicker # color picker
-    pinta # image viewer
     wdisplays # monitor manager
     eww # widgets
+    qimgv # image viewer
+    pinta # image editor
+
 
     # Clipboard stuff
     xclip
