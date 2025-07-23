@@ -39,7 +39,7 @@
 
   environment.systemPackages = with pkgs; [
     teams-for-linux
-    awscli
+    awscli2
     s5cmd
   ];
 }

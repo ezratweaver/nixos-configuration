@@ -76,6 +76,7 @@
     azuredatastudio
     chromium
     openssl
+    jq
 
     # formux specific
     # work around for atlas-official
