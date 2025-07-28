@@ -7,6 +7,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Disable sql complete default keymaps
+vim.g.omni_sql_no_default_maps = 1
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins

@@ -4,6 +4,7 @@
 local setKeyMap = vim.keymap.set
 local deleteKeyMap = vim.keymap.del
 local opts = { silent = true, noremap = true }
+
 local function yank_until_newline()
   vim.cmd("normal! y/\n")
 end
