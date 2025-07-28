@@ -54,7 +54,6 @@
     nodejs
     nodePackages.npm
     nodePackages.prettier
-    python313
     (python313.withPackages (ps: with ps; [
       # Add Python packages here declaratively
       beautifulsoup4
