@@ -55,6 +55,7 @@
     nodePackages.npm
     nodePackages.prettier
     python3
+    pip
     go
     tree-sitter
     gh
