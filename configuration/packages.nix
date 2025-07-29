@@ -30,6 +30,7 @@
     eww # widgets
     qimgv # image viewer
     pinta # image editor
+    kooha # video recording
 
 
     # Clipboard stuff
