@@ -26,7 +26,7 @@
     hyprlock # lockscreen
     hypridle # idle daemon
     hyprpicker # color picker
-    wdisplays # monitor manager
+    nwg-displays # monitor manager
     eww # widgets
     qimgv # image viewer
     pinta # image editor
