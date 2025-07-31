@@ -13,7 +13,6 @@ return {
         ["scss"] = { "prettierd" },
         ["less"] = { "prettierd" },
         ["html"] = { "prettierd" },
-        ["htmldjango"] = { "prettierd" },
         ["json"] = { "prettierd" },
         ["jsonc"] = { "prettierd" },
         ["yaml"] = { "prettierd" },
