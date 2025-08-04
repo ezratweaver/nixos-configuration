@@ -5,6 +5,7 @@
     ./configuration/desktop.nix
     ./configuration/packages.nix
     ./configuration/users.nix
+    ./configuration/virtualization.nix
   ];
 
   # Boot configuration
