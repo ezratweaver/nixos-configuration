@@ -2,18 +2,32 @@
 
 
 {
-  virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemuPackage = pkgs.qemu_kvm;
-
-  users.extraGroups.libvirtd.members = [ "ezratweaver" ];
-
-  programs.virt-manager.enable = true;
-
-  boot.kernelModules = [
-    "kvm-intel"
-    # "kvm-amd" # Uncomment for amd or intel
+  programs.dconf.enable = true;
+  
+  users.users.ezratweaver.extraGroups = [ "libvirtd" ];
+  
+  environment.systemPackages = with pkgs; [
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
   ];
 
-  networking.firewall.checkReversePath = false;
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        swtpm.enable = true;
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+    spiceUSBRedirection.enable = true;
+  };
+  services.spice-vdagentd.enable = true;
 }
 
