@@ -44,6 +44,7 @@
     # Fun stuff
     discord
     obsidian
+    openvpn
 
     # Dev tools
     fzf
