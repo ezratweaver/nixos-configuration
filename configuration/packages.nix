@@ -82,6 +82,7 @@
     chromium
     openssl
     jq
+    bat
 
     # formux specific
     # work around for atlas-official
