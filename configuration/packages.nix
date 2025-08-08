@@ -83,7 +83,7 @@
     openssl
     jq
     bat
-    insomnia
+    postman
 
     # formux specific
     # work around for atlas-official
