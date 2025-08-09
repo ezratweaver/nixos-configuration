@@ -45,6 +45,8 @@
     discord
     obsidian
     openvpn
+    transmission_4
+    transmission_4-gtk
 
     # Dev tools
     fzf
