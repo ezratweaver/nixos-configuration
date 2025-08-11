@@ -11,30 +11,29 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      mkNixosSystem = { hardwareConfig, modules ? [] }: nixpkgs.lib.nixosSystem {
+      mkNixosSystem = { hostPath, modules ? [] }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          hardwareConfig
-          ./configuration.nix
+          hostPath
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.ezratweaver = import ./home.nix;
+            home-manager.users.ezratweaver = import ./home/home.nix;
           }
         ] ++ modules;
       };
     in {
       nixosConfigurations = {
         black-dell-laptop = mkNixosSystem { 
-          hardwareConfig = ./hardware/black-dell-laptop.nix; 
+          hostPath = ./hosts/black-dell-laptop; 
         };
         gaming-laptop = mkNixosSystem { 
-          hardwareConfig = ./hardware/gaming-laptop.nix; 
+          hostPath = ./hosts/gaming-laptop; 
         };
         work-laptop = mkNixosSystem { 
-          hardwareConfig = ./hardware/work-laptop.nix; 
+          hostPath = ./hosts/work-laptop; 
         };
       };
     };
