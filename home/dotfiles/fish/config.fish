@@ -35,7 +35,7 @@ if status is-interactive
     alias nxs="nix-search"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
-    alias vnx="sudo -E nvim /etc/nixos/shared/default.nix"
+    alias vnx="sudo -E nvim /etc/nixos/configuration.nix"
     alias nxdir="cd /etc/nixos/"
 
     function vfzf

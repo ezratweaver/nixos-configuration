@@ -1,7 +1,7 @@
 {
   imports = [
     ./hardware.nix
-    ../../shared
+    ../../configuration.nix
   ];
 
   system.stateVersion = "25.05";
