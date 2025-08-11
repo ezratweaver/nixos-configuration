@@ -1,5 +1,11 @@
+{ pkgs, lib, ... }:
+
+let
+  # Generate completely anonymous hostname using random hash
+  randomHostname = lib.substring 0 8 (builtins.hashString "sha256" (toString builtins.currentTime));
+in
 {
-  networking.hostName = "11807cc6-f4f7-455c-8831-3a7d5cccb104";
+  networking.hostName = randomHostname;
 
   # IWD for netowkring
   networking.wireless.iwd.enable = true;
