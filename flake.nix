@@ -11,7 +11,7 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      mkNixosSystem = { hostPath, modules ? [] }: nixpkgs.lib.nixosSystem {
+      mkNixosSystem = { hostPath }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           hostPath
@@ -22,7 +22,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.ezratweaver = import ./home/home.nix;
           }
-        ] ++ modules;
+        ];
       };
     in {
       nixosConfigurations = {
