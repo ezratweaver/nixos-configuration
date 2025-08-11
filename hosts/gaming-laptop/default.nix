@@ -6,7 +6,5 @@
     ../../shared
   ];
 
-  networking.hostName = "gaming-laptop";
-  
   system.stateVersion = "25.05";
 }
