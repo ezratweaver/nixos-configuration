@@ -1,29 +1,23 @@
 if status is-interactive
-
     set fish_greeting
 
     export EDITOR=nvim
 
-    # -----------------------------------------------------
-    # ALIASES
-    # -----------------------------------------------------
+    # Path additions
+    fish_add_path $HOME/.local/bin
 
-    fish_add_path /home/ezratweaver/.local/bin
-
-    export ANDROID_HOME=/home/ezratweaver/Android/Sdk
-
-    fish_add_path /home/ezratweaver/Android/Sdk/emulator
-    fish_add_path /home/ezratweaver/Android/Sdk/platform-tools
-
+    # General aliases
     alias c='clear'
     alias cc='claude code --resume'
     alias nf='neofetch'
-    alias ls='eza -a --icons'
-    alias ll='eza -al --icons'
-    alias l='eza -a --tree --level=1 --icons'
     alias shutdown='systemctl poweroff'
     alias v='$EDITOR'
     alias sv='sudo -E $EDITOR'
+
+    # File listing aliases
+    alias ls='eza -a --icons'
+    alias ll='eza -al --icons'
+    alias l='eza -a --tree --level=1 --icons'
 
     function nxreb
         source /etc/nixos/.env
@@ -37,6 +31,7 @@ if status is-interactive
         sudo nixos-rebuild switch --flake .#$NIX_HOST
     end
 
+    # NixOS aliases
     alias nxs="nix-search"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
@@ -60,7 +55,9 @@ if status is-interactive
         end
     end
 
+    # Navigation aliases and functions
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
+    alias cdi="zi"
 
     function cd --argument dir
         if [ dir = "" ]
@@ -70,17 +67,16 @@ if status is-interactive
         end
     end
 
-    alias cdi="zi"
-
+    # Git aliases
     alias gs="git status"
     alias ga="git add"
+    alias gc="git commit -m"
     alias gam="git commit --amend --no-edit"
     alias game="git commit --amend"
-    alias gc="git commit -m"
     alias gp="git push"
     alias gpf="git push --force-with-lease"
-    alias gr="git restore"
     alias gpl="git pull"
+    alias gr="git restore"
     alias gst="git stash"
     alias gsp="git stash; git pull"
     alias gcheck="git checkout"
@@ -88,9 +84,6 @@ if status is-interactive
     zoxide init fish | source
 
 end
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
-set -gx PATH $PATH /home/ezratweaver/go/bin
 
 # Fish color scheme
 set -U fish_color_autosuggestion brblack
