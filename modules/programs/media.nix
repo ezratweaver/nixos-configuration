@@ -4,6 +4,9 @@
   # Browser
   programs.firefox.enable = true;
 
+  # Mullvad VPN service
+  services.mullvad-vpn.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Hyprland desktop apps
     kitty # terminal
@@ -22,6 +25,8 @@
     chromium
 
     # VPN and network tools
+    mullvad
+    mullvad-vpn
     openvpn
     transmission_4
     transmission_4-gtk
