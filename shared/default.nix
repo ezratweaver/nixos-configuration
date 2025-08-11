@@ -7,9 +7,7 @@
     ../modules/system/desktop/hyprland.nix
     ../modules/system/desktop/fonts.nix
     ../modules/system/desktop/environment.nix
-    ../modules/programs/development.nix
-    ../modules/programs/utilities.nix
-    ../modules/programs/media.nix
+    ../modules/programs.nix
     ../modules/users/ezratweaver.nix
   ];
 }
