@@ -52,10 +52,6 @@
         "ui.systemUsesDarkTheme" = 1;
         "browser.toolbars.bookmarks.visibility" = "always";
         
-        # Resist fingerprinting
-        "privacy.resistFingerprinting" = false;
-        "privacy.resistFingerprinting.letterboxing" = true;
-        
         # Enhanced tracking protection
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
