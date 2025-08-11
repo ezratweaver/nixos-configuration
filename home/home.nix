@@ -53,7 +53,7 @@
         "browser.toolbars.bookmarks.visibility" = "always";
         
         # Resist fingerprinting
-        "privacy.resistFingerprinting" = true;
+        "privacy.resistFingerprinting" = false;
         "privacy.resistFingerprinting.letterboxing" = true;
         
         # Enhanced tracking protection
