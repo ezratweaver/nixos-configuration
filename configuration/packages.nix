@@ -13,7 +13,7 @@
     rofi-wayland # application launcher
     waybar # status bar
     hyprpaper # wallpaper
-    nautilus # file manager
+    kdePackages.dolphin # file manager
     brightnessctl # brightness control
     pamixer # audio control
     pavucontrol # audio control gui
