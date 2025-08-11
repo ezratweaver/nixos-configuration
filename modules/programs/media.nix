@@ -10,7 +10,7 @@
     rofi-wayland # application launcher
     waybar # status bar
     hyprpaper # wallpaper
-    kdePackages.dolphin # file manager
+    nautilus # file manager
     eww # widgets
     qimgv # image viewer
     pinta # image editor
@@ -30,3 +30,4 @@
     postman
   ];
 }
+
