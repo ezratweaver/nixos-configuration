@@ -16,6 +16,7 @@ if status is-interactive
     fish_add_path /home/ezratweaver/Android/Sdk/platform-tools
 
     alias c='clear'
+    alias cc='claude code --resume'
     alias nf='neofetch'
     alias ls='eza -a --icons'
     alias ll='eza -al --icons'
