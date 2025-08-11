@@ -8,6 +8,6 @@
     ../modules/system/desktop/fonts.nix
     ../modules/system/desktop/environment.nix
     ../modules/programs.nix
-    ../modules/users/ezratweaver.nix
+    ../modules/user.nix
   ];
 }
