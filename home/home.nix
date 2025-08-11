@@ -109,10 +109,6 @@
     };
   };
 
-  # Configure GTK settings for dark mode
-  home.sessionVariables = {
-    GTK_THEME = "Adwaita:dark";
-  };
 
   # Qt theme configuration for dark mode
   qt = {
