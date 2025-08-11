@@ -17,6 +17,14 @@
   # Browser
   programs.firefox.enable = true;
 
+  # Shell configuration 
+  programs.fish.enable = true;
+  programs.bash.interactiveShellInit = ''
+    if [[ $- == *i* ]] && [[ -z "$FISH_VERSION" ]] && command -v fish >/dev/null 2>&1; then
+      exec fish
+    fi
+  '';
+
   # Mullvad VPN service
   services.mullvad-vpn.enable = true;
 

@@ -41,29 +41,51 @@
   
   programs.home-manager.enable = true;
 
-  # Auto-launch fish if not already in fish and if interactive
-  programs.fish.enable = true;
-
-  programs.bash = {
-    enable = true;
-    bashrcExtra = ''
-      if [[ $- == *i* ]] && [[ -z "$FISH_VERSION" ]] && command -v fish >/dev/null 2>&1; then
-        exec fish
-      fi
-    '';
-  };
-
   programs.firefox = {
     enable = true;
     profiles.default = {
       settings = {
+        # UI preferences
         "browser.fullscreen.autohide" = false;
         "sidebar.verticalTabs" = true;
         "browser.tabs.tabmanager.enabled" = false;
         "ui.systemUsesDarkTheme" = 1;
         "browser.toolbars.bookmarks.visibility" = "always";
         
-        # Disable telemetry and data collection
+        # Resist fingerprinting
+        "privacy.resistFingerprinting" = true;
+        "privacy.resistFingerprinting.letterboxing" = true;
+        
+        # Enhanced tracking protection
+        "privacy.trackingprotection.enabled" = true;
+        "privacy.trackingprotection.socialtracking.enabled" = true;
+        
+        # DNS over HTTPS
+        "network.trr.mode" = 2;
+        "network.trr.uri" = "https://mozilla.cloudflare-dns.com/dns-query";
+        
+        # Disable auto-fill
+        "browser.formfill.enable" = false;
+        "extensions.formautofill.addresses.enabled" = false;
+        "extensions.formautofill.creditCards.enabled" = false;
+        
+        # Disable password manager
+        "signon.rememberSignons" = false;
+        
+        # Security settings
+        "security.tls.version.fallback-limit" = 3;
+        "security.ssl.require_safe_negotiation" = true;
+        
+        # Performance vs privacy trade-offs
+        "dom.battery.enabled" = false;
+        "dom.gamepad.enabled" = false;
+        
+        # User agent and window size
+        "privacy.spoof_english" = 2;
+        "general.useragent.locale" = "en-US";
+        "general.useragent.override" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36";
+
+        # Telemetry and data collection
         "datareporting.healthreport.uploadEnabled" = false;
         "datareporting.policy.dataSubmissionEnabled" = false;
         "toolkit.telemetry.enabled" = false;
