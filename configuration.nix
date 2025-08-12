@@ -1,13 +1,13 @@
 {
   imports = [
-    ./modules/boot.nix
-    ./modules/audio.nix
-    ./modules/networking.nix
+    ./modules/system/boot.nix
+    ./modules/system/audio.nix
+    ./modules/system/networking.nix
     ./modules/virtualization.nix
     ./modules/hyprland.nix
-    ./modules/fonts.nix
-    ./modules/environment.nix
-    ./modules/xdg.nix
+    ./modules/system/fonts.nix
+    ./modules/system/environment.nix
+    ./modules/system/xdg.nix
     ./modules/programs.nix
     ./modules/user.nix
   ];
