@@ -28,6 +28,8 @@
   # Mullvad VPN service
   services.mullvad-vpn.enable = true;
 
+  virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Dev tools
     git
@@ -51,6 +53,7 @@
     openssl
     dbeaver-bin
     azuredatastudio
+    docker
 
     # Fun stuff
     discord
