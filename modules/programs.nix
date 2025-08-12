@@ -71,26 +71,9 @@
         chmod +x $out/bin/atlas
       '';
     })
+
     go-swag
     air
-
-    # Hyprland desktop apps
-    kitty # terminal
-    rofi-wayland # application launcher
-    waybar # status bar
-    hyprpaper # wallpaper
-    nautilus # file manager
-    eww # widgets
-    qimgv # image viewer
-    pinta # image editor
-    kooha # video recording
-    hyprshot # screenshots
-    hyprpolkitagent # authentication agent
-    swaynotificationcenter # notifications
-    hyprlock # screen lock
-    hypridle # idle management
-    hyprpicker # color picker
-    nwg-displays # display settings
 
     # Fun stuff
     discord
@@ -119,26 +102,10 @@
     unzip
     wget
     jq
-    bat
-
-    # Clipboard stuff
-    xclip
-    wl-clipboard
-    cliphist
+    bat # Cat with syntax hilighting
+    xclip # For nvim copy to clipboard
 
     # Nix stuff
     nix-search
-
-    # System utilities
-    brightnessctl
-    pamixer
-    pavucontrol
-    playerctl
-    blueman
-    iwgtk
-
-    # Theme stuff
-    bibata-cursors
-    font-awesome
   ];
 }
