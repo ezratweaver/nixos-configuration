@@ -87,5 +87,7 @@
 
     # Nix stuff
     nix-search
+
+    vlc
   ];
 }
