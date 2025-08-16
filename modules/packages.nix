@@ -90,5 +90,6 @@
 
     vlc
     ngrok
+    btop
   ];
 }
