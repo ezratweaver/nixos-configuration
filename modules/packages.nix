@@ -89,5 +89,6 @@
     nix-search
 
     vlc
+    ngrok
   ];
 }
