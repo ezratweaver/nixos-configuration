@@ -40,6 +40,7 @@
     nodePackages.prettier
     (python313.withPackages (ps: with ps; [
       beautifulsoup4
+      requests
     ]))
     go
     tree-sitter
