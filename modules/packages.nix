@@ -59,7 +59,13 @@
     # Fun stuff
     discord
     obsidian
-    chromium
+    (chromium.override {
+      commandLineArgs = [
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
+        "--enable-wayland-ime"
+      ];
+    })
 
     # VPN and network tools
     mullvad
@@ -69,7 +75,12 @@
     transmission_4-gtk
     
     # API tools
-    postman
+    (postman.overrideAttrs (oldAttrs: {
+      postInstall = (oldAttrs.postInstall or "") + ''
+        wrapProgram $out/bin/postman \
+          --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
+      '';
+    }))
 
     # Terminal utilities
     fzf
