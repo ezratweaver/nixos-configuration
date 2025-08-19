@@ -96,6 +96,7 @@
     jq
     bat # Cat with syntax hilighting
     xclip # For nvim copy to clipboard
+    railway
 
     # Nix stuff
     nix-search
