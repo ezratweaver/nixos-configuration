@@ -104,5 +104,6 @@
     vlc
     ngrok
     btop
+    postgresql
   ];
 }
