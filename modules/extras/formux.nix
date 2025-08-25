@@ -23,5 +23,6 @@
     })
     go-swag
     air
+    gotestsum
   ];
 }
