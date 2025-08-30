@@ -24,8 +24,5 @@
     go-swag
     air
     gotestsum
-
-    playwright
-    playwright-driver
   ];
 }
