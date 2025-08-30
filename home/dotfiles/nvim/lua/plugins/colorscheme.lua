@@ -1,6 +1,6 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "bluz71/vim-moonfly-colors",
     opts = {
       transparent_mode = true,
     },
@@ -8,7 +8,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "moonfly",
     },
   },
 }
