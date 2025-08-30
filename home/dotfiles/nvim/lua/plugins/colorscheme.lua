@@ -1,9 +1,9 @@
 return {
   {
     "bluz71/vim-moonfly-colors",
-    opts = {
-      transparent_mode = true,
-    },
+    config = function()
+      vim.g.moonflyTransparent = true
+    end,
   },
   {
     "LazyVim/LazyVim",
