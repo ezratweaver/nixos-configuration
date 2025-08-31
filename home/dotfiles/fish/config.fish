@@ -83,6 +83,41 @@ if status is-interactive
 
     zoxide init fish | source
 
+    function __fish_command_not_found_handler --on-event fish_command_not_found
+        if command -v nix-shell &>/dev/null
+            echo "'$argv[1]' not found."
+        end
+    end
+
+    function nix-shell --wraps='nix-shell' --description 'Enter nix-shell with fish as shell'
+        set -lx NIX_SHELL $argv
+        command nix-shell $argv --run 'env | grep PATH > /tmp/nixpath; fish'
+    end
+
+    function nix-develop --wraps='nix' --description 'Enter nix develop with fish as shell'
+        nix develop $argv --command fish
+    end
+
+    function fish_prompt
+        # Check if we're in a nix shell or nix develop environment
+        set -l nix_indicator ""
+        if test -n "$IN_NIX_SHELL"
+            if test "$IN_NIX_SHELL" = impure
+                set nix_indicator (set_color blue)"[nix-shell]"(set_color normal)" "
+            else
+                set nix_indicator (set_color cyan)"[nix-shell:pure]"(set_color normal)" "
+            end
+        else if test -n "$NIX_BUILD_TOP"
+            set nix_indicator (set_color magenta)"[nix-develop]"(set_color normal)" "
+        end
+
+        # Basic prompt with nix indicator
+        echo -n $nix_indicator
+        echo -n (set_color white)(whoami)(set_color normal)" "
+        echo -n (set_color $fish_color_cwd)(prompt_pwd)(set_color normal)
+        echo -n " \$ "
+    end
+
 end
 
 # Fish color scheme
