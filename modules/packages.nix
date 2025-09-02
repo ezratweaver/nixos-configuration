@@ -90,6 +90,7 @@
     zoxide
     eza
     claude-code
+    gemini-cli
     tree
     unzip
     wget
