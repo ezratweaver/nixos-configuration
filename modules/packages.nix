@@ -91,6 +91,7 @@
     eza
     claude-code
     gemini-cli
+    codex
     tree
     unzip
     wget
