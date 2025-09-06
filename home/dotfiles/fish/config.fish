@@ -98,6 +98,17 @@ if status is-interactive
         nix develop $argv --command fish
     end
 
+    function make-flake
+        set flakefile flake.nix
+        if test -e $flakefile
+            echo "$flakefile already exists. Aborting." >&2
+            return 1
+        end
+
+        cp /etc/nixos/templates/flake.nix $flakefile
+        echo "Created $flakefile from /etc/nixos/templates/flake.nix in (pwd)"
+    end
+
     function fish_prompt
         # Capture last exit status
         set -l last_status $status
