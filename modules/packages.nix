@@ -107,7 +107,5 @@
     ngrok
     btop
     postgresql
-
-    gnupg
   ];
 }
