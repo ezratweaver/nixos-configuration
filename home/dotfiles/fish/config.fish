@@ -80,6 +80,8 @@ if status is-interactive
     alias gst="git stash"
     alias gsp="git stash; git pull"
     alias gcheck="git checkout"
+    alias gr="git restore"
+    alias grs="git restore --staged ."
 
     zoxide init fish | source
 
