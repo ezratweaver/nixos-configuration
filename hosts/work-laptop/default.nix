@@ -4,7 +4,6 @@
   imports = [
     ./hardware.nix
     ../../configuration.nix
-    ./git.nix
   ];
 
   # Work specific packages
