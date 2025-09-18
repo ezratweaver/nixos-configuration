@@ -109,6 +109,9 @@
         "captivedetect.canonicalURL" = "";
         "network.captive-portal-service.enabled" = false;
         "network.connectivity-service.enabled" = false;
+
+        # Disable alt from opening menu
+        "ui.key.menuAccessKeyFocuses" = false;
       };
     };
   };
