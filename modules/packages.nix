@@ -109,5 +109,8 @@
     ngrok
     btop
     postgresql
+
+    onlyoffice-bin
+    visidata
   ];
 }
