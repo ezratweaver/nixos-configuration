@@ -4,6 +4,7 @@
   imports = [
     ./hardware.nix
     ./nvidia.nix
+    ./gaming.nix
     ../../configuration.nix
   ];
 
