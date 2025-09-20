@@ -3,6 +3,8 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  programs.appimage.enable = true;
+
   services.flatpak.enable = true;
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
