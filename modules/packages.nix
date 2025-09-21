@@ -29,9 +29,6 @@
     fi
   '';
 
-  # Mullvad VPN service
-  services.mullvad-vpn.enable = true;
-
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -69,14 +66,7 @@
         "--ozone-platform=wayland"
         "--enable-wayland-ime"
       ];
-    })
-
-    # VPN and network tools
-    mullvad
-    mullvad-vpn
-    openvpn
-    transmission_4
-    transmission_4-gtk
+    }) 
     
     # API tools
     (postman.overrideAttrs (oldAttrs: {
