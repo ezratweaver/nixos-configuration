@@ -5,6 +5,8 @@
     lutris
     heroic
     ryubing
+
+    alvr # Stream to vr
   ];
 
   programs.steam = {
