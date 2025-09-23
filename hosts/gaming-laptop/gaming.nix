@@ -6,6 +6,8 @@
     heroic
     ryubing
 
+    rpcs3
+
     alvr # Stream to vr
   ];
 
