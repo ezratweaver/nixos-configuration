@@ -9,7 +9,6 @@ if status is-interactive
     # General aliases
     alias c='clear'
     alias cc='claude code'
-    alias codex='npx @openai/codex@latest'
 
     alias nf='neofetch'
     alias shutdown='systemctl poweroff'
