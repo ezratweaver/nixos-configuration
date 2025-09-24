@@ -8,7 +8,9 @@ if status is-interactive
 
     # General aliases
     alias c='clear'
+
     alias cc='claude code'
+    alias codex='codex -a untrusted'
 
     alias nf='neofetch'
     alias shutdown='systemctl poweroff'
