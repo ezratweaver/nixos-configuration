@@ -1,14 +1,16 @@
 { pkgs, ... }:
-
 {
   nixpkgs.config.allowUnfree = true;
 
   programs.appimage.enable = true;
 
   services.flatpak.enable = true;
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # Git config
   programs.git = {
     enable = true;
@@ -21,7 +23,7 @@
   # Browser
   programs.firefox.enable = true;
 
-  # Shell configuration 
+  # Shell configuration
   programs.fish.enable = true;
   programs.bash.interactiveShellInit = ''
     if [[ $- == *i* ]] && [[ -z "$FISH_VERSION" ]] && command -v fish >/dev/null 2>&1; then
@@ -39,10 +41,12 @@
     nodejs
     nodePackages.npm
     nodePackages.prettier
-    (python313.withPackages (ps: with ps; [
-      beautifulsoup4
-      requests
-    ]))
+    (python313.withPackages (
+      ps: with ps; [
+        beautifulsoup4
+        requests
+      ]
+    ))
     go
     tree-sitter
     gh
@@ -66,14 +70,16 @@
         "--ozone-platform=wayland"
         "--enable-wayland-ime"
       ];
-    }) 
-    
+    })
+
     # API tools
     (postman.overrideAttrs (oldAttrs: {
-      postInstall = (oldAttrs.postInstall or "") + ''
-        wrapProgram $out/bin/postman \
-          --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
-      '';
+      postInstall =
+        (oldAttrs.postInstall or "")
+        + ''
+          wrapProgram $out/bin/postman \
+            --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
+        '';
     }))
 
     # Terminal utilities
@@ -96,6 +102,7 @@
 
     # Nix stuff
     nix-search
+    nixfmt-rfc-style
 
     vlc
     ngrok

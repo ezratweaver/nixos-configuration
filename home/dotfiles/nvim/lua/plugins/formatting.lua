@@ -20,6 +20,7 @@ return {
         ["markdown.mdx"] = { "prettierd" },
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
+        ["nix"] = { "nixfmt-rfc-style" },
       },
     },
   },
