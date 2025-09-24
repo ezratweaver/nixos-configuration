@@ -22,23 +22,22 @@ if status is-interactive
     alias l='eza -a --tree --level=1 --icons'
 
     function nxreb
-        source /etc/nixos/.env
-        sudo nixos-rebuild switch --flake /etc/nixos#$NIX_HOST
+        source ~/nixos-configuration/.env
+        sudo nixos-rebuild switch --flake ~/nixos-configuration/#$NIX_HOST
     end
 
     function nxupdate
-        cd /etc/nixos
-        source .env
+        source ~/nixos-configuration/.env
         sudo nix flake update
-        sudo nixos-rebuild switch --flake .#$NIX_HOST
+        sudo nixos-rebuild switch --flake ~/nixos-configuration/#$NIX_HOST
     end
 
     # NixOS aliases
     alias nxs="nix-search"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
     alias nxgenerations="sudo nixos-rebuild list-generations"
-    alias vnx="sudo -E nvim /etc/nixos/configuration.nix"
-    alias nxdir="cd /etc/nixos/"
+    alias vnx="nvim ~/nixos-configuration/configuration.nix"
+    alias nxdir="cd ~/nixos-configuration/"
 
     function vfzf
         set cols (tput cols)
@@ -109,8 +108,8 @@ if status is-interactive
             return 1
         end
 
-        cp /etc/nixos/templates/flake.nix $flakefile
-        echo "Created $flakefile from /etc/nixos/templates/flake.nix in (pwd)"
+        cp ~/nixos-configuration/templates/flake.nix $flakefile
+        echo "Created $flakefile from ~/nixos-configuration/templates/flake.nix in (pwd)"
     end
 
     function fish_prompt
