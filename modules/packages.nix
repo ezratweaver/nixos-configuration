@@ -85,7 +85,7 @@
     eza
     claude-code
     gemini-cli
-    codex
+    aiTools.codex
     tree
     unzip
     wget

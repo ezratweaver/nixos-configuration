@@ -10,9 +10,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
-  outputs = { nixpkgs-unstable, nixpkgs-2505, home-manager, ... }:
+  outputs = { nixpkgs-unstable, nixpkgs-2505, nix-ai-tools, home-manager, ... }:
     let
       nixpkgs = nixpkgs-unstable;
 
@@ -28,7 +30,7 @@
             home-manager.users.ezratweaver = import ./home/home.nix;
           }
 
-          # Overlay: add access to 2505 packages via pkgs.pkgs2505
+          # Overlay: add access to packages via pkgs.pkgs2505
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               (final: prev: {
@@ -36,6 +38,8 @@
                   system = prev.system;
                   config.allowUnfree = true;
                 };
+
+                aiTools = nix-ai-tools.packages.${prev.system};
               })
             ];
           })
