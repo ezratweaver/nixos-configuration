@@ -56,6 +56,7 @@
     luarocks
     cargo
     prettierd
+    black
     openssl
     dbeaver-bin
     azuredatastudio

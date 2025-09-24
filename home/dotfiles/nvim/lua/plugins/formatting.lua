@@ -21,6 +21,7 @@ return {
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
         ["nix"] = { "nixfmt-rfc-style" },
+        ["python"] = { "black" },
       },
     },
   },
