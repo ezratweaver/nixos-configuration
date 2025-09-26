@@ -10,7 +10,7 @@ if status is-interactive
     alias c='clear'
 
     alias cc='claude code'
-    alias codex='codex'
+    alias codex='codex -a untrusted -s workspace-write'
 
     alias nf='neofetch'
     alias shutdown='systemctl poweroff'
