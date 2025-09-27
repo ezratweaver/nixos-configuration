@@ -112,5 +112,7 @@
 
     onlyoffice-bin
     visidata
+
+    brave
   ];
 }
