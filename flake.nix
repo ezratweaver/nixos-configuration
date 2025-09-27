@@ -10,11 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
@@ -24,7 +19,6 @@
       nixpkgs-2505,
       nix-ai-tools,
       home-manager,
-      stylix,
       ...
     }:
     let
@@ -36,7 +30,6 @@
           system = "x86_64-linux";
           modules = [
             hostPath
-            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
