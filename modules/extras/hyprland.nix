@@ -41,5 +41,7 @@
     # Theme stuff
     bibata-cursors
     font-awesome
+
+    gnome-calculator
   ];
 }
