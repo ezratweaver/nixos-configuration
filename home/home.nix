@@ -55,7 +55,6 @@
         # Enhanced tracking protection
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
-        "privacy.firstparty.isolate" = true;
 
         # DNS over HTTPS
         "network.trr.mode" = 2;
