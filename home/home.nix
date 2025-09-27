@@ -38,7 +38,7 @@
       recursive = true;
     };
   };
-  
+
   programs.home-manager.enable = true;
 
   programs.firefox = {
@@ -51,31 +51,32 @@
         "browser.tabs.tabmanager.enabled" = false;
         "ui.systemUsesDarkTheme" = 1;
         "browser.toolbars.bookmarks.visibility" = "always";
-        
+
         # Enhanced tracking protection
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
-        
+        "privacy.firstparty.isolate" = true;
+
         # DNS over HTTPS
         "network.trr.mode" = 2;
         "network.trr.uri" = "https://mozilla.cloudflare-dns.com/dns-query";
-        
+
         # Disable auto-fill
         "browser.formfill.enable" = false;
         "extensions.formautofill.addresses.enabled" = false;
         "extensions.formautofill.creditCards.enabled" = false;
-        
+
         # Disable password manager
         "signon.rememberSignons" = false;
-        
+
         # Security settings
         "security.tls.version.fallback-limit" = 3;
         "security.ssl.require_safe_negotiation" = true;
-        
+
         # Performance vs privacy trade-offs
         "dom.battery.enabled" = false;
         "dom.gamepad.enabled" = false;
-        
+
         # User agent and window size
         "privacy.spoof_english" = 2;
         "general.useragent.locale" = "en-US";
@@ -128,7 +129,6 @@
       package = pkgs.adwaita-icon-theme;
     };
   };
-
 
   # Qt theme configuration for dark mode
   qt = {
