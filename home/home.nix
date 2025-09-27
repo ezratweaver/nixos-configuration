@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   home.stateVersion = "24.05";
 
@@ -116,17 +116,9 @@
     };
   };
 
-  # GTK theme configuration for dark mode
+  # GTK integration; Stylix manages theming.
   gtk = {
     enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-    iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
-    };
     gtk3 = {
       # Nautalis bookmarks
       bookmarks = [
@@ -136,18 +128,6 @@
     };
   };
 
-  # Qt theme configuration for dark mode
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
-  };
-
-  # dconf settings for GNOME applications
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      gtk-theme = "Adwaita-dark";
-      color-scheme = "prefer-dark";
-    };
-  };
+  # Qt integration; theme is set by Stylix.
+  qt.enable = true;
 }
