@@ -1,6 +1,8 @@
 {
   "BraveRewardsDisabled": true,
   "BraveWalletDisabled": true,
+  "BraveAIChatEnabled": false,
+  "FullscreenToolbarVisibility": 1,
   "AutofillEnabled": false,
   "AutofillProfileEnabled": false,
   "AutofillCreditCardEnabled": false,
