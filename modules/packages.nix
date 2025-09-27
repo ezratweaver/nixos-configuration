@@ -20,9 +20,6 @@
     };
   };
 
-  # Browser
-  programs.firefox.enable = true;
-
   # Shell configuration
   programs.fish.enable = true;
   programs.bash.interactiveShellInit = ''
@@ -65,13 +62,6 @@
     # Fun stuff
     discord
     obsidian
-    (chromium.override {
-      commandLineArgs = [
-        "--enable-features=UseOzonePlatform"
-        "--ozone-platform=wayland"
-        "--enable-wayland-ime"
-      ];
-    })
 
     # API tools
     (postman.overrideAttrs (oldAttrs: {
@@ -114,6 +104,4 @@
     visidata
   ];
 
-  environment.etc."/brave/policies/managed/GroupPolicy.json".source =
-    ../home/apps/brave/policies.json;
 }
