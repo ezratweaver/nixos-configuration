@@ -1,0 +1,25 @@
+{
+  "BraveRewardsDisabled": true,
+  "BraveWalletDisabled": true,
+  "AutofillEnabled": false,
+  "AutofillProfileEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "PasswordManagerEnabled": false,
+  "MetricsReportingEnabled": false,
+  "CrashReportingEnabled": false,
+  "BackgroundModeEnabled": false,
+  "DnsOverHttpsMode": "secure",
+  "PromotionalTabsEnabled": false,
+  "PrivacySandboxPromptEnabled": false,
+
+  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderSearchURL": "https://www.google.com/search?q={searchTerms}",
+  "DefaultSearchProviderName": "Google",
+  "DefaultSearchProviderKeyword": "google.com",
+
+  "ExtensionInstallForcelist": [
+    "hipekcciheckooncpjeljhnekcoolahp",
+    "nngceckbapebfimnlniiiahkandclblb",
+    "dbepggeogbaibhgnhhndojpepiihcmeb"
+  ]
+}

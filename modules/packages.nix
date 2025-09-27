@@ -112,13 +112,8 @@
 
     onlyoffice-bin
     visidata
-
-    (brave.override {
-      commandLineArgs = [
-        "--enable-features=UseOzonePlatform"
-        "--ozone-platform=wayland"
-        "--enable-wayland-ime"
-      ];
-    })
   ];
+
+  environment.etc."/brave/policies/managed/GroupPolicy.json".source =
+    ../home/apps/brave/policies.json;
 }
