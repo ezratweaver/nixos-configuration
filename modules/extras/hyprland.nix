@@ -6,6 +6,7 @@
 
   # Desktop environment
   programs.hyprland.enable = true;
+  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
 
   environment.systemPackages = with pkgs; [
     # Hyprland desktop apps
@@ -33,6 +34,7 @@
     playerctl
     blueman
     iwgtk
+    libadwaita # For libadwaite programs
 
     # Wayland clipboard utilities
     wl-clipboard

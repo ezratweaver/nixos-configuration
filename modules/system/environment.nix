@@ -5,8 +5,5 @@
     HYPRCURSOR_SIZE = "20";
     XCURSOR_THEME = "Bibata-Modern-Classic";
     HYPRCURSOR_THEME = "Bibata-Modern-Classic";
-    
-    # GTK theme
-    GTK_THEME = "Adwaita:dark";
   };
 }
