@@ -14,6 +14,7 @@ return {
         gopls = {},
         nil_ls = {},
         ts_ls = {},
+        powershell_es = {},
       },
     },
   },
