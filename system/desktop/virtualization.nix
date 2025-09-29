@@ -28,5 +28,20 @@
     };
     spiceUSBRedirection.enable = true;
   };
+
   services.spice-vdagentd.enable = true;
+
+  networking.firewall = {
+    enable = true;
+    allowedUDPPorts = [
+      53
+      67
+    ];
+    allowedTCPPorts = [ 53 ];
+    extraCommands = ''
+      iptables -I FORWARD -i virbr0 -j ACCEPT
+      iptables -I FORWARD -o virbr0 -j ACCEPT
+    '';
+  };
+
 }
