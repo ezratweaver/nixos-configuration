@@ -1,21 +1,20 @@
 { pkgs, ... }:
+let
+  waylandChromiumArgs = [
+    "--enable-features=UseOzonePlatform"
+    "--ozone-platform=wayland"
+    "--enable-wayland-ime"
+  ];
+in
 {
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
     (brave.override {
-      commandLineArgs = [
-        "--enable-features=UseOzonePlatform"
-        "--ozone-platform=wayland"
-        "--enable-wayland-ime"
-      ];
+      commandLineArgs = waylandChromiumArgs;
     })
     (chromium.override {
-      commandLineArgs = [
-        "--enable-features=UseOzonePlatform"
-        "--ozone-platform=wayland"
-        "--enable-wayland-ime"
-      ];
+      commandLineArgs = waylandChromiumArgs;
     })
   ];
 
