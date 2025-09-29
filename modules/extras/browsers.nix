@@ -20,5 +20,5 @@
   ];
 
   environment.etc."/brave/policies/managed/GroupPolicy.json".source =
-    ../../home/apps/brave/policies.json;
+    ../../home/dotfiles/brave/policies.json;
 }
