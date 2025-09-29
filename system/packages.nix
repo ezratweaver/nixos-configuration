@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-
   programs.appimage.enable = true;
 
   services.flatpak.enable = true;

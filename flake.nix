@@ -42,11 +42,13 @@
             (
               { pkgs, ... }:
               {
+                nixpkgs.config.allowUnfree = true; # Allow unfree on unstable
+
                 nixpkgs.overlays = [
                   (final: prev: {
                     pkgs2505 = import nixpkgs-2505 {
                       system = prev.system;
-                      config.allowUnfree = true;
+                      config.allowUnfree = true; # Allow unfree on stable
                     };
 
                     aiTools = nix-ai-tools.packages.${prev.system};
