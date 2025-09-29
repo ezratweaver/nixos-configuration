@@ -8,6 +8,14 @@
   programs.hyprland.enable = true;
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
 
+  # Cursor theme configuration
+  environment.sessionVariables = {
+    XCURSOR_SIZE = "20";
+    HYPRCURSOR_SIZE = "20";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    HYPRCURSOR_THEME = "Bibata-Modern-Classic";
+  };
+
   environment.systemPackages = with pkgs; [
     # Hyprland desktop apps
     kitty # terminal
