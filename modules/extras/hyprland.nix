@@ -8,6 +8,13 @@
   programs.hyprland.enable = true;
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
 
+  # XDG portals
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ 
+    pkgs.xdg-desktop-portal-gtk 
+    pkgs.xdg-desktop-portal-hyprland
+  ];
+
   # Cursor theme configuration
   environment.sessionVariables = {
     XCURSOR_SIZE = "20";
