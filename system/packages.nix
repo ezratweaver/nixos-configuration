@@ -30,7 +30,6 @@
     neovim
     nodejs
     nodePackages.npm
-    nodePackages.prettier
     (python313.withPackages (
       ps: with ps; [
         beautifulsoup4
@@ -45,18 +44,22 @@
     pnpm
     luarocks
     cargo
-    prettierd
-    black
     openssl
-    dbeaver-bin
-    azuredatastudio
     docker
 
-    # Fun stuff
+    # Formatters
+    nodePackages.prettier
+    prettierd
+    black
+    nixfmt-rfc-style
+
+    # Desktop apps
+    dbeaver-bin
+    azuredatastudio
     discord
     obsidian
-
-    # API tools
+    vlc
+    onlyoffice-bin
     (postman.overrideAttrs (oldAttrs: {
       postInstall =
         (oldAttrs.postInstall or "")
@@ -83,17 +86,10 @@
     bat # Cat with syntax hilighting
     xclip # For nvim copy to clipboard
     railway
-
-    # Nix stuff
     nix-search
-    nixfmt-rfc-style
-
-    vlc
     ngrok
     btop
     postgresql
-
-    onlyoffice-bin
     visidata
   ];
 
