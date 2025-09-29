@@ -39,8 +39,11 @@
     ];
     allowedTCPPorts = [ 53 ];
     extraCommands = ''
+      # Allow established/related connections
+      iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+      # Allow outbound traffic from VMs (virbr0) to anywhere
       iptables -I FORWARD -i virbr0 -j ACCEPT
-      iptables -I FORWARD -o virbr0 -j ACCEPT
     '';
   };
 
