@@ -1,11 +1,10 @@
 { pkgs, ... }:
 
-
 {
   programs.dconf.enable = true;
-  
+
   users.users.ezratweaver.extraGroups = [ "libvirtd" ];
-  
+
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
@@ -14,6 +13,7 @@
     spice-protocol
     win-virtio
     win-spice
+    libvirt-glib
   ];
 
   virtualisation = {
@@ -30,4 +30,3 @@
   };
   services.spice-vdagentd.enable = true;
 }
-
