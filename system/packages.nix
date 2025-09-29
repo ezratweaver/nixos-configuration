@@ -10,6 +10,8 @@
     config = {
       user.name = "ezratweaver";
       user.email = "ezratweaver@gmail.com";
+      push.autoSetupRemote = true;
+      pull.rebase = true;
     };
   };
 
