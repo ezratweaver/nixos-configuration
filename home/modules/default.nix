@@ -1,7 +1,8 @@
 {
   imports = [
     ./theme.nix
-    ./browser.nix
+    ./firefox.nix
     ./dotfiles.nix
   ];
 }
+

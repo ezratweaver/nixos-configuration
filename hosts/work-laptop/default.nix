@@ -11,6 +11,7 @@
     teams-for-linux
     awscli2
     s5cmd
+    powershell
   ];
 
   system.stateVersion = "25.05";
