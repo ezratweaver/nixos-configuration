@@ -42,8 +42,6 @@
     hyprpicker # color picker
     nwg-displays # display settings
 
-    overskride # bluetooth GUI
-
     # System utilities for Hyprland
     brightnessctl
     pamixer
