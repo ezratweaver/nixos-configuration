@@ -70,6 +70,7 @@
             --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
         '';
     }))
+    vscodium
 
     # Terminal utilities
     fzf
