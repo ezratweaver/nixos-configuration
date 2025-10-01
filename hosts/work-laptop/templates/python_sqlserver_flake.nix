@@ -29,7 +29,10 @@
         ];
 
         shellHook = ''
+          export MSSQLDRIVER=${pkgs.unixODBCDrivers.msodbcsql18}/lib/libmsodbcsql-18.1.so.1.1
+
           echo "✅ Dev shell ready: Python + unixODBC + msodbcsql18 + pandas/sqlalchemy/pyodbc"
+          echo "MSSQLDRIVER available as env 'MSSQLDRIVER'"
         '';
       };
     };
