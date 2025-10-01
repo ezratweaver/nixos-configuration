@@ -22,17 +22,6 @@ if status is-interactive
     alias ll='eza -al --icons'
     alias l='eza -a --tree --level=1 --icons'
 
-    function nxreb
-        source ~/nixos-configuration/.env
-        sudo nixos-rebuild switch --flake ~/nixos-configuration/#$NIX_HOST
-    end
-
-    function nxupdate
-        source ~/nixos-configuration/.env
-        sudo nix flake update
-        sudo nixos-rebuild switch --flake ~/nixos-configuration/#$NIX_HOST
-    end
-
     # NixOS aliases
     alias nxs="nix-search"
     alias nxrollback="sudo nixos-rebuild switch --rollback"
@@ -40,34 +29,9 @@ if status is-interactive
     alias vnx="nvim ~/nixos-configuration/configuration.nix"
     alias nxdir="cd ~/nixos-configuration/"
 
-    function vfzf
-        set cols (tput cols)
-        if test $cols -gt 160
-            # Wide enough for preview (80+ cols for fzf + 80+ for preview)
-            set file (fzf --height=70% --layout=reverse --info=inline --border --margin=1 --padding=1 \
-            --preview 'bat --color=always --style=header,grid --line-range :300 {}' \
-            --preview-window 'right:50%:wrap')
-        else
-            # Too narrow, no preview
-            set file (fzf --height=70% --layout=reverse --info=inline --border --margin=1 --padding=1)
-        end
-
-        if test -n "$file"
-            $EDITOR $file
-        end
-    end
-
     # Navigation aliases and functions
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
     alias cdi="zi"
-
-    function cd --argument dir
-        if [ dir = "" ]
-            z $HOME
-        else
-            z $dir
-        end
-    end
 
     # Git aliases
     alias gs="git status"
@@ -86,72 +50,6 @@ if status is-interactive
     alias grs="git restore --staged ."
 
     zoxide init fish | source
-
-    function __fish_command_not_found_handler --on-event fish_command_not_found
-        if command -v nix-shell &>/dev/null
-            echo "'$argv[1]' not found."
-        end
-    end
-
-    function nix-shell --wraps='nix-shell' --description 'Enter nix-shell with fish as shell'
-        set -lx NIX_SHELL $argv
-        command nix-shell $argv --run 'env | grep PATH > /tmp/nixpath; fish'
-    end
-
-    function nix-develop --wraps='nix' --description 'Enter nix develop with fish as shell'
-        nix develop $argv --command fish
-    end
-
-    function make-flake
-        set flakefile flake.nix
-        if test -e $flakefile
-            echo "$flakefile already exists. Aborting." >&2
-            return 1
-        end
-
-        cp ~/nixos-configuration/templates/flake.nix $flakefile
-        echo "Created $flakefile from ~/nixos-configuration/templates/flake.nix in (pwd)"
-    end
-
-    function fish_prompt
-        # Capture last exit status
-        set -l last_status $status
-
-        # Check if we're in a nix shell or nix develop environment
-        set -l nix_indicator ""
-        if test -n "$IN_NIX_SHELL"
-            if test "$IN_NIX_SHELL" = impure
-                set nix_indicator (set_color blue)"[nix-shell]"(set_color normal)" "
-            else
-                set nix_indicator (set_color cyan)"[nix-shell:pure]"(set_color normal)" "
-            end
-        else if test -n "$NIX_BUILD_TOP"
-            set nix_indicator (set_color magenta)"[nix-develop]"(set_color normal)" "
-        end
-
-        # Git branch
-        set -l git_branch ""
-        if type -q git
-            set branch (git rev-parse --abbrev-ref HEAD 2>/dev/null)
-            if test $status -eq 0
-                set git_branch " "(set_color yellow)"($branch)"(set_color normal)
-            end
-        end
-
-        # Exit status indicator
-        set -l status_indicator ""
-        if test $last_status -ne 0
-            set status_indicator " "(set_color red)"[$last_status]"(set_color normal)
-        end
-
-        # Build prompt
-        echo -n $nix_indicator
-        echo -n (set_color white)(whoami)(set_color normal)" "
-        echo -n (set_color $fish_color_cwd)(prompt_pwd)(set_color normal)
-        echo -n $git_branch
-        echo -n $status_indicator
-        echo -n " \$ "
-    end
 
 end
 
