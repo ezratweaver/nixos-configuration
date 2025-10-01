@@ -35,5 +35,6 @@ function fish_prompt
     echo -n (set_color $fish_color_cwd)(prompt_pwd)(set_color normal)
     echo -n $git_branch
     echo -n $status_indicator
-    echo -n " \\$ "
+    echo -n " \$ "
 end
+
