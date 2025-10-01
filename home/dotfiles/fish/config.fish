@@ -55,7 +55,7 @@ if status is-interactive
     alias gsp="git stash; git pull"
     alias gcheck="git checkout"
     alias gr="git restore"
-    alias grs="git restore --staged ."
+    alias grs="git restore --staged"
 
     zoxide init fish | source
 
@@ -91,4 +91,3 @@ set -U fish_pager_color_description yellow\e\-i
 set -U fish_pager_color_prefix normal\e\-\-bold\e\-\-underline
 set -U fish_pager_color_progress brwhite\e\-\-background\=cyan
 set -U fish_pager_color_selected_background \-r
-
