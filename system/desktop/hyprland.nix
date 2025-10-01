@@ -26,7 +26,7 @@
   environment.systemPackages = with pkgs; [
     # Hyprland desktop apps
     kitty # terminal
-    rofi-wayland # application launcher
+    rofi # application launcher
     waybar # status bar
     hyprpaper # wallpaper
     nautilus # file manager
