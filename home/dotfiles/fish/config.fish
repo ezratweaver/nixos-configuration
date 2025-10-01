@@ -30,6 +30,14 @@ if status is-interactive
     alias nxdir="cd ~/nixos-configuration/"
 
     # Navigation aliases and functions
+    function cd --argument dir
+        if [ dir = "" ]
+            z $HOME
+        else
+            z $dir
+        end
+    end
+
     alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
     alias cdi="zi"
 
@@ -83,3 +91,4 @@ set -U fish_pager_color_description yellow\e\-i
 set -U fish_pager_color_prefix normal\e\-\-bold\e\-\-underline
 set -U fish_pager_color_progress brwhite\e\-\-background\=cyan
 set -U fish_pager_color_selected_background \-r
+
