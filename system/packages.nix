@@ -29,7 +29,7 @@
     # Dev tools
     git
     vim
-    neovim
+    unstable.neovim
     nodejs
     nodePackages.npm
     (python313.withPackages (
