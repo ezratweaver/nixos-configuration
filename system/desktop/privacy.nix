@@ -3,12 +3,14 @@
 {
 
   # Enable mullvad service
-  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.pkgs2505.mullvad-vpn;
+  };
 
   environment.systemPackages = with pkgs; [
     # Mullvad vpn packages
     mullvad
-    mullvad-vpn
 
     openvpn
 
@@ -20,6 +22,5 @@
     tor
     tor-browser
   ];
-
 
 }
