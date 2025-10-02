@@ -69,7 +69,6 @@
       '';
     }))
     vscodium
-    element-desktop
 
     # Terminal utilities
     fzf

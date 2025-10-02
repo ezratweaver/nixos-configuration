@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  # Enable gnome keyring
+  # check @/home/dotfiles/hypr/programs.conf for exec statement to run
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
+  programs.seahorse.enable = true;
 
   # Enable mullvad service
   services.mullvad-vpn = {
@@ -21,6 +26,9 @@
     # Tor
     tor
     tor-browser
+
+    element-desktop
+    simplex-chat-desktop
   ];
 
 }
