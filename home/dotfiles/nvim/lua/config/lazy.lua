@@ -13,7 +13,14 @@ vim.g.omni_sql_no_default_maps = 1
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { 
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins", 
+      
+      opts = {
+        news = { lazyvim = false },
+      }, 
+    },
     -- import/override with your plugins
     { import = "plugins" },
     {
