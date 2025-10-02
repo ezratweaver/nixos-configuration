@@ -8,8 +8,8 @@
 
     # Home Manager
     home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs-2505";
     };
 
     # AI Tools
@@ -27,14 +27,14 @@
     let
       # Configuration
       system = "x86_64-linux";
-      nixpkgs = nixpkgs-unstable;
+      nixpkgs = nixpkgs-2505;
       username = "ezratweaver";
 
       # Common overlays
       overlays = [
         (final: prev: {
           # Access to stable packages via pkgs.pkgs2505
-          pkgs2505 = import nixpkgs-2505 {
+          unstable = import nixpkgs-unstable {
             system = prev.system;
             config.allowUnfree = true;
           };
@@ -56,7 +56,10 @@
       nixpkgsConfig = {
         nixpkgs.config.allowUnfree = true;
         nixpkgs.overlays = overlays;
-        nix.settings.experimental-features = [ "nix-command" "flakes" ];
+        nix.settings.experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
       };
 
       # System builder function

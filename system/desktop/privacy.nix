@@ -5,7 +5,7 @@
   # Enable mullvad service
   services.mullvad-vpn = {
     enable = true;
-    package = pkgs.pkgs2505.mullvad-vpn;
+    package = pkgs.mullvad-vpn;
   };
 
   environment.systemPackages = with pkgs; [

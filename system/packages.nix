@@ -63,14 +63,13 @@
     vlc
     onlyoffice-bin
     (postman.overrideAttrs (oldAttrs: {
-      postInstall =
-        (oldAttrs.postInstall or "")
-        + ''
-          wrapProgram $out/bin/postman \
-            --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
-        '';
+      postInstall = (oldAttrs.postInstall or "") + ''
+        wrapProgram $out/bin/postman \
+          --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
+      '';
     }))
     vscodium
+    element-desktop
 
     # Terminal utilities
     fzf
