@@ -18,7 +18,6 @@
 
   outputs =
     {
-      self,
       nixpkgs-unstable,
       nixpkgs-2505,
       nix-ai-tools,
@@ -73,32 +72,6 @@
             home-manager.nixosModules.home-manager
             homeManagerConfig
             nixpkgsConfig
-
-            (
-              { lib, ... }:
-              let
-                rev = self.rev or "dirty";
-
-                shortRev = builtins.substring 0 7 rev;
-
-                commitMsg =
-                  builtins.tryEval
-                    (builtins.readFile (
-                      builtins.toString (
-                        nixpkgs.runCommand "git-subject" { buildInputs = [ nixpkgs.git ]; } ''
-                          cd ${toString ./.}
-                          git log -1 --pretty=%s > $out
-                        ''
-                      )
-                    )).value or "local build";
-
-                buildTime = lib.formatTime "%Y-%m-%d %H:%M" builtins.currentTime;
-              in
-              {
-                boot.loader.grub.configurationName = "[${shortRev}] ${commitMsg} (${buildTime})";
-              }
-            )
-
           ];
         };
     in
