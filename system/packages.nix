@@ -69,7 +69,6 @@
       '';
     }))
     vscodium
-    stremio
 
     # Terminal utilities
     fzf
