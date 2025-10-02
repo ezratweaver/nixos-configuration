@@ -8,6 +8,19 @@
   programs.hyprland.enable = true;
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
 
+  # Greeter
+  services.greetd = {
+    enable = true;
+    # tuigreet = TUI greeter in the console
+    settings.default_session = {
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+      user = "greeter";
+    };
+  };
+
+  security.pam.services.greetd.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
+
   # XDG portals
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
