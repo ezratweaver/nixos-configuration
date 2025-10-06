@@ -20,7 +20,26 @@ if status is-interactive
     # File listing aliases
     alias ls='eza -a --icons'
     alias ll='eza -al --icons'
-    alias l='eza -a --tree --level=1 --icons'
+
+    function l
+        set level 1
+        set args
+
+        while test (count $argv) -gt 0
+            switch $argv[1]
+                case -l
+                    if test (count $argv) -ge 2
+                        set level $argv[2]
+                        set argv $argv[3..-1]
+                        continue
+                    end
+            end
+            set args $args $argv[1]
+            set argv $argv[2..-1]
+        end
+
+        eza -a --tree --level=$level --icons $args
+    end
 
     # NixOS aliases
     alias nxs="nix-search"
