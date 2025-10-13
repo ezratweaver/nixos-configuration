@@ -68,6 +68,7 @@
           --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
       '';
     }))
+    blender
 
     # Terminal utilities
     fzf
@@ -91,6 +92,9 @@
     btop
     postgresql
     visidata
+    p7zip
+    unrar
+    file-roller
   ];
 
 }
