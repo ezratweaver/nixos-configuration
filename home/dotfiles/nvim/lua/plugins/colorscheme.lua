@@ -1,14 +1,18 @@
 return {
   {
-    "bluz71/vim-moonfly-colors",
-    config = function()
-      vim.g.moonflyTransparent = true
-    end,
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "moonfly",
+      colorscheme = "tokyonight-moon",
     },
   },
 }
