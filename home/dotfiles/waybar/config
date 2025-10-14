@@ -3,6 +3,9 @@
     "position": "top",
     "height": 24,
     "spacing": 5,
+    "margin-top": 4,
+    "margin-left": 6,
+    "margin-right": 6,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],

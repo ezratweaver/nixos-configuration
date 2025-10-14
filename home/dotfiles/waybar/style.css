@@ -12,6 +12,13 @@
 window#waybar {
   color: @foreground;
   background: @background;
+  border-radius: 22px;
+}
+
+#workspaces button:hover {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: none;
 }
 
 #workspaces button {
