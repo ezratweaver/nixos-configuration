@@ -17,6 +17,7 @@
       bookmarks = [
         "file://${config.xdg.userDirs.documents}"
         "file://${config.xdg.userDirs.download}"
+        "file:///home/ezratweaver/Code"
       ];
     };
   };
@@ -38,4 +39,3 @@
     };
   };
 }
-
