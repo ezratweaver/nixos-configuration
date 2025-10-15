@@ -73,5 +73,14 @@
     font-awesome
 
     gnome-calculator
+
+    gvfs # for mounting mtp and usb, typicall included in gnome
   ];
+
+  users.users.ezratweaver.extraGroups = [ "plugdev" ];
+
+  # Permissions for usb and mtp
+  security.polkit.enable = true;
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
 }
