@@ -57,7 +57,7 @@ if status is-interactive
         end
     end
 
-    alias cdf='find . -type d -print | fzf'
+    alias cdf='cd $(find . -type d -print | fzf)'
     alias cdi="zi"
 
     alias fzf='fzf | wl-copy'
