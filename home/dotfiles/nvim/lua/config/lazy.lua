@@ -20,7 +20,7 @@ require("lazy").setup({
       opts = {
         news = { lazyvim = false },
       }, 
-    },
+    }, 
     -- import/override with your plugins
     { import = "plugins" },
     {
