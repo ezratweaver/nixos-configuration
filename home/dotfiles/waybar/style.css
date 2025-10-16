@@ -1,6 +1,6 @@
 @define-color foreground #eeeeee;
 @define-color foreground-inactive #aaaaaa;
-@define-color background rgba(17, 17, 27, 0.2);
+@define-color background rgba(27, 29, 43, 0.2);
 
 * {
   font-family: JetBrainsMono Nerd Font;
