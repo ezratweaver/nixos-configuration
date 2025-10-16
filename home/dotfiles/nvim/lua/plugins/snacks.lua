@@ -5,7 +5,7 @@ return {
       win = {
         position = "float",
         border = "rounded",
-      },
+      }
     },
     styles = {
       float = {

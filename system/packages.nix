@@ -55,6 +55,9 @@
     black
     nixfmt-rfc-style
 
+    # Lsps
+    lua-language-server # The executable mason provides is not compatible with nixos
+
     # Desktop apps
     dbeaver-bin
     azuredatastudio
