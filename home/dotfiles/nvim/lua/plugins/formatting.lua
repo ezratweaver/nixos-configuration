@@ -1,3 +1,5 @@
+local lua_ls_path = vim.fn.trim(vim.fn.system("which stylua")) -- Find the NixOS linked executable for the lua formatter
+
 return {
   {
     "stevearc/conform.nvim",
@@ -22,6 +24,7 @@ return {
         ["handlebars"] = { "prettierd" },
         ["nix"] = { "nixfmt-rfc-style" },
         ["python"] = { "black" },
+        ["lua"] = { lua_ls_path }
       },
     },
   },

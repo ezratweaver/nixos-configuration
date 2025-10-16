@@ -54,6 +54,7 @@
     prettierd
     black
     nixfmt-rfc-style
+    stylua
 
     # Lsps
     lua-language-server # The executable mason provides is not compatible with nixos
