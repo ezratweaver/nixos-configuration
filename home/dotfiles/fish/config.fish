@@ -57,8 +57,10 @@ if status is-interactive
         end
     end
 
-    alias cdf='cd ~ && cd $(find . -type d -print | fzf)'
+    alias cdf='find . -type d -print | fzf'
     alias cdi="zi"
+
+    alias fzf='fzf | wl-copy'
 
     # Git aliases
     alias gs="git status"
