@@ -57,13 +57,15 @@ if status is-interactive
         end
     end
 
-    alias cdf='cd $(find . -type d -print | fzf)'
+    alias cdf='cd (find . -type d -print | command fzf)'
     alias cdi="zi"
 
-    function fzf
-        set selection (command fzf)
-        echo $selection | wl-copy
-        echo $selection
+    function fzf --wraps 'command fzf'
+        set selection (command fzf $argv)
+        if test -n "$selection"
+            echo $selection | wl-copy
+            echo $selection
+        end
     end
 
     # Git aliases
