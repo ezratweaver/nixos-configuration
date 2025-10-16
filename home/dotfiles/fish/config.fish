@@ -60,7 +60,11 @@ if status is-interactive
     alias cdf='cd $(find . -type d -print | fzf)'
     alias cdi="zi"
 
-    alias fzf='fzf | wl-copy'
+    function fzf
+        set selection (command fzf)
+        echo $selection | wl-copy
+        echo $selection
+    end
 
     # Git aliases
     alias gs="git status"
