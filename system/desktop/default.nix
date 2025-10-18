@@ -5,5 +5,6 @@
     ./hyprland.nix
     ./virtualization.nix
     ./privacy.nix
+    ./flatpak.nix
   ];
 }

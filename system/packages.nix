@@ -2,8 +2,6 @@
 {
   programs.appimage.enable = true;
 
-  services.flatpak.enable = true;
-
   # Git config
   programs.git = {
     enable = true;
