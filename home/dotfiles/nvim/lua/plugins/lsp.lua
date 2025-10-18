@@ -17,19 +17,13 @@ return {
           cmd = { lua_ls_path }, -- dynamically using the path found by which
           settings = {
             Lua = {
-              runtime = {
-                version = "LuaJIT",
-              },
               workspace = {
                 checkThirdParty = false,
                 library = {
                   vim.fn.expand("$VIMRUNTIME/lua"),   -- built-in Neovim runtime
-                  vim.fn.stdpath("config") .. "/lua", -- your config files
+                  vim.fn.stdpath("config") .. "/lua", -- config files
                   vim.fn.stdpath("data") .. "/lazy",  -- all Lazy-installed plugins
                 },
-              },
-              diagnostics = {
-                globals = { "vim" }, -- avoid "undefined global vim"
               },
             },
           },
