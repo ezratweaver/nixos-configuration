@@ -22,7 +22,8 @@ return {
         "fish",
         "sql",
         "hyprlang",
-        "nix"
+        "nix",
+        "blueprint"
       },
     },
   },
