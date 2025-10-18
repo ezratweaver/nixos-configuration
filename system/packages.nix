@@ -58,6 +58,7 @@
 
     # Lsps
     lua-language-server # The executable mason provides is not compatible with nixos
+    blueprint-compiler # Include the blueprint LSP for gtk .blp files
 
     # Desktop apps
     dbeaver-bin

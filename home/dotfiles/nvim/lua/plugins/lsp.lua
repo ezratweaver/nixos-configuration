@@ -30,6 +30,7 @@ return {
         },
         ts_ls = {},
         powershell_es = {},
+        blueprint_ls = {}
       },
     },
   },
