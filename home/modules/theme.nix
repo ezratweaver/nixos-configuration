@@ -3,6 +3,7 @@
 {
   gtk = {
     enable = true;
+
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
@@ -17,6 +18,10 @@
         "file://${config.xdg.userDirs.download}"
         "file:///home/ezratweaver/Code"
       ];
+    };
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
   };
 
