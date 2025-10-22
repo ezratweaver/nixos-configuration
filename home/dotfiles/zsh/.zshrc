@@ -137,7 +137,7 @@ nix-develop() {
 
 nix-shell() {
     export NIX_SHELL="$@"
-    command nix-shell "$@" --run 'env | grep PATH > /tmp/nixpath; zsh'
+    command nix-shell "$@" --run "env SHELL=$(which zsh) zsh --login"
 }
 
 nxreb() {
