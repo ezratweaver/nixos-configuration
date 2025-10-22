@@ -132,7 +132,7 @@ make-flake() {
 }
 
 nix-develop() {
-    nix develop "$@" --command zsh
+    nix develop "$@" --command env SHELL=$(which zsh) zsh --login
 }
 
 nix-shell() {
