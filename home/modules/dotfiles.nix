@@ -12,11 +12,7 @@
     };
 
     ".zshrc" = {
-      source = ../dotfiles/zsh/zshrc;
-    };
-
-    ".p10k.zsh" = {
-      source = ../dotfiles/zsh/p10k.zsh;
+      source = ../dotfiles/zsh/.zshrc;
       recursive = true;
     };
 
@@ -41,3 +37,4 @@
     };
   };
 }
+
