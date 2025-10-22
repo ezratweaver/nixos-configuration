@@ -18,6 +18,12 @@
         enable = true;
       };
 
+      shellInit = ''
+        # Environment variables
+        export EDITOR=nvim
+        export PATH="$HOME/.local/bin:$PATH" 
+      '';
+
       shellAliases = {
         # General aliases
         c = "clear";

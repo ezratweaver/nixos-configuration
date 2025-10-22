@@ -1,36 +1,6 @@
-# User-specific shell configuration
-
-# Environment variables
-export EDITOR=nvim
-export PATH="$HOME/.local/bin:$PATH"
-
 # Unalias conflicting commands
 unalias l 2>/dev/null
 unalias ls 2>/dev/null
-
-# Tree listing function with level parameter
-l() {
-    local level=1
-    local args=()
-    
-    while [[ $# -gt 0 ]]; do
-        case $1 in
-            -l)
-                if [[ $# -ge 2 ]]; then
-                    level=$2
-                    shift 2
-                    continue
-                fi
-                ;;
-            *)
-                args+=("$1")
-                shift
-                ;;
-        esac
-    done
-    
-    eza -a --tree --level=$level --icons "${args[@]}"
-}
 
 # Custom prompt function
 prompt_setup() {
@@ -72,6 +42,30 @@ prompt_setup() {
 
 precmd() {
     prompt_setup
+}
+
+# Tree listing function with level parameter
+l() {
+    local level=1
+    local args=()
+    
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -l)
+                if [[ $# -ge 2 ]]; then
+                    level=$2
+                    shift 2
+                    continue
+                fi
+                ;;
+            *)
+                args+=("$1")
+                shift
+                ;;
+        esac
+    done
+    
+    eza -a --tree --level=$level --icons "${args[@]}"
 }
 
 # Enhanced navigation functions
