@@ -2,11 +2,21 @@
 
 {
   # Shell configuration
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs = {
     zsh = {
       enable = true;
       autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
+      enableCompletion = true;
+
+      oh-my-zsh = {
+        enable = true;
+      };
 
       shellAliases = {
         # General aliases

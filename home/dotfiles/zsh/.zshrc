@@ -1,8 +1,5 @@
 # User-specific shell configuration
 
-# Initialize zoxide
-eval "$(zoxide init zsh)"
-
 # Environment variables
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
