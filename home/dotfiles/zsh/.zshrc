@@ -69,6 +69,50 @@ alias grs="git restore --staged"
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
+# Custom prompt function
+setopt PROMPT_SUBST
+
+prompt_setup() {
+    # Capture last exit status
+    local last_status=$?
+    
+    # Check if we're in a nix shell or nix develop environment
+    local nix_indicator=""
+    if [[ -n "$IN_NIX_SHELL" ]]; then
+        if [[ "$IN_NIX_SHELL" == "impure" ]]; then
+            nix_indicator="%F{blue}[nix-shell]%f "
+        else
+            nix_indicator="%F{cyan}[nix-shell:pure]%f "
+        fi
+    elif [[ -n "$NIX_BUILD_TOP" ]]; then
+        nix_indicator="%F{magenta}[nix-develop]%f "
+    fi
+    
+    # Git branch
+    local git_branch=""
+    if command -v git >/dev/null 2>&1; then
+        if git rev-parse --git-dir >/dev/null 2>&1; then
+            local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+            if [[ -n "$branch" ]]; then
+                git_branch=" %F{yellow}($branch)%f"
+            fi
+        fi
+    fi
+    
+    # Exit status indicator
+    local status_indicator=""
+    if [[ $last_status -ne 0 ]]; then
+        status_indicator=" %F{red}[$last_status]%f"
+    fi
+    
+    # Build prompt
+    PROMPT="${nix_indicator}%F{white}%n%f %F{cyan}%~%f${git_branch}${status_indicator} $ "
+}
+
+precmd() {
+    prompt_setup
+}
+
 # Zsh options
 setopt AUTO_CD              # Change directory without typing cd
 setopt HIST_VERIFY         # Show command with history expansion to user before running it
@@ -77,16 +121,6 @@ setopt HIST_IGNORE_SPACE   # Don't record commands that start with space
 setopt HIST_IGNORE_DUPS    # Don't record duplicates
 setopt CORRECT             # Try to correct spelling of commands
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word
-
-# Enable completions
-autoload -Uz compinit
-compinit
-
-# Case insensitive completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-# Colorize completions
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # History settings
 HISTSIZE=10000

@@ -14,12 +14,14 @@
   };
 
   # Shell configuration
-  programs.zsh.enable = true;
-  programs.bash.interactiveShellInit = ''
-    if [[ $- == *i* ]] && [[ -z "$ZSH_VERSION" ]] && command -v zsh >/dev/null 2>&1; then
-      exec zsh
-    fi
-  '';
+  programs = {
+    zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+    };
+  };
+  users.defaultUserShell = pkgs.zsh;
+  users.users.ezratweaver.shell = pkgs.zsh;
 
   virtualisation.docker.enable = true;
 
