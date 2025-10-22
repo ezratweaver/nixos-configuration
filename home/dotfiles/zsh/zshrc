@@ -2,47 +2,34 @@
 unalias l 2>/dev/null
 unalias ls 2>/dev/null
 
-# Custom prompt function
-prompt_setup() {
-    # Capture last exit status
-    local last_status=$?
-    
-    # Check if we're in a nix shell or nix develop environment
-    local nix_indicator=""
-    if [[ -n "$IN_NIX_SHELL" ]]; then
-        if [[ "$IN_NIX_SHELL" == "impure" ]]; then
-            nix_indicator="%F{blue}[nix-shell]%f "
-        else
-            nix_indicator="%F{cyan}[nix-shell:pure]%f "
-        fi
-    elif [[ -n "$NIX_BUILD_TOP" ]]; then
-        nix_indicator="%F{magenta}[nix-develop]%f "
-    fi
-    
-    # Git branch
-    local git_branch=""
-    if command -v git >/dev/null 2>&1; then
-        if git rev-parse --git-dir >/dev/null 2>&1; then
-            local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-            if [[ -n "$branch" ]]; then
-                git_branch=" %F{yellow}($branch)%f"
-            fi
-        fi
-    fi
-    
-    # Exit status indicator
-    local status_indicator=""
-    if [[ $last_status -ne 0 ]]; then
-        status_indicator=" %F{red}[$last_status]%f"
-    fi
-    
-    # Build prompt
-    PROMPT="${nix_indicator}%F{white}%n%f %F{cyan}%~%f${git_branch}${status_indicator} $ "
-}
+# Ensure zplug is installed
+if [ ! -d "$HOME/.zplug" ]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+fi
+export ZPLUG_USE_CACHE=true
+source ~/.zplug/init.zsh
 
-precmd() {
-    prompt_setup
-}
+# Enable completions
+autoload -Uz compinit
+compinit -C
+
+# Declare plugins
+zplug "hlissner/zsh-autopair"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+
+# Install missing plugins automatically
+if ! zplug check --verbose; then
+  echo "Installing missing plugins..."
+  zplug install
+fi
+
+# Load p10k config
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# Load everything
+zplug load
 
 # Tree listing function with level parameter
 l() {
