@@ -6,5 +6,6 @@
     ./virtualization.nix
     ./privacy.nix
     ./flatpak.nix
+    ./shell.nix
   ];
 }
