@@ -11,8 +11,8 @@
       recursive = true;
     };
 
-    ".config/fish/" = {
-      source = ../dotfiles/fish;
+    ".zshrc" = {
+      source = ../dotfiles/zsh/.zshrc;
       recursive = true;
     };
 
@@ -37,3 +37,4 @@
     };
   };
 }
+

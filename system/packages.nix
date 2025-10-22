@@ -14,10 +14,10 @@
   };
 
   # Shell configuration
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
   programs.bash.interactiveShellInit = ''
-    if [[ $- == *i* ]] && [[ -z "$FISH_VERSION" ]] && command -v fish >/dev/null 2>&1; then
-      exec fish
+    if [[ $- == *i* ]] && [[ -z "$ZSH_VERSION" ]] && command -v zsh >/dev/null 2>&1; then
+      exec zsh
     fi
   '';
 
@@ -77,7 +77,7 @@
     fzf
     ripgrep
     fd
-    fish
+    zsh
     zoxide
     eza
     claude-code
