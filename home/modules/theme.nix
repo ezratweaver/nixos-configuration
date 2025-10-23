@@ -22,6 +22,8 @@
 
   };
 
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
+
   qt = {
     enable = true;
     platformTheme.name = "adwaita";
