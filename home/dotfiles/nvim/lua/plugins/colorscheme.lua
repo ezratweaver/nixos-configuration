@@ -1,6 +1,6 @@
 return {
   {
-    "navarasu/onedark.nvim",
+    "olimorris/onedarkpro.nvim"
   },
   {
     "LazyVim/LazyVim",
