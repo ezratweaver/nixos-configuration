@@ -24,7 +24,13 @@
       shellInit = ''
         # Environment variables
         export EDITOR=nvim
-        export PATH="$HOME/.local/bin:$PATH" 
+        export PATH="$HOME/.local/bin:$PATH"
+      '';
+
+      interactiveShellInit = ''
+        # Load zsh-autopair
+        source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
+        autopair-init
       '';
 
       shellAliases = {
@@ -89,5 +95,6 @@
     zsh
     zoxide
     eza
+    zsh-autopair
   ];
 }
