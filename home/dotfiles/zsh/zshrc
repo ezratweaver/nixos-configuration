@@ -2,6 +2,9 @@
 unalias l 2>/dev/null
 unalias ls 2>/dev/null
 
+
+
+
 # Custom prompt function
 prompt_setup() {
     # Capture last exit status

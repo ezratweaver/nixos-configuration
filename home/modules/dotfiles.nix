@@ -12,7 +12,7 @@
     };
 
     ".zshrc" = {
-      source = ../dotfiles/zsh/.zshrc;
+      source = ../dotfiles/zsh/zshrc;
       recursive = true;
     };
 
@@ -37,4 +37,3 @@
     };
   };
 }
-
