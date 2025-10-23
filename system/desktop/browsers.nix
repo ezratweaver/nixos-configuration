@@ -58,8 +58,8 @@ in
             id = "mnjggcdmjocbbbhaepdhchncahnbgone";
           }
           {
-            name = "Tokyo Night Storm Theme";
-            id = "pgbjifpikialeahbdendkjioeafbmfkn";
+            name = "Nord Theme";
+            id = "abehfkkfjlplnjadfcjiflnejblfmmp";
           }
           {
             name = "Uninternet";
