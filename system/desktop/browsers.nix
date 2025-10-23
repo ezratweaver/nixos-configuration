@@ -62,8 +62,8 @@ in
             id = "pgbjifpikialeahbdendkjioeafbmfkn";
           }
           {
-            name = "Minimal Youtube";
-            id = "imnffafnaoooaedkhappfhomnnpigogk";
+            name = "Uninternet";
+            id = "ihgeijoonjmdfkamhpgoedplnmbencgd";
           }
           {
             name = "Remove Youtube Shorts";
