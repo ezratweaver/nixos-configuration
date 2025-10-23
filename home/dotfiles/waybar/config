@@ -29,7 +29,7 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %I:%M %p}",
+        "format": "{:%m/%d/%Y | %I:%M %p}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
             "mode": "month",
