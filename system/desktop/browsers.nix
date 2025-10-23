@@ -59,7 +59,7 @@ in
           }
           {
             name = "Nord Theme";
-            id = "abehfkkfjlplnjadfcjiflnejblfmmp";
+            id = "abehfkkfjlplnjadfcjiflnejblfmmpj";
           }
           {
             name = "Uninternet";
