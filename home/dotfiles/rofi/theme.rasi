@@ -1,11 +1,11 @@
 * {
-    bg-col: #1a1b26;
-    bg-col-light: #24283b;
-    border-col: #414868;
-    selected-col: #c0caf5;
-    fg-col: #c0caf5;
-    fg-col-selected: #1a1b26;
-    accent-col: #7aa2f7;
+    bg-col: #141414;
+    bg-col-light: #2a2a2a;
+    border-col: #2a2a2a;
+    selected-col: #2a2a2a;
+    fg-col: #d0d0d0;
+    fg-col-selected: #ffffff;
+    accent-col: #ffffff;
     width: 600;
     height: 500;
     font: "JetBrains Mono 12";
