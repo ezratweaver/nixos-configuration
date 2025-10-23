@@ -16,6 +16,9 @@
 
       ohMyZsh = {
         enable = true;
+        plugins = [
+          "gitfast"
+        ];
       };
 
       shellInit = ''
