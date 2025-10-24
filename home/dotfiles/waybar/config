@@ -90,7 +90,7 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "hyprctl dispatch exec '[float; center]' blueman-manager"
+        "on-click": "hyprctl dispatch exec '[float; center]' com.eweaver.adw_bluetooth"
     },
 
     "tray": {
