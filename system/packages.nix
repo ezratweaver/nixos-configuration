@@ -13,7 +13,6 @@
     };
   };
 
-
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -65,6 +64,7 @@
       '';
     }))
     blender
+    obs-studio
 
     # Terminal utilities
     fzf
