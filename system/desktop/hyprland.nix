@@ -74,6 +74,8 @@
 
     gnome-calculator
 
+    adw-bluetooth
+
     gvfs # for mounting mtp and usb, typicall included in gnome
   ];
 

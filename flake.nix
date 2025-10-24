@@ -14,6 +14,8 @@
 
     # AI Tools
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
+
+    adw-bluetooth.url = "github:ezratweaver/adwaita-bluetooth";
   };
 
   outputs =
@@ -22,6 +24,7 @@
       nixpkgs-2505,
       nix-ai-tools,
       home-manager,
+      adw-bluetooth,
       ...
     }:
     let
@@ -41,6 +44,9 @@
 
           # AI tools
           aiTools = nix-ai-tools.packages.${prev.system};
+
+          # Adwaita bluetooth
+          adw-bluetooth = adw-bluetooth.packages.${prev.system}.default;
         })
       ];
 
