@@ -18,6 +18,7 @@
         enable = true;
         plugins = [
           "gitfast"
+          "ssh-agent"
         ];
       };
 
