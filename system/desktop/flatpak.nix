@@ -35,4 +35,8 @@ in
       ${pkgs.flatpak}/bin/flatpak update -y
     '';
   };
+
+  environment.systemPackages = with pkgs; [
+    flatpak-builder # For developing with flatpaks
+  ];
 }
