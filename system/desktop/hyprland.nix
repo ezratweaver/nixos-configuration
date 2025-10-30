@@ -60,7 +60,6 @@
     pamixer
     pavucontrol
     playerctl
-    blueman
     iwgtk
     libadwaita # For libadwaite programs
 
