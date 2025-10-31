@@ -65,6 +65,7 @@
     }))
     blender
     obs-studio
+    jetbrains.datagrip
 
     # Terminal utilities
     fzf
