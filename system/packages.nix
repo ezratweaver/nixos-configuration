@@ -38,6 +38,7 @@
     cargo
     openssl
     docker
+    clang
 
     # Formatters
     nodePackages.prettier
@@ -49,6 +50,7 @@
     # Lsps
     lua-language-server # The executable mason provides is not compatible with nixos
     blueprint-compiler # Include the blueprint LSP for gtk .blp files
+    clang-tools
 
     # Desktop apps
     dbeaver-bin

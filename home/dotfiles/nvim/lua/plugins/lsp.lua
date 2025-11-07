@@ -1,4 +1,5 @@
 local lua_ls_path = vim.fn.trim(vim.fn.system("which lua-language-server")) -- Find the NixOS linked executable for the lua lsp
+local clang_path = vim.fn.trim(vim.fn.system("which clangd"))
 
 return {
   {
@@ -9,7 +10,9 @@ return {
       },
       servers = {
         prismals = {},
-        clangd = {},
+        clangd = {
+          cmd = { clang_path }
+        },
         sqlls = {},
         pyright = {},
         gopls = {},
@@ -30,7 +33,7 @@ return {
         },
         ts_ls = {},
         powershell_es = {},
-        blueprint_ls = {}
+        blueprint_ls = {},
       },
     },
   },
