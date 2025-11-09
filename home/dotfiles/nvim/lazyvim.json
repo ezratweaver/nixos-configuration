@@ -2,7 +2,8 @@
   "extras": [
     "lazyvim.plugins.extras.formatting.black",
     "lazyvim.plugins.extras.formatting.prettier",
-    "lazyvim.plugins.extras.util.gitui"
+    "lazyvim.plugins.extras.util.gitui",
+    "lazyvim.plugins.extras.ai.copilot"
   ],
   "news": {
     "NEWS.md": "10960"
