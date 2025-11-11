@@ -16,6 +16,7 @@
     # For peer to peer sharing of our favorite cat memes
     transmission_4
     transmission_4-gtk
+    qbittorrent
 
     # Tor
     tor
