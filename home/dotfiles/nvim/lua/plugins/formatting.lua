@@ -22,7 +22,7 @@ return {
         ["markdown.mdx"] = { "prettierd" },
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
-        ["nix"] = { "nixfmt-rfc-style" },
+        ["nix"] = { "nixfmt" },
         ["python"] = { "black" },
         ["lua"] = { lua_ls_path }
       },
