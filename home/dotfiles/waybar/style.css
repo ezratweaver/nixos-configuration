@@ -1,6 +1,6 @@
 @define-color foreground #eeeeee;
 @define-color foreground-inactive #aaaaaa;
-@define-color background rgba(27, 29, 43, 0.2);
+@define-color background rgba(27, 29, 43, 0);
 
 * {
   font-family: JetBrainsMono Nerd Font;
@@ -11,8 +11,7 @@
 
 window#waybar {
   color: @foreground;
-  background: @background;
-  border-radius: 22px;
+  background: transparent;
 }
 
 #workspaces button:hover {
