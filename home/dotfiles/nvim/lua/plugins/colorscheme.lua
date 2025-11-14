@@ -1,11 +1,11 @@
 return {
   {
-    "olimorris/onedarkpro.nvim"
+    'loctvl842/monokai-pro.nvim'
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "monokai-pro-spectrum",
     },
   },
 }
