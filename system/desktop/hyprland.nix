@@ -25,15 +25,7 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
-    pkgs.xdg-desktop-portal-hyprland
-    pkgs.xdg-desktop-portal-gnome
   ];
-
-  environment.etc."xdg-desktop-portal/hyprland-portals.conf".text = ''
-    [preferred]
-    default=hyprland;gtk
-    org.freedesktop.impl.portal.FileChooser=gnome
-  '';
 
   # Cursor theme configuration
   environment.sessionVariables = {
