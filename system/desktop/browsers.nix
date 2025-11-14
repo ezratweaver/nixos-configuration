@@ -58,10 +58,6 @@ in
             id = "mnjggcdmjocbbbhaepdhchncahnbgone";
           }
           {
-            name = "Nord Theme";
-            id = "abehfkkfjlplnjadfcjiflnejblfmmpj";
-          }
-          {
             name = "Uninternet";
             id = "ihgeijoonjmdfkamhpgoedplnmbencgd";
           }
