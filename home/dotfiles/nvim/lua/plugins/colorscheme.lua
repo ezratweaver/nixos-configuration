@@ -1,11 +1,12 @@
 return {
   {
-    'loctvl842/monokai-pro.nvim'
+    'loctvl842/monokai-pro.nvim',
+    'gmr458/vscode_modern_theme.nvim'
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-pro-spectrum",
+      colorscheme = "vscode_modern",
     },
   },
 }
