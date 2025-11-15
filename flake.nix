@@ -15,7 +15,7 @@
     # AI Tools
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
 
-    adw-bluetooth.url = "github:ezratweaver/adw-bluetooth";
+    adw-bluetooth.url = "github:ezratweaver/adw-bluetooth/develop";
   };
 
   outputs =
