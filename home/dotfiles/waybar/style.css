@@ -14,6 +14,10 @@ window#waybar {
   background: transparent;
 }
 
+#workspaces {
+  margin-left: 0.3em;
+}
+
 #workspaces button:hover {
   border-color: transparent;
   background: rgba(255, 255, 255, 0.1);
@@ -21,10 +25,13 @@ window#waybar {
 }
 
 #workspaces button {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#workspaces button.active {
   color: @foreground;
-  margin-left: 0.3em;
-  padding-right: 0.6em;
-  padding-left: 0.1em;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button.empty {
@@ -44,7 +51,7 @@ window#waybar {
 #network {
   padding-right: 0.9em;
   padding-left: 0.3em;
-  margin-right: 0.3em;
+  margin-right: 0.6em;
 }
 
 #bluetooth {
@@ -54,7 +61,7 @@ window#waybar {
 
 #tray {
   margin-right: 0.8em;
-  margin-left: 0.2em;
+  margin-left: -0.3em;
 }
 
 #wireplumber:hover,
