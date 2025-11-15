@@ -50,11 +50,6 @@
         "on-click": "hyprctl dispatch exec '[float; center]' pavucontrol"
     },
 
-    "backlight": {
-        "format": " {percent}%",
-        "scroll-step": 5
-    },
-
     "battery": {
         "interval": 1,
         "format": "{icon}  {capacity}%",

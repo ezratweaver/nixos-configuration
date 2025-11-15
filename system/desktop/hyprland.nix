@@ -49,6 +49,7 @@
     hyprshot # screenshots
     hyprpolkitagent # authentication agent
     swaynotificationcenter # notifications
+    avizo # brightness/volume notifications
     hyprlock # screen lock
     hypridle # idle management
     hyprpicker # color picker
