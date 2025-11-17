@@ -4,7 +4,7 @@
   "height": 36,
   "spacing": 5,
 
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["battery", "wireplumber", "bluetooth", "network", "tray"],
 
@@ -19,12 +19,6 @@
       "4": [],
       "5": [],
     },
-  },
-
-  "hyprland/window": {
-    "format": "> {}",
-    "max-length": 30, // truncate long titles
-    "separate-outputs": false, // keep single entry even with multi-monitor
   },
 
   "clock": {
