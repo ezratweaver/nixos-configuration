@@ -8,7 +8,16 @@
   networking.enableIPv6 = false;
 
   # Enable bluetooth
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+    };
+  };
 
   # Enable SSH
   services.openssh.enable = true;
