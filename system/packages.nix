@@ -68,6 +68,7 @@
     blender
     obs-studio
     jetbrains.datagrip
+    losslesscut-bin
 
     # Terminal utilities
     fzf
