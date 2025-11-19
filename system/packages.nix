@@ -70,6 +70,7 @@
     obs-studio
     jetbrains.datagrip
     losslesscut-bin
+    antigravity.google-antigravity
 
     # Terminal utilities
     fzf

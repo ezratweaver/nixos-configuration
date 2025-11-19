@@ -14,6 +14,7 @@
 
     # AI Tools
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
+    antigravity-nix.url = "github:jacopone/antigravity-nix";
 
     adw-bluetooth.url = "github:ezratweaver/adw-bluetooth/develop";
   };
@@ -23,6 +24,7 @@
       nixpkgs-unstable,
       nixpkgs-2505,
       nix-ai-tools,
+      antigravity-nix,
       home-manager,
       adw-bluetooth,
       ...
@@ -44,6 +46,7 @@
 
           # AI tools
           aiTools = nix-ai-tools.packages.${prev.system};
+          antigravity = antigravity-nix.packages.${prev.system};
 
           # Adwaita bluetooth
           adw-bluetooth = adw-bluetooth.packages.${prev.system}.default;
