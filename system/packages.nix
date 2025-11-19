@@ -56,6 +56,7 @@
     dbeaver-bin
     azuredatastudio
     discord
+    signal-desktop
     obsidian
     vlc
     onlyoffice-bin
