@@ -7,6 +7,5 @@
     ./privacy.nix
     ./flatpak.nix
     ./shell.nix
-    ./syncthing.nix
   ];
 }
