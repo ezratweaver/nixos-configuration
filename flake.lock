@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1763853467,
-        "narHash": "sha256-wPRYy1oKt/s4Jh5X41HuD3DlYJefx5Y9Kvv2ZfePXC0=",
+        "lastModified": 1764185357,
+        "narHash": "sha256-/gg5kKCVnu7nppvynZutDSMnBGkvLR1Q824WEC8nTtA=",
         "owner": "ezratweaver",
         "repo": "adw-bluetooth",
-        "rev": "0db647ab83836c79198ac894fcf9bd7421ae0cc9",
+        "rev": "ffbd58c2d334e99bd750881e63a0dd0b06fa7a24",
         "type": "github"
       },
       "original": {
