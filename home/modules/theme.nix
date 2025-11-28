@@ -23,10 +23,24 @@
 
   };
 
+  xdg.configFile."mimeapps.list".force = true;
+
   xdg.mimeApps = {
     enable = true;
 
     defaultApplications = {
+      # --- Web Browser (Brave) ---
+      "text/html" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/http" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/https" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/about" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/unknown" = [ "brave-browser.desktop" ];
+
+      # --- Image Viewer (Qimgv) ---
+      "image/png" = [ "qimgv.desktop" ];
+      "image/jpeg" = [ "qimgv.desktop" ];
+
+      # --- Video Player (Clapper) ---
       "video/x-matroska" = [ "com.github.rafostar.Clapper.desktop" ]; # .mkv
       "video/mp4" = [ "com.github.rafostar.Clapper.desktop" ]; # .mp4
       "video/quicktime" = [ "com.github.rafostar.Clapper.desktop" ]; # .mov
@@ -35,8 +49,13 @@
       "video/mpeg" = [ "com.github.rafostar.Clapper.desktop" ]; # .mpg, .mpeg
       "video/x-ms-wmv" = [ "com.github.rafostar.Clapper.desktop" ]; # .wmv
       "video/x-msvideo" = [ "com.github.rafostar.Clapper.desktop" ]; # .avi
-
       "video/any" = [ "com.github.rafostar.Clapper.desktop" ];
+
+      # --- Protocol Handlers ---
+      "x-scheme-handler/magnet" = [ "transmission-gtk.desktop" ];
+      "x-scheme-handler/anytype" = [ "anytype.desktop" ];
+      "x-scheme-handler/sgnl" = [ "signal.desktop" ];
+      "x-scheme-handler/signalcaptcha" = [ "signal.desktop" ];
     };
   };
 
