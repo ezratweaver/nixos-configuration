@@ -70,6 +70,7 @@
     obs-studio
     jetbrains.datagrip
     antigravity.google-antigravity
+    shotcut
 
     # Terminal utilities
     fzf
