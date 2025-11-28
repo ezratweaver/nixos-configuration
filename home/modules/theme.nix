@@ -23,6 +23,23 @@
 
   };
 
+  xdg.mimeApps = {
+    enable = true;
+
+    defaultApplications = {
+      "video/x-matroska" = [ "com.github.rafostar.Clapper.desktop" ]; # .mkv
+      "video/mp4" = [ "com.github.rafostar.Clapper.desktop" ]; # .mp4
+      "video/quicktime" = [ "com.github.rafostar.Clapper.desktop" ]; # .mov
+      "video/x-flv" = [ "com.github.rafostar.Clapper.desktop" ]; # .flv
+      "video/webm" = [ "com.github.rafostar.Clapper.desktop" ]; # .webm
+      "video/mpeg" = [ "com.github.rafostar.Clapper.desktop" ]; # .mpg, .mpeg
+      "video/x-ms-wmv" = [ "com.github.rafostar.Clapper.desktop" ]; # .wmv
+      "video/x-msvideo" = [ "com.github.rafostar.Clapper.desktop" ]; # .avi
+
+      "video/any" = [ "com.github.rafostar.Clapper.desktop" ];
+    };
+  };
+
   home.sessionVariables.GTK_THEME = "Adwaita-dark";
 
   qt = {
