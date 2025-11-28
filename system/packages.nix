@@ -71,6 +71,7 @@
     jetbrains.datagrip
     antigravity.google-antigravity
     shotcut
+    clapper
 
     # Terminal utilities
     fzf
