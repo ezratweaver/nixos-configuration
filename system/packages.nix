@@ -59,7 +59,7 @@
     signal-desktop
     obsidian
     vlc
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     (postman.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
         wrapProgram $out/bin/postman \

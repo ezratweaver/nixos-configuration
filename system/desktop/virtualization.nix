@@ -11,7 +11,7 @@
     spice
     spice-gtk
     spice-protocol
-    win-virtio
+    virtio-win
     win-spice
     libvirt-glib
   ];
@@ -22,8 +22,6 @@
       qemu = {
         package = pkgs.unstable.qemu_kvm;
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
     spiceUSBRedirection.enable = true;
