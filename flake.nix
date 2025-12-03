@@ -4,12 +4,12 @@
   inputs = {
     # Nixpkgs channels
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-2505.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-2511.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     # Home Manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
-      inputs.nixpkgs.follows = "nixpkgs-2505";
+      url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs-2511";
     };
 
     # AI Tools
@@ -22,7 +22,7 @@
   outputs =
     {
       nixpkgs-unstable,
-      nixpkgs-2505,
+      nixpkgs-2511,
       nix-ai-tools,
       antigravity-nix,
       home-manager,
@@ -32,13 +32,13 @@
     let
       # Configuration
       system = "x86_64-linux";
-      nixpkgs = nixpkgs-2505;
+      nixpkgs = nixpkgs-2511;
       username = "ezratweaver";
 
       # Common overlays
       overlays = [
         (final: prev: {
-          # Access to stable packages via pkgs.pkgs2505
+          # Access to unstable packages via pkgs.unstable.*
           unstable = import nixpkgs-unstable {
             system = prev.system;
             config.allowUnfree = true;
