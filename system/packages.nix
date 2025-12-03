@@ -81,7 +81,6 @@
     eza
     claude-code
     gemini-cli
-    aiTools.codex
     code-cursor
     tree
     unzip

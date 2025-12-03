@@ -38,7 +38,6 @@
         # General aliases
         c = "clear";
         cc = "claude";
-        codex = "codex -a untrusted -s workspace-write";
         nf = "neofetch";
         shutdown = "systemctl poweroff";
         v = "$EDITOR";
