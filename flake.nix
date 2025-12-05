@@ -40,16 +40,16 @@
         (final: prev: {
           # Access to unstable packages via pkgs.unstable.*
           unstable = import nixpkgs-unstable {
-            system = prev.system;
+            system = prev.stdenv.hostPlatform.system;
             config.allowUnfree = true;
           };
 
           # AI tools
-          aiTools = nix-ai-tools.packages.${prev.system};
-          antigravity = antigravity-nix.packages.${prev.system};
+          aiTools = nix-ai-tools.packages.${prev.stdenv.hostPlatform.system};
+          antigravity = antigravity-nix.packages.${prev.stdenv.hostPlatform.system};
 
           # Adwaita bluetooth
-          adw-bluetooth = adw-bluetooth.packages.${prev.system}.default;
+          adw-bluetooth = adw-bluetooth.packages.${prev.stdenv.hostPlatform.system}.default;
         })
       ];
 
