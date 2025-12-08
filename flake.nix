@@ -16,7 +16,7 @@
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
     antigravity-nix.url = "github:jacopone/antigravity-nix";
 
-    adw-bluetooth.url = "github:ezratweaver/adw-bluetooth/develop";
+    adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
   };
 
   outputs =
@@ -26,7 +26,7 @@
       nix-ai-tools,
       antigravity-nix,
       home-manager,
-      adw-bluetooth,
+      adw-bluetooth-git,
       ...
     }:
     let
@@ -49,7 +49,7 @@
           antigravity = antigravity-nix.packages.${prev.stdenv.hostPlatform.system};
 
           # Adwaita bluetooth
-          adw-bluetooth = adw-bluetooth.packages.${prev.stdenv.hostPlatform.system}.default;
+          adw-bluetooth-git = adw-bluetooth-git.packages.${prev.stdenv.hostPlatform.system}.default;
         })
       ];
 

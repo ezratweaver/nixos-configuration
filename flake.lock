@@ -1,15 +1,15 @@
 {
   "nodes": {
-    "adw-bluetooth": {
+    "adw-bluetooth-git": {
       "inputs": {
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1764304078,
-        "narHash": "sha256-5t6S8x1L25ck32opsWG6G+WojAlOMqxXkRXfXLBiqSY=",
+        "lastModified": 1765050189,
+        "narHash": "sha256-SnFA3oMjdoFlQIAOlqA4dV+FCl7WMoEHthFFiOCp8SM=",
         "owner": "ezratweaver",
         "repo": "adw-bluetooth",
-        "rev": "f83574dbd4f41eb4cec28e0550b7900f5d4b31a0",
+        "rev": "909f8fcfb3bb92f77c752df5ae8265b2cf080067",
         "type": "github"
       },
       "original": {
@@ -201,7 +201,7 @@
     },
     "root": {
       "inputs": {
-        "adw-bluetooth": "adw-bluetooth",
+        "adw-bluetooth-git": "adw-bluetooth-git",
         "antigravity-nix": "antigravity-nix",
         "home-manager": "home-manager",
         "nix-ai-tools": "nix-ai-tools",
