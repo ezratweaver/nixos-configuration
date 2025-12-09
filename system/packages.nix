@@ -72,6 +72,7 @@
     antigravity.google-antigravity
     shotcut
     clapper
+    popsicle # usb distro writer
 
     # Terminal utilities
     fzf

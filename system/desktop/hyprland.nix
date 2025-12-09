@@ -61,7 +61,8 @@
     pavucontrol
     playerctl
     iwgtk
-    libadwaita # For libadwaite programs
+
+    libadwaita
 
     # Wayland clipboard utilities
     wl-clipboard
@@ -75,7 +76,12 @@
 
     adw-bluetooth-git
 
-    gvfs # for mounting mtp and usb, typicall included in gnome
+    gvfs # for mounting mtp and usb, needed for nautalis auto mounting
+
+    # Disk utilities
+    udisks
+    gnome-disk-utility
+    baobab
   ];
 
   users.users.ezratweaver.extraGroups = [ "plugdev" ];
