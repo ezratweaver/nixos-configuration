@@ -98,6 +98,7 @@
     p7zip
     unrar
     file-roller
+    fastfetch
   ];
 
 }
