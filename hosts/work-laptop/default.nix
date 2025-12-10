@@ -1,9 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, nixos-hardware, ... }:
 
 {
   imports = [
     ./hardware.nix
+    ./tweaks.nix
     ../../configuration.nix
+    nixos-hardware.nixosModules.dell-latitude-5520
   ];
 
   # Work specific packages
