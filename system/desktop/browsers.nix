@@ -42,10 +42,6 @@ in
 
         ExtensionInstallForcelist = map (extension: extension.id) [
           {
-            name = "Tabliss";
-            id = "hipekcciheckooncpjeljhnekcoolahp";
-          }
-          {
             name = "Bitwarden";
             id = "nngceckbapebfimnlniiiahkandclblb";
           }
