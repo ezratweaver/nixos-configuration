@@ -61,6 +61,10 @@ in
             name = "Remove Youtube Shorts";
             id = "mgngbgbhliflggkamjnpdmegbkidiapm";
           }
+          {
+            name = "Dark Theme for Google Chrome";
+            id = "annfbnbieaamhaimclajlajpijgkdblo";
+          }
         ];
       };
 }
