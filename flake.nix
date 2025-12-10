@@ -12,6 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs-2511";
     };
 
+    # NixOS Hardware
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+
     # AI Tools
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
     antigravity-nix.url = "github:jacopone/antigravity-nix";
@@ -26,6 +29,7 @@
       nix-ai-tools,
       antigravity-nix,
       home-manager,
+      nixos-hardware,
       adw-bluetooth-git,
       ...
     }:
@@ -76,6 +80,7 @@
         { hostPath }:
         nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = { inherit nixos-hardware; };
           modules = [
             hostPath
             home-manager.nixosModules.home-manager
