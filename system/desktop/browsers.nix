@@ -61,10 +61,6 @@ in
             name = "Remove Youtube Shorts";
             id = "mgngbgbhliflggkamjnpdmegbkidiapm";
           }
-          {
-            name = "Arc Dark Theme";
-            id = "adicoenigffoolephelklheejpcpoolk";
-          }
         ];
       };
 }
