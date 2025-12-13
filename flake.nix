@@ -94,7 +94,6 @@
         black-dell-laptop = mkNixosSystem { hostPath = ./hosts/black-dell-laptop; };
         gaming-laptop = mkNixosSystem { hostPath = ./hosts/gaming-laptop; };
         work-laptop = mkNixosSystem { hostPath = ./hosts/work-laptop; };
-	latitude-5521 = mkNixosSystem { hostPath = ./hosts/latitude-5521; };
       };
     };
 }
