@@ -99,8 +99,6 @@
     unrar
     file-roller
     fastfetch
-
-    fwupd
   ];
 
 }
