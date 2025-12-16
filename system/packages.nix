@@ -92,13 +92,17 @@
     railway
     nix-search
     ngrok
-    btop
     postgresql
     visidata
     p7zip
     unrar
     file-roller
     fastfetch
+
+    # system monitoring utils
+    inxi
+    powertop
+    btop
   ];
 
 }
