@@ -16,9 +16,17 @@
 
   # Global suspend then hibernate rule for this device only
   # Since not every device has hibernation set up
-  services.logind.lidSwitch = "suspend-then-hibernate";
-  services.logind.extraConfig = ''
-    IdleAction=suspend-then-hibernate
-    IdleActionSec=30min
+  services.logind = {
+    settings = {
+      Login = {
+        HandleLidSwitch = "suspend-then-hibernate";
+        IdleAction = "suspend-then-hibernate";
+        IdleActionSec = "30min";
+      };
+    };
+  };
+
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=1h
   '';
 }
