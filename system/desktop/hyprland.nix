@@ -90,4 +90,7 @@
   security.polkit.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
+
+  # Force Electron apps (VSCode, Discord, Obsidian) to use Wayland natively
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
