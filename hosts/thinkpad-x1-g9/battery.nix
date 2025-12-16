@@ -7,9 +7,6 @@
       PLATFORM_PROFILE_ON_AC = "performance";
       PLATFORM_PROFILE_ON_BAT = "low-power";
 
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
       CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
 
@@ -28,6 +25,30 @@
 
       NVME_PIN_STEERING_ON_AC = "performance";
       NVME_PIN_STEERING_ON_BAT = "powersave";
+    };
+  };
+
+  services.undervolt = {
+    enable = true;
+    p1 = {
+      limit = 15;
+      window = 28;
+    };
+    p2 = {
+      limit = 25;
+      window = 0.002;
+    };
+  };
+
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "performance";
+      turbo = "auto";
     };
   };
 }
