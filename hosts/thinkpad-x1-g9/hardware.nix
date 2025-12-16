@@ -48,6 +48,8 @@
     { device = "/dev/mapper/luks-d62ee072-a9ff-4437-9ec7-dc68b14fbff8"; }
   ];
 
+  boot.resumeDevice = "/dev/dm-1"; # Derived from swapon -s
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
