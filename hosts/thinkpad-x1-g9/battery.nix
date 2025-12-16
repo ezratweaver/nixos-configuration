@@ -11,6 +11,4 @@
       STOP_CHARGE_THRESH_BAT0 = 98;
     };
   };
-
-  powerManagement.enable = true;
 }

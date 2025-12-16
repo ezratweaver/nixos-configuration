@@ -47,14 +47,6 @@
     { device = "/dev/mapper/luks-d62ee072-a9ff-4437-9ec7-dc68b14fbff8"; }
   ];
 
-  boot.resumeDevice = "/dev/disk/by-uuid/d56c1a1f-2226-4b32-a5bc-7ffa91f0808e";
-
-  boot.kernelParams = [
-    "resume=/dev/mapper/luks-d62ee072-a9ff-4437-9ec7-dc68b14fbff8"
-  ];
-
-  boot.initrd.systemd.enable = true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
