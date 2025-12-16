@@ -13,4 +13,12 @@
 
   # For Hyprland/GNOME power management
   powerManagement.enable = true;
+
+  # Global suspend then hibernate rule for this device only
+  # Since not every device has hibernation set up
+  services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.extraConfig = ''
+    IdleAction=suspend-then-hibernate
+    IdleActionSec=30min
+  '';
 }
