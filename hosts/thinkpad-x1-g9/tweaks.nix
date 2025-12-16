@@ -1,7 +1,6 @@
 { ... }:
 
 {
-
   services.tlp = {
     enable = true;
     settings = {
@@ -13,4 +12,5 @@
     };
   };
 
+  powerManagement.enable = true;
 }
