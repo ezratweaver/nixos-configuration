@@ -4,6 +4,7 @@
     ./hardware.nix
     ./battery.nix
     ./hibernation.nix
+    ./tweaks.nix
     ../../configuration.nix
     nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
   ];
