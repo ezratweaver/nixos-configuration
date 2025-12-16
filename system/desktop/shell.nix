@@ -40,6 +40,7 @@
         cc = "claude";
         nf = "neofetch";
         shutdown = "systemctl poweroff";
+        hibernate = "systemctl hibernate";
         v = "$EDITOR";
         sv = "sudo -E $EDITOR";
 
