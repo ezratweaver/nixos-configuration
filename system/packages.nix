@@ -41,7 +41,6 @@
     clang
 
     # Formatters
-    nodePackages.prettier
     prettierd
     black
     nixfmt-rfc-style

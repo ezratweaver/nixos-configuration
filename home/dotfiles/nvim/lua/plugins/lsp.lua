@@ -34,7 +34,8 @@ return {
         ts_ls = {},
         powershell_es = {},
         blueprint_ls = {},
-        nil_ls = {}
+        nil_ls = {},
+        astro = {}
       },
     },
   },
