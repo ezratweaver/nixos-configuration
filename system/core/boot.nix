@@ -34,6 +34,12 @@
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;
 
+  boot.plymouth.extraConfig = ''
+    [Daemon]
+    ShowDelay=0
+    DeviceTimeout=8
+  '';
+
   boot.kernelParams = [
     "quiet"
     "splash"
