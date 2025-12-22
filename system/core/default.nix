@@ -5,6 +5,6 @@
     ./fonts.nix
     ./networking.nix
     ./user.nix
+    ./cleanup.nix
   ];
 }
-
