@@ -20,6 +20,8 @@
     antigravity-nix.url = "github:jacopone/antigravity-nix";
 
     adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
+
+    helium.url = "github:vikingnope/helium-browser-nix-flake";
   };
 
   outputs =
@@ -31,6 +33,7 @@
       home-manager,
       nixos-hardware,
       adw-bluetooth-git,
+      helium,
       ...
     }:
     let
@@ -54,6 +57,8 @@
 
           # Adwaita bluetooth
           adw-bluetooth-git = adw-bluetooth-git.packages.${prev.stdenv.hostPlatform.system}.default;
+
+          helium = helium.packages.${prev.stdenv.hostPlatform.system}.default;
         })
       ];
 
@@ -94,7 +99,7 @@
         black-dell-laptop = mkNixosSystem { hostPath = ./hosts/black-dell-laptop; };
         gaming-laptop = mkNixosSystem { hostPath = ./hosts/gaming-laptop; };
         work-laptop = mkNixosSystem { hostPath = ./hosts/work-laptop; };
-	thinkpad-x1-g9 = mkNixosSystem { hostPath = ./hosts/thinkpad-x1-g9; };
+        thinkpad-x1-g9 = mkNixosSystem { hostPath = ./hosts/thinkpad-x1-g9; };
       };
     };
 }

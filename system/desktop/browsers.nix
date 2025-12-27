@@ -16,6 +16,7 @@ in
     (chromium.override {
       commandLineArgs = waylandChromiumArgs;
     })
+    helium
   ];
 
   environment.etc."/brave/policies/managed/GroupPolicy.json".source =
