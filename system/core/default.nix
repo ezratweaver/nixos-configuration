@@ -6,5 +6,6 @@
     ./networking.nix
     ./user.nix
     ./cleanup.nix
+    ./printing.nix
   ];
 }
