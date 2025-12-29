@@ -10,4 +10,10 @@
       libvdpau-va-gl
     ];
   };
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 }
