@@ -62,6 +62,8 @@
     playerctl
     iwgtk
 
+    libnotify # Sending notifications
+
     libadwaita
 
     # Wayland clipboard utilities

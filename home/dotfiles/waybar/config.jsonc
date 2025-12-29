@@ -51,14 +51,16 @@
     "interval": 30,
     "states": {
       "good": 95,
-      "warning": 30,
-      "critical": 20,
+      "warning": 20,
+      "critical": 5,
     },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰂄 {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+    "on-discharging-warning": "notify-send -u normal 'Battery Low' 'Remaining: {capacity}%'",
+    "on-discharging-critical": "notify-send -u critical 'Battery Critical' 'Plugging in a charger is recommended.'",
   },
 
   "memory": {
