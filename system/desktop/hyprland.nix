@@ -62,7 +62,7 @@
     playerctl
     iwgtk
 
-    libnotify # Sending notifications
+    batsignal # Battery notifications
 
     libadwaita
 
