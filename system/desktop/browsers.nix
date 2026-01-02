@@ -27,7 +27,7 @@
         PrivacySandboxPromptEnabled = false;
 
         DefaultSearchProviderEnabled = true;
-        DefaultSearchProviderSearchURL = "https://search.fredix.xyz/search?q={searchTerms}";
+        DefaultSearchProviderSearchURL = "https://search.rhscz.eu/search?q={searchTerms}";
         DefaultSearchProviderName = "SearchXNG";
         DefaultSearchProviderKeyword = "search.fredix.xyz";
 
