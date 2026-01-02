@@ -27,9 +27,9 @@
         PrivacySandboxPromptEnabled = false;
 
         DefaultSearchProviderEnabled = true;
-        DefaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
-        DefaultSearchProviderName = "DuckDuckGo";
-        DefaultSearchProviderKeyword = "duckduckgo.com";
+        DefaultSearchProviderSearchURL = "https://search.fredix.xyz/search?q={searchTerms}";
+        DefaultSearchProviderName = "SearchXNG";
+        DefaultSearchProviderKeyword = "search.fredix.xyz";
 
         ExtensionInstallForcelist = map (extension: extension.id) [
           {
