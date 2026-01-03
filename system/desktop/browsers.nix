@@ -23,6 +23,7 @@
 
         DefaultSearchProviderEnabled = true;
         DefaultSearchProviderSearchURL = "https://startpage.com/sp/search?q={searchTerms}";
+        DefaultSearchProviderSuggestURL = "https://www.startpage.com/osuggestions?q={searchTerms}";
         DefaultSearchProviderName = "StartPage";
         DefaultSearchProviderKeyword = "startpage.com";
 
