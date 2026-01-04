@@ -54,6 +54,17 @@ window#waybar {
   margin-right: 0.75em;
 }
 
+#battery.critical:not(.charging) {
+  margin-right: 0.75em;
+  background-color: #f38ba8; /* Red */
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 #network {
   padding-right: 0.9em;
   padding-left: 0.3em;
