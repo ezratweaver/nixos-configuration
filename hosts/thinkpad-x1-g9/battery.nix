@@ -1,6 +1,8 @@
 { ... }:
 
 {
+  powerManagement.powertop.enable = true;
+
   services.undervolt = {
     enable = true;
     p1 = {
