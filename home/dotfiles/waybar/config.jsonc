@@ -40,10 +40,8 @@
 
   "wireplumber": {
     "scroll-step": 5,
-    "format": "   {format_source}",
-    "format-muted": "   {format_source}",
-    "format-source": "",
-    "format-source-muted": "",
+    "format": "",
+    "format-muted": "",
     "on-click": "hyprctl dispatch exec '[float; center]' pavucontrol",
   },
 

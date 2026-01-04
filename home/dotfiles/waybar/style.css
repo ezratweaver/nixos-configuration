@@ -38,9 +38,15 @@ window#waybar {
   color: @foreground-inactive;
 }
 
-#wireplumber {
+#wireplumber.muted {
   padding-left: 0.1em;
   padding-right: 0.1em;
+  margin-right: 0.6em;
+}
+
+#wireplumber {
+  padding-left: 0.1em;
+  padding-right: 0.3em;
   margin-right: 0.6em;
 }
 
