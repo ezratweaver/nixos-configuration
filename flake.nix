@@ -21,7 +21,8 @@
 
     adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
 
-    helium.url = "github:vikingnope/helium-browser-nix-flake";
+    # Nix User Repository
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs =
@@ -33,7 +34,7 @@
       home-manager,
       nixos-hardware,
       adw-bluetooth-git,
-      helium,
+      nur,
       ...
     }:
     let
@@ -44,6 +45,9 @@
 
       # Common overlays
       overlays = [
+        # NUR overlay
+        nur.overlays.default
+
         (final: prev: {
           # Access to unstable packages via pkgs.unstable.*
           unstable = import nixpkgs-unstable {
@@ -57,8 +61,6 @@
 
           # Adwaita bluetooth
           adw-bluetooth-git = adw-bluetooth-git.packages.${prev.stdenv.hostPlatform.system}.default;
-
-          helium = helium.packages.${prev.stdenv.hostPlatform.system}.default;
         })
       ];
 

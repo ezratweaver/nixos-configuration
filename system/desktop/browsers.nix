@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     brave
     chromium
-    helium
+    nur.repos.forkprince.helium-nightly
   ];
 
   environment.etc."/chromium/policies/managed/policy.json".source =
