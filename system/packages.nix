@@ -39,6 +39,8 @@
     openssl
     docker
     clang
+    ffmpeg
+    ffmpeg-full
 
     # Formatters
     prettierd
