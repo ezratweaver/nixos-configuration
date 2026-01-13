@@ -68,6 +68,7 @@
       '';
     }))
     blender
+    freecad
     obs-studio
     jetbrains.datagrip
     antigravity.google-antigravity
