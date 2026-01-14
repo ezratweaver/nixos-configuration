@@ -71,7 +71,6 @@
     freecad
     obs-studio
     jetbrains.datagrip
-    antigravity.google-antigravity
     shotcut
     clapper
     popsicle # usb distro writer
