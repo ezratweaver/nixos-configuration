@@ -15,9 +15,6 @@
     # NixOS Hardware
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    # AI Tools
-    nix-ai-tools.url = "github:numtide/nix-ai-tools";
-
     adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
 
     # Nix User Repository
@@ -28,7 +25,6 @@
     {
       nixpkgs-unstable,
       nixpkgs-2511,
-      nix-ai-tools,
       home-manager,
       nixos-hardware,
       adw-bluetooth-git,
@@ -52,9 +48,6 @@
             system = prev.stdenv.hostPlatform.system;
             config.allowUnfree = true;
           };
-
-          # AI tools
-          aiTools = nix-ai-tools.packages.${prev.stdenv.hostPlatform.system};
 
           # Adwaita bluetooth
           adw-bluetooth-git = adw-bluetooth-git.packages.${prev.stdenv.hostPlatform.system}.default;
