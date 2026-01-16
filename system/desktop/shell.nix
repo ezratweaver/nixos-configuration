@@ -14,47 +14,6 @@
       syntaxHighlighting.enable = true;
       enableCompletion = true;
 
-      shellAliases = {
-        # General aliases
-        c = "clear";
-        cc = "claude";
-        nf = "neofetch";
-        shutdown = "systemctl poweroff";
-        hibernate = "systemctl hibernate";
-        v = "nvim";
-        sv = "sudo -E nvim";
-
-        # File listing aliases
-        ls = "eza -a --icons";
-        ll = "eza -al --icons";
-
-        # NixOS aliases
-        nxs = "nix-search";
-        nxrollback = "sudo nixos-rebuild switch --rollback";
-        nxgenerations = "sudo nixos-rebuild list-generations";
-        vnx = "nvim ~/nixos-configuration/configuration.nix";
-        nxdir = "cd ~/nixos-configuration/";
-
-        # Navigation aliases
-        cdf = "cd $(find . -type d -print | command fzf)";
-        cdi = "zi";
-
-        # Git aliases
-        gs = "git status";
-        ga = "git add";
-        gc = "git commit -m";
-        gam = "git commit --amend --no-edit";
-        game = "git commit --amend";
-        gp = "git push";
-        gpf = "git push --force-with-lease";
-        gpl = "git pull";
-        gr = "git restore";
-        gst = "git stash";
-        gsp = "git stash; git pull";
-        gcheck = "git checkout";
-        grs = "git restore --staged";
-      };
-
       setOptions = [
         "AUTO_CD" # Change directory without typing cd
         "HIST_VERIFY" # Show command with history expansion to user before running it

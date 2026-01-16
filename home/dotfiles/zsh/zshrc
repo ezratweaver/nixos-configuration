@@ -2,6 +2,45 @@
 unalias l 2>/dev/null
 unalias ls 2>/dev/null
 
+# General aliases
+alias c="clear"
+alias cc="claude"
+alias nf="neofetch"
+alias shutdown="systemctl poweroff"
+alias hibernate="systemctl hibernate"
+alias v="nvim"
+alias sv="sudo -E nvim"
+
+# File listing aliases
+alias ls="eza -a --icons"
+alias ll="eza -al --icons"
+
+# NixOS aliases
+alias nxs="nix-search"
+alias nxrollback="sudo nixos-rebuild switch --rollback"
+alias nxgenerations="sudo nixos-rebuild list-generations"
+alias vnx="nvim ~/nixos-configuration/configuration.nix"
+alias nxdir="cd ~/nixos-configuration/"
+
+# Navigation aliases
+alias cdf="cd \$(find . -type d -print | command fzf)"
+alias cdi="zi"
+
+# Git aliases
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gam="git commit --amend --no-edit"
+alias game="git commit --amend"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
+alias gpl="git pull"
+alias gr="git restore"
+alias gst="git stash"
+alias gsp="git stash; git pull"
+alias gcheck="git checkout"
+alias grs="git restore --staged"
+
 # Special variables for edit-command-line
 export VISUAL=nvim
 export EDITOR=nvim
