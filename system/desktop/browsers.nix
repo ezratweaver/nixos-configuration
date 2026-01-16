@@ -2,7 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    brave
+    (brave.override {
+      commandLineArgs = [
+        "--ozone-platform=wayland"
+        "--password-store=gnome"
+      ];
+    })
     chromium
     nur.repos.forkprince.helium-nightly
   ];
