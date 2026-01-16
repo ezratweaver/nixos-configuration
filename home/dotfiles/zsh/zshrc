@@ -2,9 +2,32 @@
 unalias l 2>/dev/null
 unalias ls 2>/dev/null
 
+# Special variables for edit-command-line
+export VISUAL=nvim
+export EDITOR=nvim
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# Start ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ]; then
    eval $(ssh-agent) > /dev/null
 fi
+
+
+# Enable vi mode
+bindkey -v
+
+# Bind CTRL + v to vi mode
+bindkey -M viins '^V' vi-cmd-mode
+
+# Edit command via vim using 'v'
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# bind CTRL + f to complete auto-complete
+bindkey '^F' autosuggest-accept
+
 
 # Custom prompt function
 prompt_setup() {

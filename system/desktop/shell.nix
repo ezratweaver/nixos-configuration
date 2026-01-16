@@ -14,12 +14,6 @@
       syntaxHighlighting.enable = true;
       enableCompletion = true;
 
-      shellInit = ''
-        # Environment variables
-        export EDITOR=nvim
-        export PATH="$HOME/.local/bin:$PATH"
-      '';
-
       shellAliases = {
         # General aliases
         c = "clear";
@@ -27,8 +21,8 @@
         nf = "neofetch";
         shutdown = "systemctl poweroff";
         hibernate = "systemctl hibernate";
-        v = "$EDITOR";
-        sv = "sudo -E $EDITOR";
+        v = "nvim";
+        sv = "sudo -E nvim";
 
         # File listing aliases
         ls = "eza -a --icons";
