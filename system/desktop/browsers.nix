@@ -8,8 +8,11 @@
         "--password-store=gnome"
       ];
     })
-    chromium
     nur.repos.forkprince.helium-nightly
+
+    # Vanilla browsers for testing
+    firefox
+    chromium
   ];
 
   environment.etc."/brave/policies/managed/GroupPolicy.json".source =
