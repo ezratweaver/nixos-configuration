@@ -13,6 +13,7 @@
     # Vanilla browsers for testing
     firefox
     chromium
+    epiphany
   ];
 
   environment.etc."/brave/policies/managed/GroupPolicy.json".source =
