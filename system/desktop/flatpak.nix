@@ -14,7 +14,6 @@
     packages = [
       "org.gnome.dspy"
       "re.sonny.Workbench"
-      "app.zen_browser.zen"
     ];
 
     update.onActivation = true;

@@ -22,6 +22,11 @@
 
     # Nix Flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    zen = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs-2511";
+    };
   };
 
   outputs =
@@ -33,6 +38,7 @@
       adw-bluetooth-git,
       nur,
       nix-flatpak,
+      zen,
       ...
     }:
     let
@@ -63,6 +69,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "backup";
+        home-manager.extraSpecialArgs = { inherit zen; };
         home-manager.users.${username} = import ./home/home.nix;
       };
 
