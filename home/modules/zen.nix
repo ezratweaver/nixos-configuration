@@ -1,7 +1,7 @@
-{ zen, ... }:
+{ zen, pkgs, ... }:
 {
   imports = [
-    zen.homeModules.beta
+    zen.homeModules.twilight
   ];
 
   programs.zen-browser = {
@@ -30,7 +30,22 @@
           "zen.welcome-screen.seen" = true;
           "zen.themes.updated-value-observer" = true;
         };
-        extensions = [ ];
+        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+          bitwarden
+        ];
+        search = {
+          force = true;
+          default = "Startpage";
+          engines = {
+            Startpage = {
+              name = "Startpage";
+              urls = [{ template = "https://www.startpage.com/sp/search?query={searchTerms}"; }];
+              icon = "https://www.startpage.com/favicon.ico";
+              definedAliases = [ "@sp" ];
+            };
+          };
+        };
       };
     };
 
