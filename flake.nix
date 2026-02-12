@@ -19,6 +19,9 @@
 
     # Nix User Repository
     nur.url = "github:nix-community/NUR";
+
+    # Nix Flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -29,6 +32,7 @@
       nixos-hardware,
       adw-bluetooth-git,
       nur,
+      nix-flatpak,
       ...
     }:
     let
@@ -81,6 +85,7 @@
           modules = [
             hostPath
             home-manager.nixosModules.home-manager
+            nix-flatpak.nixosModules.nix-flatpak
             homeManagerConfig
             nixpkgsConfig
           ];
