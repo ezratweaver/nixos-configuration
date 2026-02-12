@@ -21,6 +21,11 @@
           "network.predictor.enabled" = false;
           "network.prefetch-next" = false;
 
+          # --- Autofill Disable ---
+          "extensions.formautofill.addresses.enabled" = false;
+          "extensions.formautofill.creditCards.enabled" = false;
+          "signon.rememberSignons" = false;
+
           # --- Telemetry/tracking Disable ---
           "app.shield.optoutstudies.enabled" = false;
           "datareporting.policy.dataSubmissionPolicyAcceptedVersion" = 2;
@@ -33,6 +38,9 @@
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           bitwarden
+          vimium
+          sponsorblock
+          youtube-shorts-block
         ];
         search = {
           force = true;
@@ -52,6 +60,14 @@
     policies = {
       DisableAppUpdate = true;
       DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      PasswordManagerEnabled = false;
+      AutofillAddressEnabled = false;
+      AutofillCreditCardEnabled = false;
+      BackgroundAppUpdates = false;
+      DnsOverHttps = {
+        Mode = "enabled";
+      };
     };
   };
 }
