@@ -48,9 +48,19 @@
           engines = {
             Startpage = {
               name = "Startpage";
-              urls = [{ template = "https://www.startpage.com/sp/search?query={searchTerms}"; }];
+              urls = [ { template = "https://www.startpage.com/sp/search?query={searchTerms}"; } ];
               icon = "https://www.startpage.com/favicon.ico";
               definedAliases = [ "@sp" ];
+            };
+            Gemini = {
+              name = "Gemini";
+              urls = [
+                {
+                  template = "https://gemini.google.com/app?q={searchTerms}";
+                }
+              ];
+              icon = "https://gemini.google.com/favicon.ico";
+              definedAliases = [ "@gem" ];
             };
           };
         };
