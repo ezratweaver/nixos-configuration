@@ -40,7 +40,6 @@
           bitwarden
           vimium
           sponsorblock
-          youtube-shorts-block
         ];
         search = {
           force = true;
@@ -77,6 +76,12 @@
       BackgroundAppUpdates = false;
       DnsOverHttps = {
         Mode = "enabled";
+      };
+      ExtensionSettings = {
+        "myallychou@gmail.com" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/youtube-recommended-videos/latest.xpi";
+        };
       };
     };
   };
