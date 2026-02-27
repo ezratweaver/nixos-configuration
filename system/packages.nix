@@ -82,6 +82,7 @@
     zoxide
     eza
     claude-code
+    opencode
     gemini-cli
     code-cursor
     tree

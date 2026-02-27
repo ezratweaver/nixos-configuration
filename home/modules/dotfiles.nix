@@ -35,5 +35,10 @@
       source = ../dotfiles/swaync;
       recursive = true;
     };
+
+    ".config/opencode/" = {
+      source = ../dotfiles/opencode;
+      recursive = true;
+    };
   };
 }
