@@ -105,6 +105,7 @@
     inxi
     powertop
     btop
+    motrix
   ];
 
 }
