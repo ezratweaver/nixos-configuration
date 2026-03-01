@@ -44,6 +44,12 @@
       "video/x-msvideo" = [ "com.github.rafostar.Clapper.desktop" ]; # .avi
       "video/any" = [ "com.github.rafostar.Clapper.desktop" ];
 
+      # --- Browser (Helium) ---
+      "x-scheme-handler/http" = [ "helium.desktop" ];
+      "x-scheme-handler/https" = [ "helium.desktop" ];
+      "text/html" = [ "helium.desktop" ];
+      "application/xhtml+xml" = [ "helium.desktop" ];
+
       # --- Protocol Handlers ---
       "x-scheme-handler/magnet" = [ "transmission-gtk.desktop" ];
       "x-scheme-handler/anytype" = [ "anytype.desktop" ];
