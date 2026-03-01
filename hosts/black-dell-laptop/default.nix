@@ -3,6 +3,7 @@
   imports = [
     ./hardware.nix
     ./tweaks.nix
+    ./xbox.nix
     ../../configuration.nix
     nixos-hardware.nixosModules.dell-latitude-5520
   ];
