@@ -47,8 +47,15 @@
       # --- Browser (Helium) ---
       "x-scheme-handler/http" = [ "helium.desktop" ];
       "x-scheme-handler/https" = [ "helium.desktop" ];
+      "x-scheme-handler/about" = [ "helium.desktop" ];
+      "x-scheme-handler/unknown" = [ "helium.desktop" ];
       "text/html" = [ "helium.desktop" ];
       "application/xhtml+xml" = [ "helium.desktop" ];
+      "application/x-extension-htm" = [ "helium.desktop" ];
+      "application/x-extension-html" = [ "helium.desktop" ];
+      "application/x-extension-shtml" = [ "helium.desktop" ];
+      "application/x-extension-xhtml" = [ "helium.desktop" ];
+      "application/x-extension-xht" = [ "helium.desktop" ];
 
       # --- Protocol Handlers ---
       "x-scheme-handler/magnet" = [ "transmission-gtk.desktop" ];
