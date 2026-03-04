@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   imports = [
     ./system/core
@@ -5,5 +7,5 @@
     ./system/packages.nix
   ];
 
-  services.automatic-timezoned.enable = true;
+  time.timeZone = lib.mkDefault "America/New_York";
 }
