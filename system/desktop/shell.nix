@@ -36,4 +36,12 @@
     zoxide
     eza
   ];
+
+  # Sym link bash to /bin/bash, so shebangs resolve to correct bin
+  system.activationScripts.binbash = {
+    deps = [ "binsh" ];
+    text = ''
+      ln -sf ${pkgs.bash}/bin/bash /bin/bash
+    '';
+  };
 }
