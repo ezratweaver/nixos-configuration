@@ -23,7 +23,8 @@ return {
         "sql",
         "hyprlang",
         "nix",
-        "blueprint"
+        "blueprint",
+        "astro"
       },
     },
   },
