@@ -67,6 +67,15 @@ bindkey -M vicmd v edit-command-line
 # bind CTRL + f to complete auto-complete
 bindkey '^F' autosuggest-accept
 
+# Enable completion system
+autoload -Uz compinit && compinit
+
+# Highlight selected option when TAB cycling
+zstyle ':completion:*' menu select
+# Case insensitive matching
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+
 
 # Custom prompt function
 prompt_setup() {
