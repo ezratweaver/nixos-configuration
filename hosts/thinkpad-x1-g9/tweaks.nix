@@ -21,6 +21,4 @@
     "xe.force_probe=9a49"
     "i915.enable_psr=0"
   ];
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 }

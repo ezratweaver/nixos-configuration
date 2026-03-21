@@ -94,11 +94,10 @@
     in
     {
       nixosConfigurations = {
-        black-dell-laptop = mkNixosSystem { hostPath = ./hosts/black-dell-laptop; };
         gaming-laptop = mkNixosSystem { hostPath = ./hosts/gaming-laptop; };
         work-laptop = mkNixosSystem { hostPath = ./hosts/work-laptop; };
         thinkpad-x1-g9 = mkNixosSystem { hostPath = ./hosts/thinkpad-x1-g9; };
-	asus-zenbook = mkNixosSystem { hostPath = ./hosts/asus-zenbook; };
+        asus-zenbook = mkNixosSystem { hostPath = ./hosts/asus-zenbook; };
       };
     };
 }
