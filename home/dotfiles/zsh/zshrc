@@ -19,7 +19,7 @@ alias ll="eza -al --icons"
 alias nxs="nix-search"
 alias nxrollback="sudo nixos-rebuild switch --rollback"
 alias nxgenerations="sudo nixos-rebuild list-generations"
-alias vnx="nvim ~/nixos-configuration/configuration.nix"
+alias vnx="cd ~/nixos-configuration/ && nvim ~/nixos-configuration/configuration.nix"
 alias nxdir="cd ~/nixos-configuration/"
 
 # Navigation aliases
