@@ -57,8 +57,8 @@
       "application/x-extension-xhtml" = [ "helium.desktop" ];
       "application/x-extension-xht" = [ "helium.desktop" ];
 
-      # --- PDF Viewer (Calibre) ---
-      "application/pdf" = [ "calibre-ebook-viewer.desktop" ];
+      # --- PDF Viewer (Helium) ---
+      "application/pdf" = [ "helium.desktop" ];
 
       # --- Protocol Handlers ---
       "x-scheme-handler/magnet" = [ "transmission-gtk.desktop" ];
