@@ -75,6 +75,7 @@
     shotcut
     clapper
     popsicle # usb distro writer
+    calibre
 
     # Terminal utilities
     fzf
