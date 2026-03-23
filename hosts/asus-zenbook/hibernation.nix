@@ -1,12 +1,12 @@
 { ... }:
 
 {
-  # UUID of the unlocked swap filesystem (not the LUKS container UUID)
+  # Input swap disk, using uuid found, via lsblk -f
   boot.resumeDevice = "/dev/disk/by-uuid/078bdf57-0cb9-464b-86e3-4aec0c7dd9cc";
 
-  # Force AMD to use deep sleep (s2idle is default on AMD, but breaks suspend-then-hibernate)
+  # Map resume disk
   boot.kernelParams = [
-    "mem_sleep_default=deep"
+    "resume=/dev/mapper/luks-09883cd3-af6a-4144-9988-457449e2b496"
   ];
 
   boot.initrd.systemd.enable = true;
@@ -29,7 +29,7 @@
   # Automatic hibernation settings
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=4h
-    HibernateMode=shutdown
+    HibernateMode=platform shutdown
     SuspendState=mem
   '';
 
