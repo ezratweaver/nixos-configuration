@@ -1,12 +1,12 @@
 { ... }:
 
 {
-  # Input swap disk, using uuid found, via lsblk -f
-  boot.resumeDevice = "/dev/disk/by-uuid/09883cd3-af6a-4144-9988-457449e2b496";
+  # UUID of the unlocked swap filesystem (not the LUKS container UUID)
+  boot.resumeDevice = "/dev/disk/by-uuid/078bdf57-0cb9-464b-86e3-4aec0c7dd9cc";
 
-  # # Map resume disk
+  # Force AMD to use deep sleep (s2idle is default on AMD, but breaks suspend-then-hibernate)
   boot.kernelParams = [
-    "resume=/dev/mapper/luks-09883cd3-af6a-4144-9988-457449e2b496"
+    "mem_sleep_default=deep"
   ];
 
   boot.initrd.systemd.enable = true;
@@ -14,10 +14,22 @@
   # For Hyprland/GNOME power management
   powerManagement.enable = true;
 
+  # Lock screen before suspend/hibernate (triggered by lid close or idle)
+  systemd.services."hyprlock-on-sleep" = {
+    description = "Lock screen with hyprlock before sleep";
+    before = [ "sleep.target" ];
+    wantedBy = [ "sleep.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "/run/current-system/sw/bin/bash -c 'loginctl lock-sessions'";
+      TimeoutSec = 5;
+    };
+  };
+
   # Automatic hibernation settings
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=4h
-    HibernateMode=platform shutdown
+    HibernateMode=shutdown
     SuspendState=mem
   '';
 
