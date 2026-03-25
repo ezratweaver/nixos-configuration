@@ -87,6 +87,7 @@
             hostPath
             home-manager.nixosModules.home-manager
             nix-flatpak.nixosModules.nix-flatpak
+            adw-bluetooth-git.nixosModules.default
             homeManagerConfig
             nixpkgsConfig
           ];

@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # Enable Adwaita Bluetooth daemon
+  services.adw-bluetooth.enable = true;
+
   # Enable touchpad
   services.libinput.enable = true;
 
@@ -75,8 +78,6 @@
     font-awesome
 
     gnome-calculator
-
-    adw-bluetooth-git
 
     gvfs # for mounting mtp and usb, needed for nautalis auto mounting
 
