@@ -28,6 +28,7 @@
         requests
       ]
     ))
+    bun
     go
     tree-sitter
     gh
@@ -62,6 +63,7 @@
     obsidian
     vlc
     onlyoffice-desktopeditors
+    libreoffice
     (postman.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
         wrapProgram $out/bin/postman \
