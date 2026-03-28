@@ -14,6 +14,7 @@
     packages = [
       "org.gnome.dspy"
       "re.sonny.Workbench"
+      "com.collaboraoffice.Office"
     ];
 
     update.onActivation = true;
