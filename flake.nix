@@ -69,6 +69,7 @@
 
       # Nixpkgs configuration
       nixpkgsConfig = {
+        nixpkgs.hostPlatform = system;
         nixpkgs.config.allowUnfree = true;
         nixpkgs.overlays = overlays;
         nix.settings.experimental-features = [
@@ -81,7 +82,6 @@
       mkNixosSystem =
         { hostPath }:
         nixpkgs.lib.nixosSystem {
-          inherit system;
           specialArgs = { inherit nixos-hardware; };
           modules = [
             hostPath
