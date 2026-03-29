@@ -14,18 +14,6 @@
   # For Hyprland/GNOME power management
   powerManagement.enable = true;
 
-  # Lock screen before suspend/hibernate (triggered by lid close or idle)
-  systemd.services."hyprlock-on-sleep" = {
-    description = "Lock screen with hyprlock before sleep";
-    before = [ "sleep.target" ];
-    wantedBy = [ "sleep.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "/run/current-system/sw/bin/bash -c 'loginctl lock-sessions'";
-      TimeoutSec = 5;
-    };
-  };
-
   # Automatic hibernation settings
   systemd.sleep.extraConfig = ''
     HibernateDelaySec=4h
