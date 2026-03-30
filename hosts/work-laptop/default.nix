@@ -1,4 +1,4 @@
-{ pkgs, nixos-hardware, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     awscli2
     s5cmd
     powershell
+    sqlcmd
   ];
 
   system.stateVersion = "25.05";
