@@ -13,7 +13,7 @@ return {
         clangd = {
           cmd = { clang_path }
         },
-        sqlls = {},
+        sqlls = { enabled = false },
         pyright = {},
         gopls = {},
         lua_ls = {
