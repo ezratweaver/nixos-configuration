@@ -2,7 +2,8 @@
   "extras": [
     "lazyvim.plugins.extras.formatting.black",
     "lazyvim.plugins.extras.util.gitui",
-    "lazyvim.plugins.extras.lang.tailwind"
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.sql"
   ],
   "news": {
     "NEWS.md": "10960"
