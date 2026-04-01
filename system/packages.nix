@@ -83,6 +83,7 @@
     shotcut
     clapper
     popsicle # usb distro writer
+    tomato-c
 
     # Terminal utilities
     fzf
