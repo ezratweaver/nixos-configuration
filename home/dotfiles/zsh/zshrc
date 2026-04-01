@@ -41,6 +41,11 @@ alias gsp="git stash; git pull"
 alias gcheck="git checkout"
 alias grs="git restore --staged"
 
+# Diff current branch against target branch (defaults to main)
+gdiff() {
+    git diff "${1:-main}"...HEAD
+}
+
 # Special variables for edit-command-line
 export VISUAL=nvim
 export EDITOR=nvim
