@@ -10,6 +10,10 @@
       user.email = "ezratweaver@gmail.com";
       push.autoSetupRemote = true;
       pull.rebase = true;
+      diff.external = "difft";
+      core.pager = "delta";
+      interactive.diffFilter = "delta --color-only";
+      delta.navigate = true;
     };
   };
 
@@ -18,6 +22,8 @@
   environment.systemPackages = with pkgs; [
     # Dev tools
     git
+    difftastic
+    delta
     vim
     unstable.neovim
     nodejs
