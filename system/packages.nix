@@ -84,6 +84,7 @@
     clapper
     popsicle # usb distro writer
     tomato-c
+    sniffnet
 
     # Terminal utilities
     fzf
