@@ -85,6 +85,7 @@
     popsicle # usb distro writer
     tomato-c
     sniffnet
+    gnome-calendar
 
     # Terminal utilities
     fzf
