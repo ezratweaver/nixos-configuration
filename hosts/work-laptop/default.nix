@@ -15,5 +15,7 @@
     sqlcmd
   ];
 
+  programs.git.config.user.email = "eweaver@classicalconversations.com";
+
   system.stateVersion = "25.05";
 }

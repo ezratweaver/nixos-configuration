@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.appimage.enable = true;
 
@@ -7,7 +7,7 @@
     enable = true;
     config = {
       user.name = "ezratweaver";
-      user.email = "ezratweaver@gmail.com";
+      user.email = lib.mkDefault "ezratweaver@gmail.com";
       push.autoSetupRemote = true;
       pull.rebase = true;
       diff.external = "difft";
