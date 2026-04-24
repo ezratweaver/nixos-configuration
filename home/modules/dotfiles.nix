@@ -40,5 +40,10 @@
       source = ../dotfiles/opencode;
       recursive = true;
     };
+
+    ".claude/" = {
+      source = ../dotfiles/.claude;
+      recursive = true;
+    };
   };
 }
