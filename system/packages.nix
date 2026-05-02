@@ -94,7 +94,7 @@
     zoxide
     eza
     claude-code
-    opencode
+    unstable.opencode
     gemini-cli
     code-cursor
     tree
