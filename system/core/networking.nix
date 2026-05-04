@@ -14,7 +14,6 @@
     settings = {
       General = {
         Experimental = true;
-        FastConnectable = true;
         GATTCache = true;
       };
     };

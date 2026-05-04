@@ -86,6 +86,7 @@
     tomato-c
     sniffnet
     gnome-calendar
+    marktext # simple markdown editor
 
     # Terminal utilities
     fzf
