@@ -4,6 +4,8 @@
   # Enable Adwaita Bluetooth daemon
   services.adw-bluetooth.enable = true;
 
+  services.upower.enable = true;
+
   # Enable touchpad
   services.libinput.enable = true;
 
@@ -65,7 +67,7 @@
     playerctl
     iwgtk
 
-    batsignal # Battery notifications
+    poweralertd # Battery notifications
 
     libadwaita
 
