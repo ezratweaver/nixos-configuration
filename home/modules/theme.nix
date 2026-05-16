@@ -65,6 +65,9 @@
       "x-scheme-handler/anytype" = [ "anytype.desktop" ];
       "x-scheme-handler/sgnl" = [ "signal.desktop" ];
       "x-scheme-handler/signalcaptcha" = [ "signal.desktop" ];
+
+      # --- Figma OAuth ---
+      "x-scheme-handler/figma" = [ "figma-linux.desktop" ];
     };
   };
 

@@ -62,6 +62,7 @@
     nil # Nix language server
 
     # Desktop apps
+    figma-linux
     dbeaver-bin
     azuredatastudio
     discord
