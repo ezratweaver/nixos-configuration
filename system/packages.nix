@@ -60,6 +60,7 @@
     blueprint-compiler # Include the blueprint LSP for gtk .blp files
     clang-tools
     nil # Nix language server
+    gopls # Go language server
 
     # Desktop apps
     figma-linux
