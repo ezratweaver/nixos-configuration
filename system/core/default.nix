@@ -7,5 +7,6 @@
     ./user.nix
     ./cleanup.nix
     ./printing.nix
+    ./virtualization.nix
   ];
 }

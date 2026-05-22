@@ -17,8 +17,6 @@
     };
   };
 
-  virtualisation.docker.enable = true;
-
   environment.systemPackages = with pkgs; [
     # Dev tools
     git
@@ -44,11 +42,9 @@
     luarocks
     cargo
     openssl
-    docker
     clang
     ffmpeg
     ffmpeg-full
-    podman
 
     # Formatters
     prettierd
