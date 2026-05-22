@@ -48,6 +48,7 @@
     clang
     ffmpeg
     ffmpeg-full
+    podman
 
     # Formatters
     prettierd
