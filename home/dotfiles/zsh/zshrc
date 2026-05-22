@@ -12,8 +12,10 @@ alias v="nvim"
 alias sv="sudo -E nvim"
 
 # File listing aliases
-alias ls="eza -a --icons"
+alias ls="eza -a --tree --level=1 --icons"
+alias lls="eza -al --tree --level=1 --icons"
 alias ll="eza -al --icons"
+alias l="eza -a --tree --level=1 --icons"
 
 # NixOS aliases
 alias nxs="nix-search"
@@ -125,30 +127,6 @@ prompt_setup() {
 
 precmd() {
     prompt_setup
-}
-
-# Tree listing function with level parameter
-l() {
-    local level=1
-    local args=()
-    
-    while [[ $# -gt 0 ]]; do
-        case $1 in
-            -l)
-                if [[ $# -ge 2 ]]; then
-                    level=$2
-                    shift 2
-                    continue
-                fi
-                ;;
-            *)
-                args+=("$1")
-                shift
-                ;;
-        esac
-    done
-    
-    eza -a --tree --level=$level --icons "${args[@]}"
 }
 
 # Enhanced navigation functions
