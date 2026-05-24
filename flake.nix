@@ -80,9 +80,11 @@
 
       # System builder function
       mkNixosSystem =
-        { hostPath }:
+        {
+          hostPath,
+          hardwareModule ? null,
+        }:
         nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit nixos-hardware; };
           modules = [
             hostPath
             home-manager.nixosModules.home-manager
@@ -90,14 +92,18 @@
             adw-bluetooth-git.nixosModules.default
             homeManagerConfig
             nixpkgsConfig
-          ];
+          ]
+          ++ nixpkgs.lib.optional (hardwareModule != null) hardwareModule;
         };
     in
     {
       nixosConfigurations = {
         gaming-laptop = mkNixosSystem { hostPath = ./hosts/gaming-laptop; };
         work-laptop = mkNixosSystem { hostPath = ./hosts/work-laptop; };
-        thinkpad-x1-g9 = mkNixosSystem { hostPath = ./hosts/thinkpad-x1-g9; };
+        thinkpad-x1-g9 = mkNixosSystem {
+          hostPath = ./hosts/thinkpad-x1-g9;
+          hardwareModule = nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen;
+        };
         asus-zenbook = mkNixosSystem { hostPath = ./hosts/asus-zenbook; };
       };
     };
