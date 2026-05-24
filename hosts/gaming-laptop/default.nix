@@ -5,7 +5,6 @@
     ./hardware.nix
     ./nvidia.nix
     ./gaming.nix
-    ../../configuration.nix
   ];
 
   environment.systemPackages = with pkgs; [

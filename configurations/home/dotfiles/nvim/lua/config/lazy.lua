@@ -65,7 +65,7 @@ require("lazy").setup({
   },
   install = { colorscheme = { "nordic", "tokyonight", "habamax" } },
   checker = { enabled = true, notify = false },
-  lockfile = "~/nixos-configuration/home/dotfiles/nvim/lazy-lock.json", -- save lockfile in dotfiles directory
+  lockfile = "~/nixos-configuration/configurations/home/dotfiles/nvim/lazy-lock.json", -- save lockfile in dotfiles directory
   performance = {
     rtp = {
       -- disable some rtp plugins
