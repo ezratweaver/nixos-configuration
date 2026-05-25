@@ -41,8 +41,8 @@
       nixpkgs = nixpkgs-2511;
       username = "ezratweaver";
       allowUnfree = true;
-      configurationPath = ./configuration;
-      homePath = ./configuration/home/home.nix;
+      systemPath = ./configuration/system;
+      homePath = ./configuration/home;
 
       # Common overlays
       overlays = [
@@ -65,7 +65,9 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "backup";
-        home-manager.extraSpecialArgs = { username = username; };
+        home-manager.extraSpecialArgs = {
+          username = username;
+        };
         home-manager.users.${username} = import homePath;
       };
 
@@ -86,9 +88,11 @@
           hardwareModule ? null,
         }:
         nixpkgs.lib.nixosSystem {
-          specialArgs = { username = username; };
+          specialArgs = {
+            username = username;
+          };
           modules = [
-            configurationPath
+            systemPath
             hostPath
             home-manager.nixosModules.home-manager
             nix-flatpak.nixosModules.nix-flatpak

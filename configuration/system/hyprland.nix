@@ -89,12 +89,12 @@
     baobab
   ];
 
-  users.users.${username}.extraGroups = [ "plugdev" ];
-
   # Permissions for usb and mtp
   security.polkit.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
+
+  users.users.${username}.extraGroups = [ "plugdev" ];
 
   # Force Electron apps (VSCode, Discord, Obsidian) to use Wayland natively
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

@@ -2,47 +2,47 @@
 {
   home.file = {
     ".config/hypr/" = {
-      source = ../dotfiles/hypr;
+      source = ./hypr;
       recursive = true;
     };
 
     ".config/nvim/" = {
-      source = ../dotfiles/nvim;
+      source = ./nvim;
       recursive = true;
     };
 
     ".zshrc" = {
-      source = ../dotfiles/zsh/zshrc;
+      source = ./zsh/zshrc;
       recursive = true;
     };
 
     ".config/kitty/" = {
-      source = ../dotfiles/kitty;
+      source = ./kitty;
       recursive = true;
     };
 
     ".config/rofi/" = {
-      source = ../dotfiles/rofi;
+      source = ./rofi;
       recursive = true;
     };
 
     ".config/waybar/" = {
-      source = ../dotfiles/waybar;
+      source = ./waybar;
       recursive = true;
     };
 
     ".config/swaync/" = {
-      source = ../dotfiles/swaync;
+      source = ./swaync;
       recursive = true;
     };
 
     ".config/opencode/" = {
-      source = ../dotfiles/opencode;
+      source = ./opencode;
       recursive = true;
     };
 
     ".claude/" = {
-      source = ../dotfiles/.claude;
+      source = ./claude;
       recursive = true;
     };
   };
