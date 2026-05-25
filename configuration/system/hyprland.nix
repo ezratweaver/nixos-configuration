@@ -48,7 +48,7 @@
     hyprpaper # wallpaper
     nautilus # file manager
     eww # widgets
-    qimgv # image viewer
+    loupe # image viewer
     pinta # image editor
     kooha # video recording
     hyprshot # screenshots

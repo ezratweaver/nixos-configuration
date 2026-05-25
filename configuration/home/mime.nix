@@ -8,8 +8,8 @@
 
     defaultApplications = {
       # --- Image Viewer (Qimgv) ---
-      "image/png" = [ "qimgv.desktop" ];
-      "image/jpeg" = [ "qimgv.desktop" ];
+      "image/png" = [ "org.gnome.Loupe.desktop" ];
+      "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
 
       # --- Video Player (Clapper) ---
       "video/x-matroska" = [ "com.github.rafostar.Clapper.desktop" ]; # .mkv
