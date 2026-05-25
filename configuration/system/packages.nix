@@ -6,7 +6,7 @@
   programs.git = {
     enable = true;
     config = {
-      user.name = "ezratweaver";
+      user.name = lib.mkDefault "ezratweaver";
       user.email = lib.mkDefault "ezratweaver@gmail.com";
       push.autoSetupRemote = true;
       pull.rebase = true;
@@ -62,19 +62,13 @@
     # Desktop apps
     figma-linux
     dbeaver-bin
-    azuredatastudio
     discord
     signal-desktop
     obsidian
     vlc
     onlyoffice-desktopeditors
     libreoffice
-    (postman.overrideAttrs (oldAttrs: {
-      postInstall = (oldAttrs.postInstall or "") + ''
-        wrapProgram $out/bin/postman \
-          --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland"
-      '';
-    }))
+    postman
     blender
     freecad
     obs-studio
