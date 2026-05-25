@@ -1,5 +1,6 @@
+{ username, ... }:
 {
-  users.users.ezratweaver = {
+  users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
       "wheel"

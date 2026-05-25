@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   # Shell configuration
@@ -29,7 +29,7 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
-  users.users.ezratweaver.shell = pkgs.zsh;
+  users.users.${username}.shell = pkgs.zsh;
 
   environment.systemPackages = with pkgs; [
     zsh

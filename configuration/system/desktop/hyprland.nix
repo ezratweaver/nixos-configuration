@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   # Enable Adwaita Bluetooth daemon
@@ -89,7 +89,7 @@
     baobab
   ];
 
-  users.users.ezratweaver.extraGroups = [ "plugdev" ];
+  users.users.${username}.extraGroups = [ "plugdev" ];
 
   # Permissions for usb and mtp
   security.polkit.enable = true;

@@ -65,6 +65,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "backup";
+        home-manager.extraSpecialArgs = { username = username; };
         home-manager.users.${username} = import homePath;
       };
 
@@ -85,6 +86,7 @@
           hardwareModule ? null,
         }:
         nixpkgs.lib.nixosSystem {
+          specialArgs = { username = username; };
           modules = [
             configurationPath
             hostPath
