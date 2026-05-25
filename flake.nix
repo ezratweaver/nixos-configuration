@@ -100,8 +100,8 @@
     in
     {
       nixosConfigurations = {
-        gaming-laptop = mkNixosSystem { modules = [ ./hosts/gaming-laptop ]; };
-        work-laptop = mkNixosSystem { modules = [ ./hosts/work-laptop ]; };
+        asus-tuf = mkNixosSystem { modules = [ ./hosts/asus-tuf ]; };
+        dell-latitude = mkNixosSystem { modules = [ ./hosts/dell-latitude ]; };
         thinkpad-x1-g9 = mkNixosSystem {
           modules = [
             ./hosts/thinkpad-x1-g9

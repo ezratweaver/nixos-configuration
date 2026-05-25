@@ -7,5 +7,7 @@
     ./tweaks.nix
   ];
 
+  networking.hostName = "asus-zenbook";
+
   system.stateVersion = "25.05";
 }

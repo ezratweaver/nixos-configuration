@@ -11,5 +11,7 @@
     ntfs3g
   ];
 
+  networking.hostName = "asus-tuf";
+
   system.stateVersion = "25.05";
 }

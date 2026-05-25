@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  networking.hostName = "91f1c1065ead";
-
   # IWD for networking
   networking.wireless.iwd.enable = true;
 
