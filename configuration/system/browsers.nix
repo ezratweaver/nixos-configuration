@@ -1,13 +1,17 @@
 { pkgs, ... }:
 
+let
+  searchEngine = {
+    name = "Startpage";
+    keyword = "startpage.com";
+    url = "https://www.startpage.com/sp/search?query={searchTerms}";
+    iconUrl = "https://www.startpage.com/favicon.ico";
+    alias = "startpage";
+  };
+in
 {
   environment.systemPackages = with pkgs; [
-    (brave.override {
-      commandLineArgs = [
-        "--ozone-platform=wayland"
-        "--password-store=gnome"
-      ];
-    })
+    brave
     nur.repos.forkprince.helium-nightly
 
     # Vanilla browsers for testing
@@ -34,31 +38,16 @@
         PrivacySandboxPromptEnabled = false;
 
         DefaultSearchProviderEnabled = true;
-        DefaultSearchProviderSearchURL = "https://www.startpage.com/sp/search?query={searchTerms}";
-        DefaultSearchProviderName = "Startpage";
-        DefaultSearchProviderKeyword = "startpage.com";
+        DefaultSearchProviderSearchURL = searchEngine.url;
+        DefaultSearchProviderName = searchEngine.name;
+        DefaultSearchProviderKeyword = searchEngine.keyword;
 
-        ExtensionInstallForcelist = map (extension: extension.id) [
-          {
-            name = "Bitwarden";
-            id = "nngceckbapebfimnlniiiahkandclblb";
-          }
-          {
-            name = "Vimium";
-            id = "dbepggeogbaibhgnhhndojpepiihcmeb";
-          }
-          {
-            name = "SponserBlock for Youtube";
-            id = "mnjggcdmjocbbbhaepdhchncahnbgone";
-          }
-          {
-            name = "Uninternet";
-            id = "ihgeijoonjmdfkamhpgoedplnmbencgd";
-          }
-          {
-            name = "Remove Youtube Shorts";
-            id = "mgngbgbhliflggkamjnpdmegbkidiapm";
-          }
+        ExtensionInstallForcelist = [
+          "nngceckbapebfimnlniiiahkandclblb" # Bitwarden
+          "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
+          "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock for Youtube
+          "khncfooichmfjbepaaaebmommgaepoid" # Unhook
+          "mgngbgbhliflggkamjnpdmegbkidiapm" # Remove Youtube Shorts
         ];
       };
 
@@ -70,14 +59,14 @@
       DisableFirefoxStudies = true;
 
       SearchEngines = {
-        Default = "Startpage";
+        Default = searchEngine.name;
         Add = [
           {
-            Name = "Startpage";
-            URLTemplate = "https://www.startpage.com/do/dsearch?query={searchTerms}";
+            Name = searchEngine.name;
+            URLTemplate = searchEngine.url;
             Method = "GET";
-            IconURL = "https://www.startpage.com/favicon.ico";
-            Alias = "startpage";
+            IconURL = searchEngine.iconUrl;
+            Alias = searchEngine.alias;
           }
         ];
       };
