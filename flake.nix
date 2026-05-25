@@ -37,31 +37,30 @@
       ...
     }:
     let
-      # Configuration
       system = "x86_64-linux";
       nixpkgs = nixpkgs-2511;
       username = "ezratweaver";
+      allowUnfree = true;
       configurationPath = ./configurations;
       homePath = ./configurations/home/home.nix;
 
       # Common overlays
       overlays = [
-        # NUR overlay
+        # Add NUR Packages
         nur.overlays.default
 
-        (final: prev: {
-          # Access to unstable packages via pkgs.unstable.*
+        (_: _: {
+          # Expose unstable packages
           unstable = import nixpkgs-unstable {
-            system = prev.stdenv.hostPlatform.system;
-            config.allowUnfree = true;
+            system = system;
+            config.allowUnfree = allowUnfree;
           };
 
-          # Adwaita bluetooth
-          adw-bluetooth-git = adw-bluetooth-git.packages.${prev.stdenv.hostPlatform.system}.default;
+          # Add adw-bluetooth-git
+          adw-bluetooth-git = adw-bluetooth-git.packages.${system}.default;
         })
       ];
 
-      # Home Manager configuration
       homeManagerConfig = {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -69,10 +68,9 @@
         home-manager.users.${username} = import homePath;
       };
 
-      # Nixpkgs configuration
       nixpkgsConfig = {
         nixpkgs.hostPlatform = system;
-        nixpkgs.config.allowUnfree = true;
+        nixpkgs.config.allowUnfree = allowUnfree;
         nixpkgs.overlays = overlays;
         nix.settings.experimental-features = [
           "nix-command"
