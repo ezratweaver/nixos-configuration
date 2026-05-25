@@ -15,7 +15,6 @@
     ./system/shell.nix
     ./system/user.nix
     ./system/virtualization.nix
-    ./system/vpn.nix
   ];
 
   time.timeZone = lib.mkDefault "America/New_York";
