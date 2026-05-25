@@ -26,19 +26,12 @@
   };
 
   outputs =
-    {
-      nixpkgs-unstable,
-      nixpkgs-2511,
-      home-manager,
-      nixos-hardware,
-      adw-bluetooth-git,
-      nur,
-      nix-flatpak,
+    inputs@{
       ...
     }:
     let
       system = "x86_64-linux";
-      nixpkgs = nixpkgs-2511;
+      defaultNixpkgs = inputs.nixpkgs-2511;
       username = "ezratweaver";
       allowUnfree = true;
       systemPath = ./configuration/system;
@@ -47,17 +40,20 @@
       # Common overlays
       overlays = [
         # Add NUR Packages
-        nur.overlays.default
+        inputs.nur.overlays.default
 
         (_: _: {
           # Expose unstable packages
-          unstable = import nixpkgs-unstable {
+          unstable = import inputs.nixpkgs-unstable {
             system = system;
             config.allowUnfree = allowUnfree;
           };
 
-          # Add adw-bluetooth-git
-          adw-bluetooth-git = adw-bluetooth-git.packages.${system}.default;
+          stable = import inputs.nixpkgs-2511 {
+            system = system;
+            config.allowUnfree = allowUnfree;
+          };
+
         })
       ];
 
@@ -81,37 +77,38 @@
         ];
       };
 
-      # System builder function
+      defaultModules = [
+        systemPath
+        inputs.home-manager.nixosModules.home-manager
+        inputs.nix-flatpak.nixosModules.nix-flatpak
+        inputs.adw-bluetooth-git.nixosModules.default
+        homeManagerConfig
+        nixpkgsConfig
+      ];
+
+      # System builder helper
       mkNixosSystem =
         {
-          hostPath,
-          hardwareModule ? null,
+          modules ? [ ],
         }:
-        nixpkgs.lib.nixosSystem {
+        defaultNixpkgs.lib.nixosSystem {
           specialArgs = {
             username = username;
           };
-          modules = [
-            systemPath
-            hostPath
-            home-manager.nixosModules.home-manager
-            nix-flatpak.nixosModules.nix-flatpak
-            adw-bluetooth-git.nixosModules.default
-            homeManagerConfig
-            nixpkgsConfig
-          ]
-          ++ nixpkgs.lib.optional (hardwareModule != null) hardwareModule;
+          modules = defaultModules ++ modules;
         };
     in
     {
       nixosConfigurations = {
-        gaming-laptop = mkNixosSystem { hostPath = ./hosts/gaming-laptop; };
-        work-laptop = mkNixosSystem { hostPath = ./hosts/work-laptop; };
+        gaming-laptop = mkNixosSystem { modules = [ ./hosts/gaming-laptop ]; };
+        work-laptop = mkNixosSystem { modules = [ ./hosts/work-laptop ]; };
         thinkpad-x1-g9 = mkNixosSystem {
-          hostPath = ./hosts/thinkpad-x1-g9;
-          hardwareModule = nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen;
+          modules = [
+            ./hosts/thinkpad-x1-g9
+            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
+          ];
         };
-        asus-zenbook = mkNixosSystem { hostPath = ./hosts/asus-zenbook; };
+        asus-zenbook = mkNixosSystem { modules = [ ./hosts/asus-zenbook ]; };
       };
     };
 }
