@@ -41,8 +41,8 @@
       nixpkgs = nixpkgs-2511;
       username = "ezratweaver";
       allowUnfree = true;
-      configurationPath = ./configurations;
-      homePath = ./configurations/home/home.nix;
+      configurationPath = ./configuration;
+      homePath = ./configuration/home/home.nix;
 
       # Common overlays
       overlays = [
