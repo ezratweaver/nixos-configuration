@@ -1,9 +1,8 @@
 {
   imports = [
     ./browsers.nix
-    ./formux.nix
     ./hyprland.nix
-    ./privacy.nix
+    ./vpn.nix
     ./flatpak.nix
     ./shell.nix
   ];

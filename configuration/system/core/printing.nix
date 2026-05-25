@@ -1,7 +1,6 @@
 { ... }:
 
 {
-
   services.printing.enable = true;
 
   # Cups available at localhost:631

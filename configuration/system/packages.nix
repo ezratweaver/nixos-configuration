@@ -1,4 +1,9 @@
-{ pkgs, lib, username, ... }:
+{
+  pkgs,
+  lib,
+  username,
+  ...
+}:
 {
   programs.appimage.enable = true;
 
@@ -80,6 +85,12 @@
     sniffnet
     gnome-calendar
     marktext # simple markdown editor
+    element-desktop
+    qbittorrent
+
+    # Tor
+    tor
+    tor-browser
 
     # Terminal utilities
     fzf
