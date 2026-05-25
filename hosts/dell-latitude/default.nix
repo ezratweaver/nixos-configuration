@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware.nix
-    ./packages.nix
+    ./work-packages.nix
   ];
 
   networking.hostName = "dell-latitude";
