@@ -98,7 +98,6 @@
     obs-studio
     jetbrains.datagrip
     shotcut
-    clapper
     popsicle # usb distro writer
     tomato-c
     sniffnet

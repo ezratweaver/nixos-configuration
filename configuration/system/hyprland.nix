@@ -49,6 +49,7 @@
     nautilus # file manager
     eww # widgets
     loupe # image viewer
+    celluloid # video viewer
     pinta # image editor
     kooha # video recording
     hyprshot # screenshots

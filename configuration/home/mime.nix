@@ -11,16 +11,16 @@
       "image/png" = [ "org.gnome.Loupe.desktop" ];
       "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
 
-      # --- Video Player (Clapper) ---
-      "video/x-matroska" = [ "com.github.rafostar.Clapper.desktop" ]; # .mkv
-      "video/mp4" = [ "com.github.rafostar.Clapper.desktop" ]; # .mp4
-      "video/quicktime" = [ "com.github.rafostar.Clapper.desktop" ]; # .mov
-      "video/x-flv" = [ "com.github.rafostar.Clapper.desktop" ]; # .flv
-      "video/webm" = [ "com.github.rafostar.Clapper.desktop" ]; # .webm
-      "video/mpeg" = [ "com.github.rafostar.Clapper.desktop" ]; # .mpg, .mpeg
-      "video/x-ms-wmv" = [ "com.github.rafostar.Clapper.desktop" ]; # .wmv
-      "video/x-msvideo" = [ "com.github.rafostar.Clapper.desktop" ]; # .avi
-      "video/any" = [ "com.github.rafostar.Clapper.desktop" ];
+      # --- Video Player (Celluloid) ---
+      "video/x-matroska" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .mkv
+      "video/mp4" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .mp4
+      "video/quicktime" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .mov
+      "video/x-flv" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .flv
+      "video/webm" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .webm
+      "video/mpeg" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .mpg, .mpeg
+      "video/x-ms-wmv" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .wmv
+      "video/x-msvideo" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .avi
+      "video/any" = [ "io.github.celluloid_player.Celluloid.desktop" ];
 
       # --- Browser (Helium) ---
       "x-scheme-handler/http" = [ "helium.desktop" ];
