@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./direnv.nix
     ./dotfiles
     ./theme.nix
     ./mime.nix
