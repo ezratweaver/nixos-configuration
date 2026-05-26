@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ./git.nix
     ./work-packages.nix
   ];
 
