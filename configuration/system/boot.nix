@@ -2,7 +2,7 @@
 
 {
   # Set kernel to latest
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_12; # pkgs.linuxPackages_latest (once they fix the MT7922 bug on 7.0.7)
 
   # Boot configuration
   boot.loader = {
