@@ -89,7 +89,7 @@
       # System builder helper
       mkNixosSystem =
         {
-          modules ? [ ],
+          modules,
         }:
         defaultNixpkgs.lib.nixosSystem {
           specialArgs = {
