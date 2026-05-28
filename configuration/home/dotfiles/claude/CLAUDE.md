@@ -69,4 +69,4 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-**Also important**, never use em-dashes. Ever.
+**Also important**, never use em-dashes or regular dashes as punctuation. Prefer commas, semicolons, colons, or restructure the sentence instead.
