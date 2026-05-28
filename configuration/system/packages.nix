@@ -106,6 +106,7 @@
     element-desktop
     qbittorrent
     rapidraw # adobe lightroom alternative
+    krita # good photoshop alternative
 
     # Tor
     tor

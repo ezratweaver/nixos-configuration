@@ -22,21 +22,21 @@
       "video/x-msvideo" = [ "io.github.celluloid_player.Celluloid.desktop" ]; # .avi
       "video/any" = [ "io.github.celluloid_player.Celluloid.desktop" ];
 
-      # --- Browser (Helium) ---
-      "x-scheme-handler/http" = [ "helium.desktop" ];
-      "x-scheme-handler/https" = [ "helium.desktop" ];
-      "x-scheme-handler/about" = [ "helium.desktop" ];
-      "x-scheme-handler/unknown" = [ "helium.desktop" ];
-      "text/html" = [ "helium.desktop" ];
-      "application/xhtml+xml" = [ "helium.desktop" ];
-      "application/x-extension-htm" = [ "helium.desktop" ];
-      "application/x-extension-html" = [ "helium.desktop" ];
-      "application/x-extension-shtml" = [ "helium.desktop" ];
-      "application/x-extension-xhtml" = [ "helium.desktop" ];
-      "application/x-extension-xht" = [ "helium.desktop" ];
+      # --- Browser (Brave) ---
+      "x-scheme-handler/http" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/https" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/about" = [ "brave-browser.desktop" ];
+      "x-scheme-handler/unknown" = [ "brave-browser.desktop" ];
+      "text/html" = [ "brave-browser.desktop" ];
+      "application/xhtml+xml" = [ "brave-browser.desktop" ];
+      "application/x-extension-htm" = [ "brave-browser.desktop" ];
+      "application/x-extension-html" = [ "brave-browser.desktop" ];
+      "application/x-extension-shtml" = [ "brave-browser.desktop" ];
+      "application/x-extension-xhtml" = [ "brave-browser.desktop" ];
+      "application/x-extension-xht" = [ "brave-browser.desktop" ];
 
-      # --- PDF Viewer (Helium) ---
-      "application/pdf" = [ "helium.desktop" ];
+      # --- PDF Viewer (Brave) ---
+      "application/pdf" = [ "brave-browser.desktop" ];
 
       # --- Protocol Handlers ---
       "x-scheme-handler/magnet" = [ "org.qbittorrent.qBittorrent.desktop" ];
