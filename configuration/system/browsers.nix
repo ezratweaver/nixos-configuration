@@ -2,11 +2,11 @@
 
 let
   searchEngine = {
-    name = "Startpage";
-    keyword = "startpage.com";
-    url = "https://www.startpage.com/sp/search?query={searchTerms}";
-    iconUrl = "https://www.startpage.com/favicon.ico";
-    alias = "startpage";
+    name = "Brave";
+    keyword = "search.brave.com";
+    url = "https://search.brave.com/search?q={searchTerms}";
+    iconUrl = "https://search.brave.com/favicon.ico";
+    alias = "brave";
   };
 in
 {
