@@ -105,6 +105,7 @@
     marktext # simple markdown editor
     element-desktop
     qbittorrent
+    rapidraw # adobe lightroom alternative
 
     # Tor
     tor
