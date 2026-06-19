@@ -19,7 +19,6 @@ alias l="eza -a --tree --level=1 --icons"
 
 # NixOS aliases
 alias nix-develop="nix develop -c $SHELL"
-alias nix-shell="nix-shell -c $SHELL"
 alias nxreb="sudo nixos-rebuild switch --flake ~/nixos-configuration/#$(hostname)"
 alias nxs="nix-search"
 alias nxrollback="sudo nixos-rebuild switch --rollback"
@@ -130,6 +129,11 @@ prompt_setup() {
 
 precmd() {
     prompt_setup
+}
+
+nix-shell() {
+    export NIX_SHELL="$@"
+    command nix-shell "$@" --run "env SHELL=$(which zsh) zsh --login"
 }
 
 # Enhanced navigation functions
