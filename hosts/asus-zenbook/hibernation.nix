@@ -15,11 +15,11 @@
   powerManagement.enable = true;
 
   # Automatic hibernation settings
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=4h
-    HibernateMode=platform shutdown
-    SuspendState=mem
-  '';
+  systemd.sleep.settings.Sleep = {
+    HibernateDelaySec = "4h";
+    HibernateMode = "platform shutdown";
+    SuspendState = "mem";
+  };
 
   services.logind = {
     settings = {

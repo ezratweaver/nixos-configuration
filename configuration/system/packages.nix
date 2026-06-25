@@ -49,7 +49,6 @@
     vim
     unstable.neovim
     nodejs
-    nodePackages.npm
     (python313.withPackages (
       ps: with ps; [
         beautifulsoup4
@@ -73,7 +72,7 @@
     # Formatters
     prettierd
     black
-    nixfmt-rfc-style
+    nixfmt
     stylua
 
     # Lsps
