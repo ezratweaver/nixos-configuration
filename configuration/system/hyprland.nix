@@ -18,7 +18,7 @@
     enable = true;
     # tuigreet = TUI greeter in the console
     settings.default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland --user-menu";
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland --user-menu";
       user = "greeter";
     };
   };
