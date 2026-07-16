@@ -2,7 +2,7 @@
 
 {
   # Enable Adwaita Bluetooth daemon
-  services.adw-bluetooth.enable = true;
+  services.adw-bluetooth-git.enable = true;
 
   services.upower.enable = true;
 
