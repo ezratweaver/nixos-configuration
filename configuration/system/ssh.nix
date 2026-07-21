@@ -1,6 +1,8 @@
 { ... }:
 
 {
+  environment.sessionVariables.SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/gcr/ssh";
+
   programs.ssh.extraConfig = ''
     # Add a key to the agent the first time it is used (gnome-keyring then
     # offers to remember its passphrase in the keyring).
