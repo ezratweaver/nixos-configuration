@@ -8,5 +8,6 @@
     powershell
     sqlcmd
     azuredatastudio
+    glab
   ];
 }
