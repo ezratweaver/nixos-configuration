@@ -12,6 +12,7 @@
     ./packages.nix
     ./printing.nix
     ./shell.nix
+    ./ssh.nix
     ./user.nix
     ./virtualization.nix
   ];
