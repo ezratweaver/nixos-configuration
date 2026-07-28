@@ -3,7 +3,7 @@
   "instructions": ["rules.md"],
   "permission": {
     "bash": {
-      "*": "ask",
+      "*": "allow",
       "git *": "allow",
       "git commit *": "deny",
       "git push *": "deny",
