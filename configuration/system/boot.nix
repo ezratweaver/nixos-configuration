@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  # Set kernel to latest
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   # Boot configuration
   boot.loader = {
     # Disable systemd-boot
