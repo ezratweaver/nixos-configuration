@@ -13,9 +13,16 @@
       General = {
         Experimental = true;
         GATTCache = true;
+        # Specific workarounds for XBOX Controllers
+        Privacy = "device";
+        JustWorksRepairing = "always";
+        Class = "0x000100";
       };
     };
   };
+
+  # Enable XBOX Controller support
+  hardware.xpadneo.enable = true;
 
   services.openssh.enable = true;
 
