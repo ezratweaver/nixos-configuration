@@ -3,6 +3,7 @@
   "plugin": ["@dietrichgebert/ponytail"],
   "instructions": ["rules.md"],
   "permission": {
+    "edit": "ask",
     "bash": {
       "*": "allow",
       "git *": "allow",
