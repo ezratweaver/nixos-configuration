@@ -121,6 +121,7 @@
     unstable.opencode
     gemini-cli
     code-cursor
+    codex
     tree
     unzip
     wget
