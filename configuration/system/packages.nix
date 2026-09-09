@@ -83,6 +83,7 @@
     gopls # Go language server
 
     # Desktop apps
+    codex-desktop
     figma-linux
     dbeaver-bin
     discord

@@ -16,6 +16,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
+    codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
 
     # Nix User Repository
     nur.url = "github:nix-community/NUR";
@@ -43,6 +44,8 @@
         inputs.nur.overlays.default
 
         (_: _: {
+          codex-desktop = inputs.codex-desktop-linux.packages.${system}.default;
+
           # Expose unstable packages
           unstable = import inputs.nixpkgs-unstable {
             system = system;
