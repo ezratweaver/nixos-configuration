@@ -112,6 +112,7 @@
           ];
         };
         asus-zenbook = mkNixosSystem { modules = [ ./hosts/asus-zenbook ]; };
+        thinkbook-16 = mkNixosSystem { modules = [ ./hosts/thinkbook-16 ]; };
       };
     };
 }
