@@ -4,6 +4,7 @@
   imports = [
     ./hardware.nix
     ./hibernation.nix
+    ./tweaks.nix
   ];
 
   networking.hostName = "thinkbook-16";
