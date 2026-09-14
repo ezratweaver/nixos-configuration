@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ./hibernation.nix
   ];
 
   networking.hostName = "thinkbook-16";
