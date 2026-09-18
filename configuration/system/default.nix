@@ -15,6 +15,7 @@
     ./ssh.nix
     ./user.nix
     ./virtualization.nix
+    ./vr-streaming.nix
   ];
 
   time.timeZone = lib.mkDefault "America/New_York";

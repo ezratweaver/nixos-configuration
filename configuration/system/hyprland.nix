@@ -32,13 +32,6 @@
     pkgs.xdg-desktop-portal-gtk
   ];
 
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true;
-    openFirewall = true;
-  };
-
   # Cursor theme configuration
   environment.sessionVariables = {
     XCURSOR_SIZE = "20";
