@@ -33,7 +33,7 @@ in
         MetricsReportingEnabled = false;
         CrashReportingEnabled = false;
         BackgroundModeEnabled = false;
-        DnsOverHttpsMode = "secure";
+        DnsOverHttpsMode = "automatic";
         PromotionalTabsEnabled = false;
         PrivacySandboxPromptEnabled = false;
 
