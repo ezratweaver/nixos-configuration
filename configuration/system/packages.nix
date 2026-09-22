@@ -83,6 +83,7 @@
     gopls # Go language server
 
     # Desktop apps
+    claude-desktop
     codex-desktop
     figma-linux
     dbeaver-bin

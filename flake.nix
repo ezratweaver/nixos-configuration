@@ -16,6 +16,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     adw-bluetooth-git.url = "github:ezratweaver/adw-bluetooth/develop";
+    claude-desktop-nix-flake.url = "github:poeck/claude-desktop-nix-flake";
     codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
 
     # Nix User Repository
@@ -44,6 +45,7 @@
         inputs.nur.overlays.default
 
         (_: _: {
+          claude-desktop = inputs.claude-desktop-nix-flake.packages.${system}.default;
           codex-desktop = inputs.codex-desktop-linux.packages.${system}.default;
 
           # Expose unstable packages
