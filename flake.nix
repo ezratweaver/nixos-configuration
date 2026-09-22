@@ -45,7 +45,11 @@
         inputs.nur.overlays.default
 
         (_: _: {
-          claude-desktop = inputs.claude-desktop-nix-flake.packages.${system}.default;
+          claude-desktop = inputs.claude-desktop-nix-flake.packages.${system}.default.overrideAttrs (old: {
+            preFixup = (old.preFixup or "") + ''
+              gappsWrapperArgs+=(--add-flags "--password-store=gnome-libsecret")
+            '';
+          });
           codex-desktop = inputs.codex-desktop-linux.packages.${system}.default;
 
           # Expose unstable packages
