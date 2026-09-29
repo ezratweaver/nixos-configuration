@@ -83,6 +83,7 @@
           "nix-command"
           "flakes"
         ];
+
         # Binary cache for llm-agents.nix (claude-desktop is a ~174 MB app).
         nix.settings.extra-substituters = [ "https://cache.numtide.com" ];
         nix.settings.extra-trusted-public-keys = [
