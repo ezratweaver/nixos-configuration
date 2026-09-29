@@ -7,6 +7,7 @@
     ./browsers.nix
     ./cleanup.nix
     ./fonts.nix
+    ./gaming.nix
     ./hyprland.nix
     ./networking.nix
     ./packages.nix
