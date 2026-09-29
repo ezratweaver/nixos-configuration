@@ -85,6 +85,7 @@
     # Desktop apps
     claude-desktop
     codex-desktop
+    t3code-desktop
     figma-linux
     dbeaver-bin
     discord
