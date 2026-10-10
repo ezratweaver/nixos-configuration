@@ -73,7 +73,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "hyprctl dispatch exec '[float; center]' iwgtk",
+    "on-click": "hyprctl dispatch exec '[float; center]' nmgui",
   },
 
   "bluetooth": {

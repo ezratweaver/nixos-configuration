@@ -66,7 +66,8 @@
     pamixer
     pavucontrol
     playerctl
-    iwgtk
+    networkmanagerapplet
+    nmgui
 
     poweralertd # Battery notifications
 
