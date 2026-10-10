@@ -42,7 +42,7 @@
     "scroll-step": 5,
     "format": "",
     "format-muted": "",
-    "on-click": "hyprctl dispatch exec '[float; center]' pavucontrol",
+    "on-click": "hyprctl dispatch exec '[float; center]' pwvucontrol",
   },
 
   "battery": {

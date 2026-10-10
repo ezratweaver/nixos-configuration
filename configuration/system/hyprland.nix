@@ -64,7 +64,7 @@
     # System utilities for Hyprland
     brightnessctl
     pamixer
-    pavucontrol
+    pwvucontrol
     playerctl
     networkmanagerapplet
     nmgui
