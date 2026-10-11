@@ -32,6 +32,7 @@ let
       pkgs.android-tools
       pkgs.coreutils
       pkgs.gnugrep
+      pkgs.systemd
       pkgs.util-linux
     ];
     text = ''
@@ -43,6 +44,7 @@ let
       serial="''${1:-}"
       requested="$serial"
       relay_pid=""
+      sunshine_started=false
       client_started=false
       wifi_changed=false
       log_dir=$(mktemp -d)
@@ -78,6 +80,7 @@ let
         if (( result != 0 )) && [[ -f "$log_dir/relay.log" ]]; then
           tail -n 30 "$log_dir/relay.log" >&2
         fi
+        $sunshine_started && systemctl --user stop sunshine
         rm -rf "$log_dir"
         exit "$result"
       }
@@ -86,7 +89,10 @@ let
       trap 'exit 143' TERM
       exec 9>"''${XDG_RUNTIME_DIR:-/tmp}/quest-link-$UID.lock"
       flock -n 9 || fail "Another quest-link command is already running."
-      timeout --kill-after=2 10 adb start-server || fail "Could not start ADB."
+      sunshine_started=true
+      systemctl --user start sunshine || fail "Could not start Sunshine."
+      # Close the lock descriptor so the forked ADB server does not keep the lock.
+      timeout --kill-after=2 10 adb start-server 9>&- || fail "Could not start ADB."
 
       echo "Waiting for an authorized USB device. Connect and unlock the Quest."
       last_status=""
@@ -155,7 +161,7 @@ in
 {
   services.sunshine = {
     enable = true;
-    autoStart = true;
+    autoStart = false;
     capSysAdmin = true;
     openFirewall = true;
   };
