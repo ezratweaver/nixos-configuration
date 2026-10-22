@@ -1,3 +1,5 @@
+You're on nixos, and the configuration lives at ~/nixos-configuration/
+
 Always talk in ASD-STE100 Simplified Technical English.
 
 Always perform the most minimal change possible to perform the task, avoid unneeded complexity by any means.
@@ -32,3 +34,5 @@ Avoid these patterns when writing or modifying code. Apply them to the actual ch
 - Unnecessary rewrites: Don't replace working, understandable code merely because another style is possible.
 
 Before finishing, inspect the diff specifically for these anti-patterns. Remove any that you introduced, preserve behavior, and run relevant formatting, type checks, and tests. Do not claim checks ran if they did not.
+
+Sometimes I might want to implement things step by step, when I do I'll tell you to implement it in step mode, which means you should come up with a plan, break it into steps, and then go step by step, and only go to the next step once you've gotten my approval after the previous step has been completed.
