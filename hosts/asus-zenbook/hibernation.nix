@@ -11,6 +11,9 @@
 
   boot.initrd.systemd.enable = true;
 
+  # tiny_power_button signals init to power off directly, bypassing logind's HandlePowerKey
+  boot.blacklistedKernelModules = [ "tiny_power_button" ];
+
   # For Hyprland/GNOME power management
   powerManagement.enable = true;
 
@@ -25,6 +28,7 @@
     settings = {
       Login = {
         HandleLidSwitch = "suspend-then-hibernate";
+        HandlePowerKey = "ignore";
         IdleAction = "suspend-then-hibernate";
         IdleActionSec = "30min";
         IdleActionInhibitGroup = "none";
