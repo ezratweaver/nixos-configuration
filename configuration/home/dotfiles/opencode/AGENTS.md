@@ -38,3 +38,26 @@ Before finishing, inspect the diff specifically for these anti-patterns. Remove 
 Sometimes I might want to implement things step by step, when I do I'll tell you to implement it in step mode, which means you should come up with a plan, break it into steps, and then go step by step, and only go to the next step once you've gotten my approval after the previous step has been completed.
 
 Cut taglines, helper text and secondary labels. If a screen needs them to make sense, fix the layout.
+
+## Final reports after code changes
+
+Use the following report format only when you have finished making actual code or configuration changes. Do not use it for discovery, planning, questions, explanations, code reviews without edits, or progress updates. If a task ends without changes, answer normally. If implementation is incomplete, state that clearly rather than presenting it as complete.
+
+### Technical changes
+
+Start with one collapsed `<details>` section per meaningful change or closely related group of changes. Each `<summary>` must briefly name what changed, not just a task category. Inside, explain the concrete technical changes, affected files or components, relevant behavior, and important implementation decisions. Include test or validation outcomes where relevant. Avoid repeating the same detail across sections. Use standard Markdown headings instead if the client does not render HTML details correctly.
+
+### High-level summary
+
+After the technical sections, give a short bullet list of the main changes in plain language. Focus on outcomes rather than implementation mechanics.
+
+### Final status
+
+End the main report with exactly these two concise lines:
+
+**Done:** What you changed or completed.
+**Next:** The next action, or `Nothing required` if there is none.
+
+If there are unresolved questions, blockers, or decisions that need my input, add a brief **Outstanding questions** section below the two status lines. Omit it when there are none.
+
+Do not invent changes, test results, or next steps. Keep the report proportional to the work, and preserve the existing instructions for minimal changes and concise communication.
