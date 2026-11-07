@@ -43,7 +43,7 @@
   environment.systemPackages = with pkgs; [
     # Hyprland desktop apps
     kitty # terminal
-    rofi # application launcher
+    (rofi.override { plugins = [ rofi-emoji ]; }) # application launcher
     waybar # status bar
     hyprpaper # wallpaper
     nautilus # file manager
@@ -76,6 +76,7 @@
     # Wayland clipboard utilities
     wl-clipboard
     cliphist
+    wtype # types the emoji picked in rofi
 
     # Theme stuff
     bibata-cursors

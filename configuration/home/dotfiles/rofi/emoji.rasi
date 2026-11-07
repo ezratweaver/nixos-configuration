@@ -1,0 +1,16 @@
+@theme "~/.config/rofi/theme.rasi"
+
+listview {
+    columns: 8;
+    lines: 6;
+    flow: horizontal;
+}
+
+element {
+    children: [ element-text ];
+}
+
+element-text {
+    font: "JetBrains Mono 24";
+    horizontal-align: 0.5;
+}
