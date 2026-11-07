@@ -121,7 +121,7 @@
     zoxide
     eza
     claude-code
-    unstable.opencode
+    opencode
     gemini-cli
     code-cursor
     codex

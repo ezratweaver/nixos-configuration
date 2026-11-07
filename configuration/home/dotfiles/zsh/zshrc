@@ -19,7 +19,7 @@ alias l="eza -a --tree --level=1 --icons"
 
 # NixOS aliases
 alias nix-develop="nix develop -c $SHELL"
-alias nxreb="sudo nixos-rebuild switch --flake ~/nixos-configuration/#$(hostname)"
+alias nxreb="nixos-rebuild switch --sudo --flake ~/nixos-configuration/#$(hostname)"
 alias nxs="nix-search"
 alias nxrollback="sudo nixos-rebuild switch --rollback"
 alias nxgenerations="sudo nixos-rebuild list-generations"

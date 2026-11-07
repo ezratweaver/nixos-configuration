@@ -11,7 +11,6 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    brave
     nur.repos.forkprince.helium-nightly
 
     # Vanilla browsers for testing
