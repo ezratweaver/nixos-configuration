@@ -41,8 +41,10 @@
       recursive = true;
     };
 
-    ".codex/AGENTS.md".source = ./opencode/AGENTS.md;
+    ".config/opencode/AGENTS.md".source = ./agents/AGENTS.md;
 
-    ".claude/CLAUDE.md".source = ./opencode/AGENTS.md;
+    ".codex/AGENTS.md".source = ./agents/AGENTS.md;
+
+    ".claude/CLAUDE.md".source = ./agents/AGENTS.md;
   };
 }

@@ -50,6 +50,7 @@
           };
           codex-desktop = inputs.codex-desktop-linux.packages.${system}.default;
           t3code-desktop = inputs.llm-agents.packages.${system}.t3code-desktop;
+          claude-code = inputs.llm-agents.packages.${system}.claude-code;
 
           # Expose unstable packages
           unstable = import inputs.nixpkgs-unstable {

@@ -45,17 +45,30 @@ Use the following report format only when you have finished making actual code o
 
 ### Technical changes
 
-Start with one collapsed `<details>` section per meaningful change or closely related group of changes. Each `<summary>` must briefly name what changed, not just a task category. Inside, explain the concrete technical changes, affected files or components, relevant behavior, and important implementation decisions. Include test or validation outcomes where relevant. Avoid repeating the same detail across sections. Use standard Markdown headings instead if the client does not render HTML details correctly.
+Start the report directly with one collapsed `<details>` section per meaningful change or closely related group of changes. Do not put an intro paragraph before them. Each `<summary>` starts with the affected file or area in `<code>`, then a short name of what changed, not just a task category. Inside, use a short bullet list for the concrete technical changes, relevant behavior, and important implementation decisions. Include test or validation outcomes where relevant. Avoid repeating the same detail across sections. Use standard Markdown headings instead if the client does not render HTML details correctly.
+
+Put a blank line before and after each `<details>` block, and a blank line between `</summary>` and the body, so the body renders as Markdown:
+
+```markdown
+<details>
+<summary><code>keybinds.conf</code> · emoji picker on Mod+.</summary>
+
+- Removed the `vnx` bind on `PERIOD`.
+- `Mod+.` runs `rofi -show emoji -modes emoji`.
+
+</details>
+```
 
 ### High-level summary
 
-After the technical sections, give a short bullet list of the main changes in plain language. Focus on outcomes rather than implementation mechanics.
+After the technical sections, give a short bullet list of the main changes in plain language. Focus on outcomes rather than implementation mechanics. Omit it when it would only repeat the `<summary>` lines.
 
 ### Final status
 
-End the main report with exactly these two concise lines:
+Put a `---` rule before this section. End the main report with exactly these two concise lines, with a blank line between them:
 
-**Done:** What you changed or completed.
+**Done:** What you changed or completed, including any check that did not run.
+
 **Next:** The next action, or `Nothing required` if there is none.
 
 If there are unresolved questions, blockers, or decisions that need my input, add a brief **Outstanding questions** section below the two status lines. Omit it when there are none.
