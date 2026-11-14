@@ -11,6 +11,10 @@
   # Disable IPv6, because most vpns don't support it out of the box.
   networking.enableIPv6 = false;
 
+  # Let normal users bind port 443, so the portless dev proxy serves https://<name>.localhost
+  # without sudo (running it as root leaves root-owned files in ~/.portless).
+  boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = 443;
+
   hardware.bluetooth = {
     enable = true;
     settings = {
