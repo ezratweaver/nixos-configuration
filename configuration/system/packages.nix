@@ -92,6 +92,7 @@
     signal-desktop
     obsidian
     vlc
+    spotify
     onlyoffice-desktopeditors
     libreoffice
     postman
