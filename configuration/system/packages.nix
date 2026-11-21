@@ -85,7 +85,7 @@
     # Desktop apps
     claude-desktop
     codex-desktop
-    t3code-desktop
+    llm-agents.t3code-desktop
     figma-linux
     dbeaver-bin
     discord
@@ -93,6 +93,7 @@
     obsidian
     vlc
     spotify
+    llm-agents.antigravity-hub
     onlyoffice-desktopeditors
     libreoffice
     postman
@@ -121,7 +122,8 @@
     fd
     zoxide
     eza
-    claude-code
+    llm-agents.claude-code
+    llm-agents.antigravity-cli
     opencode
     gemini-cli
     code-cursor

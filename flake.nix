@@ -49,8 +49,7 @@
             commandLineArgs = "--password-store=gnome-libsecret";
           };
           codex-desktop = inputs.codex-desktop-linux.packages.${system}.default;
-          t3code-desktop = inputs.llm-agents.packages.${system}.t3code-desktop;
-          claude-code = inputs.llm-agents.packages.${system}.claude-code;
+          llm-agents = inputs.llm-agents.packages.${system};
 
           # Expose unstable packages
           unstable = import inputs.nixpkgs-unstable {
