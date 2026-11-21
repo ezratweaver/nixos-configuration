@@ -93,6 +93,7 @@
     obsidian
     vlc
     spotify
+    bitwarden-desktop
     llm-agents.antigravity-hub
     onlyoffice-desktopeditors
     libreoffice
